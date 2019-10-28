@@ -1,0 +1,16 @@
+#title{
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.card{
+    display: inline-block;
+    float: left; 
+    width: 5%;
+}
+.card-text{
+    text-align: justify;
+}
+.card{
+    width:100%;
+    height:auto;
+  }
