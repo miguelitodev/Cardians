@@ -3,7 +3,7 @@
 class Conexao {
     public static function pegarConexao() {
         $conexao = new PDO("mysql:host=localhost;
-        dbname=bdlojacarros", "root", ""); 
+        dbname=bjlojacarros", "root", ""); 
         /*new PDO(
             tipo:host=local;dbname=nome do banco
             , usuário de acesso ao banco
