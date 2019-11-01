@@ -20,13 +20,17 @@
             $this->nomeMarca = $nome;
         }
 
-        public function cadastrar(){
+        public function cadastrar($marca){
             $conexao = Conexao::pegarConexao();
-            $insert ="  INSERT INTO tbMarca(nomeMarca)
-                        VALUES ('".$nomeMarca->getNomeMarca()."')
+            $insert ="  insert into tbmarca(nomeMarca)
+                        values ('".$marca->getNomeMarca()."')
                     ";
             $conexao->exec($insert);
             return 'Cadastro realizado com sucesso!';
+
+        }
+        
+        public function editar(){
 
         }
 
