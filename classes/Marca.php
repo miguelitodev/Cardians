@@ -20,6 +20,16 @@
             $this->nomeMarca = $nome;
         }
 
+        public function cadastrar(){
+            $conexao = Conexao::pegarConexao();
+            $insert ="  INSERT INTO tbMarca(nomeMarca)
+                        VALUES ('".$nomeMarca->getNomeMarca()."')
+                    ";
+            $conexao->exec($insert);
+            return 'Cadastro realizado com sucesso!';
+
+        }
+
         public function listar(){
             $conexao = Conexao::pegarConexao();
             $query = "SELECT idMarca, nomeMarca FROM tbmarca";
