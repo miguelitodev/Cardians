@@ -1,6 +1,3 @@
-<?php
-
-?>
 <!doctype html>
 <html lang="pt-br">
   <head>
@@ -30,6 +27,16 @@
 		<a href="cadastrar-veiculo.php">
 			<button>
 				Cadastro veiculo
+			</button>
+		</a>
+		<a href="marca/form-cadastrar-marca.php">
+			<button>
+				Cadastrar marca
+			</button>	
+		</a>
+		<a href="cadastrar-usuario.php">
+			<button>
+				Cadastrar usuario
 			</button>
 		</a>
 	</div>
