@@ -2,10 +2,10 @@
 -- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Tempo de geração: 18-Out-2019 às 20:01
+-- Host: localhost
+-- Tempo de geração: 02/11/2019 às 00:41
 -- Versão do servidor: 10.4.6-MariaDB
--- versão do PHP: 7.3.9
+-- Versão do PHP: 7.3.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,7 +25,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `tbcliente`
+-- Estrutura para tabela `tbcliente`
 --
 
 CREATE TABLE `tbcliente` (
@@ -45,7 +45,7 @@ CREATE TABLE `tbcliente` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `tblocacao`
+-- Estrutura para tabela `tblocacao`
 --
 
 CREATE TABLE `tblocacao` (
@@ -61,7 +61,7 @@ CREATE TABLE `tblocacao` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `tbmarca`
+-- Estrutura para tabela `tbmarca`
 --
 
 CREATE TABLE `tbmarca` (
@@ -69,10 +69,22 @@ CREATE TABLE `tbmarca` (
   `nomeMarca` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Despejando dados para a tabela `tbmarca`
+--
+
+INSERT INTO `tbmarca` (`idMarca`, `nomeMarca`) VALUES
+(1, 'tesla'),
+(2, 'bmw'),
+(3, 'volkswagen'),
+(4, 'volkswagen'),
+(5, 'mercedez'),
+(6, 'honda');
+
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `tbusuario`
+-- Estrutura para tabela `tbusuario`
 --
 
 CREATE TABLE `tbusuario` (
@@ -85,30 +97,37 @@ CREATE TABLE `tbusuario` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `tbveiculo`
+-- Estrutura para tabela `tbveiculo`
 --
 
 CREATE TABLE `tbveiculo` (
   `idVeiculo` int(11) NOT NULL,
   `anoVeiculo` int(4) NOT NULL,
   `corVeiculo` varchar(25) NOT NULL,
-  `modeloVeiculo` int(30) NOT NULL,
-  `valorDiariaVeiculo` int(11) NOT NULL,
+  `modeloVeiculo` varchar(100) NOT NULL,
+  `valorDiariaVeiculo` decimal(5,2) NOT NULL,
   `idMarca` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Índices para tabelas despejadas
+-- Despejando dados para a tabela `tbveiculo`
+--
+
+INSERT INTO `tbveiculo` (`idVeiculo`, `anoVeiculo`, `corVeiculo`, `modeloVeiculo`, `valorDiariaVeiculo`, `idMarca`) VALUES
+(1, 2017, 'branca', 'model s', '600.00', 1);
+
+--
+-- Índices de tabelas apagadas
 --
 
 --
--- Índices para tabela `tbcliente`
+-- Índices de tabela `tbcliente`
 --
 ALTER TABLE `tbcliente`
   ADD PRIMARY KEY (`idCliente`);
 
 --
--- Índices para tabela `tblocacao`
+-- Índices de tabela `tblocacao`
 --
 ALTER TABLE `tblocacao`
   ADD PRIMARY KEY (`idLocacao`),
@@ -117,26 +136,26 @@ ALTER TABLE `tblocacao`
   ADD KEY `FK_idUsuario` (`idUsuario`);
 
 --
--- Índices para tabela `tbmarca`
+-- Índices de tabela `tbmarca`
 --
 ALTER TABLE `tbmarca`
   ADD PRIMARY KEY (`idMarca`);
 
 --
--- Índices para tabela `tbusuario`
+-- Índices de tabela `tbusuario`
 --
 ALTER TABLE `tbusuario`
   ADD PRIMARY KEY (`idUsuario`);
 
 --
--- Índices para tabela `tbveiculo`
+-- Índices de tabela `tbveiculo`
 --
 ALTER TABLE `tbveiculo`
   ADD PRIMARY KEY (`idVeiculo`),
   ADD KEY `FK_idMarca` (`idMarca`);
 
 --
--- AUTO_INCREMENT de tabelas despejadas
+-- AUTO_INCREMENT de tabelas apagadas
 --
 
 --
@@ -155,7 +174,7 @@ ALTER TABLE `tblocacao`
 -- AUTO_INCREMENT de tabela `tbmarca`
 --
 ALTER TABLE `tbmarca`
-  MODIFY `idMarca` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idMarca` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de tabela `tbusuario`
@@ -167,14 +186,14 @@ ALTER TABLE `tbusuario`
 -- AUTO_INCREMENT de tabela `tbveiculo`
 --
 ALTER TABLE `tbveiculo`
-  MODIFY `idVeiculo` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idVeiculo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- Restrições para despejos de tabelas
+-- Restrições para dumps de tabelas
 --
 
 --
--- Limitadores para a tabela `tblocacao`
+-- Restrições para tabelas `tblocacao`
 --
 ALTER TABLE `tblocacao`
   ADD CONSTRAINT `tblocacao_ibfk_1` FOREIGN KEY (`idVeiculo`) REFERENCES `tbveiculo` (`idVeiculo`),
@@ -182,7 +201,7 @@ ALTER TABLE `tblocacao`
   ADD CONSTRAINT `tblocacao_ibfk_3` FOREIGN KEY (`idCliente`) REFERENCES `tbcliente` (`idCliente`);
 
 --
--- Limitadores para a tabela `tbveiculo`
+-- Restrições para tabelas `tbveiculo`
 --
 ALTER TABLE `tbveiculo`
   ADD CONSTRAINT `tbveiculo_ibfk_1` FOREIGN KEY (`idMarca`) REFERENCES `tbmarca` (`idMarca`);
