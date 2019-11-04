@@ -4,9 +4,9 @@ require_once 'global.php';
 
 try{
     $marca = new Marca();
-    if(!empty($_POST['campoPesquisa'])){
-        $campoPesquisa = $_POST['campoPesquisa']."%";
-        $marca = $marca->pesquisar($campoPesquisa);
+    if(!empty($_GET['campoPesquisa'])){
+        $campoPesquisa = $_GET['campoPesquisa']."%";
+        $lista = $marca->pesquisar($campoPesquisa);
         foreach ($lista as $linha){
         echo "<tr>
                 <td> ". $linha['idMarca'] ."</td>
@@ -17,7 +17,7 @@ try{
         }
     }
     else{
-        $marca = $marca->listar();
+        $lista = $marca->listar();
         foreach ($lista as $linha){
         echo "<tr>
                 <td> ". $linha['idMarca'] ."</td>

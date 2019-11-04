@@ -1,18 +1,5 @@
-$(document).ready(function(){
-    $('#campoPesquisa').keyup(function(){
-        $('form').submit(function(){
-            var dados = $(this).serialize();
-            $.ajax({
-                url: 'buscar-cliente.php',
-                method: 'post',
-                dataType: 'html',
-                data: dados,
-                success: function(data){
-                    $('#resultado').empty().html(data);
-                }
-            });
-            return false;
-        });
-        $('form').trigger('submit');
+document.querySelector("#campoPesquisa").addEventListener("keyup", async(e) => {
+    document.querySelector("#resultado").innerHTML = await fetch("buscar-marca.php?campoPesquisa="+e.target.value)
+        .then((data) => data.text())
+        .then((html) => html)
     });
-});
