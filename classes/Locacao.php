@@ -8,6 +8,27 @@
         private $idCliente;
         private $idVeiculo;
         private $idUsuario;
+        
+        private $nomeCliente;
+        private $cpfCliente;
+        private $cnhCliente;
+        private $cepCliente;
+        private $enderecoCliente;
+        private $numCasaCliente;
+        private $complementoCliente;
+        private $bairroCliente;
+        private $cidadeCliente;
+        private $ufCliente;
+        
+
+
+        public function getCpfCliente(){
+            return $this->cpfCliente;
+        }
+
+        public function getNomeCliente(){
+            return $this->nomeCliente;
+        }
 
         public function getIdLocacao(){
             return $this->idLocacao;

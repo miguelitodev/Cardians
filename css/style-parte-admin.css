@@ -3,6 +3,7 @@ body{
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: 100%;
+    text-align: center;
 }
 .card {
     width: 50%;
@@ -21,4 +22,8 @@ body{
     text-decoration: none;
     outline: none;
     height: 40px;
+}
+
+form{
+    text-align: center;
 }

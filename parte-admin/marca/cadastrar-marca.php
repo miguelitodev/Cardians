@@ -14,13 +14,5 @@ try {
     echo '</pre>';
     echo $erro->getMessage();
 }
-/*
-
-Cadastrar (insert) FEITO
-Listar (select) FEITO
-editar (update) 
-apagar (delete)
-
-*/
 ?>
 
