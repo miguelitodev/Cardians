@@ -31,6 +31,11 @@
                                 <img src="img/menu_pag/logoContato.png" style="width: 30px; margin-right: 10px;" title="Contato"/>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html">
+                                <img src="img/icons/login.svg" title="Login"/>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
