@@ -54,13 +54,14 @@ class Marca
         return $lista;
     }
 
-    public function pesquisar($campoPesquisa){
+    public function pesquisar($campoPesquisa)
+    {
         $conexao = Conexao::pegarConexao();
         $select = "select idMarca, nomeMarca from tbmarca
                         where nomeMarca like '$campoPesquisa'";
         $resultado = $conexao->query($select);
         $lista = $resultado->fetchAll();
-        return $lista;   
+        return $lista;
     }
 
     public static function pegarMarca($id)
@@ -75,7 +76,7 @@ class Marca
 
     public function excluir($marca)
     {
-        
+
         $conexao = Conexao::pegarConexao();
         $apagar = "  delete from tbmarca
                         where idMarca = " . $marca->getIdMarca();
