@@ -32,7 +32,7 @@
             <div class="card">
                 <div class="card-body">
                     <h3>Veiculo da locação</h3>
-                    <input type="number" name="idVeiculo" placeholder="id do veiculo">
+                    <input type="text" name="veiculo" placeholder="Nome do veiculo">
                 </div>
             </div>
 
