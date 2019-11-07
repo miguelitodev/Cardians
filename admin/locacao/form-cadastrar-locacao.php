@@ -11,23 +11,13 @@
 
 <body>
     <div>
-        <h1>Fazer locação</h1>
+        <div class="card text-left">
+          <div class="card-body">
+              <h1>Fazer locação</h1>
+          </div>
+        </div>
         <form action="cadastrar-locacao.php" method="POST">
-            <div class="card">
-                <div class="card-body">
-                    <h3>Dados do cliente</h3>
-                    <input type="text" name="nome" placeholder="Nome completo">
-                    <input type="text" name="cpf" placeholder="CPF">
-                    <input type="text" name="cnh" placeholder="CNH">
-                    <input type="text" name="cep" placeholder="CEP">
-                    <input type="text" name="endereco" placeholder="Endereço">
-                    <input type="text" name="numeroCasa" placeholder="N° casa/apt">
-                    <input type="text" name="complemento" placeholder="Complemento">
-                    <input type="text" name="bairro" placeholder="Bairro">
-                    <input type="text" name="cidade" placeholder="Cidade">
-                    <input type="text" name="uf" placeholder="UF">
-                </div>
-            </div>
+            
 
             <div class="card">
                 <div class="card-body">
