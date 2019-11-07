@@ -10,6 +10,7 @@
         private $idUsuario;
         private $modeloVeiculo;
         private $nomeUsuario;
+        
         private $idCliente;
         private $nomeCliente;
         private $cpfCliente;
