@@ -25,8 +25,7 @@ class Marca
         $this->nomeMarca = $nome;
     }
 
-    public function cadastrar($marca)
-    {
+    public function cadastrar($marca){
         $conexao = Conexao::pegarConexao();
         $insert = "  insert into tbmarca(nomeMarca)
                         values ('" . $marca->getNomeMarca() . "')
