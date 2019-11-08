@@ -44,8 +44,7 @@
                                     '" . $usuario->getLoginUsuario() . "',
                                     '" . $usuario->getSenhaUsuario() . "')
                         ";
-            $conexao->exec($insert);
-            return 'Cadastro realizado com sucesso!';
+            return $conexao->exec($insert);
         }
 
         public function editar($id)
