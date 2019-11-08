@@ -64,7 +64,7 @@
 		</nav>
       
 		<div class="container">
-			<form class="form-cadastrar" action="form-cadastrar-usuario.php" method="POST">
+			<form class="form-cadastrar" action="cadastrar-usuario.php" method="POST">
 				<h2 class="form-cadastrar-title">Cadastrar</h2>
 				<div class="form-group">
 					<input type="text" class="form-control" name="txtNome" placeholder="Nome Completo" required />
@@ -79,25 +79,6 @@
 			</form>
 		</div>
 
-		<?php
-
-	include_once("../../classes/Usuario.php");
-	$usuario = new Usuario();
-
-	if(isset($_POST["txtNome"]))
-		$usuario->setNomeUsuario($_POST["txtNome"]);
-	
-	
-	if(isset($_POST["txtEmail"]))
-		$usuario->setLoginUsuario($_POST["txtEmail"]);
-
-	
-	if(isset($_POST["txtSenha"]))
-		$usuario->setSenhaUsuario($_POST["txtSenha"]);
-
-	if($usuario->cadastrar($usuario) != false)
-		header("Location: sucesso-cadastro.html");
-?>
 
     	<script type="text/javascript" src="../../js/jquery.slim.min.js"></script>
         <script type="text/javascript" src="../../js/bootstrap.min.js"></script>

@@ -9,11 +9,11 @@
             $this->idUsuario = $id;
         }
 
-        public function getIdUsuario($id){
+        public function getIdUsuario(){
             return $this->idUsuario;
         }
 
-        public function getNomeUsuario($nome){
+        public function getNomeUsuario(){
             return $this->nomeUsuario;
         }
 
@@ -21,7 +21,7 @@
             $this->nomeUsuario = $nome;
         }
 
-        public function getLoginUsuario($login){
+        public function getLoginUsuario(){
             return $this->loginUsuario;
         }
 
@@ -33,13 +33,13 @@
             $this->senhaUsuario = $senha;
         }
 
-        public function getSenhaUsuario($senha){
+        public function getSenhaUsuario(){
             return $this->senhaUsuario;
         }
 
         public function cadastrar($usuario){
             $conexao = Conexao::pegarConexao();
-            $insert = "  insert into tbusuario(nomeUsuario, senhaUsuario)
+            $insert = "  insert into tbusuario(nomeUsuario, loginUsuario, senhaUsuario)
                             values ('" . $usuario->getNomeUsuario() . "',
                                     '" . $usuario->getLoginUsuario() . "',
                                     '" . $usuario->getSenhaUsuario() . "')
@@ -85,12 +85,15 @@
             return $lista;
         }
     
-        public static function pegarMarca($id){
-            $sql = "SELECT idUsuario, nomeUsuario, loginUsuario FROM tbusuario WHERE idUsuario = " . $id . ";";
+        public static function pegarUsuario($id){
+            $sql = "SELECT idUsuario, nomeUsuario, loginUsuario, senhaUsuario
+                    FROM tbusuario WHERE idUsuario = " . $id . ";";
             $result = Conexao::pegarConexao()->query($sql)->fetch();
-            $marca = new Usuario();
-            $marca->setIdMarca($result["idUsuario"]);
-            $marca->setNomeMarca($result["nomeUsuario"]);
-            $marca->setLoginUsuario($result["loginUsuario"]);
-            return $marca;
+            $usuario = new Usuario();
+            $usuario->setIdUsuario($result["idUsuario"]);
+            $usuario->setNomeUsuario($result["nomeUsuario"]);
+            $usuario->setLoginUsuario($result["loginUsuario"]);
+            $usuario->setSenhaUsuario($result["senhaUsuario"]);
+            return $usuario;
         }
+    }

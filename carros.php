@@ -39,10 +39,12 @@
         <?php
             $veiculo = new Veiculo();
             $carro = $veiculo->pesquisar();
-
+        
 
         ?>
        
+        <img src="<?php echo $linha?>">
+
         <!-- INICIO DO RODAPÉ -->
         <footer class="page-footer font-small indigo" style="background-color: #DCDCDC;" id="desceai">
             <div class="container">
