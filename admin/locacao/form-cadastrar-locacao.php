@@ -46,9 +46,11 @@
             <div class="card">
                 <div class="card-body">
                     <h3>Dados do cliente</h3>
-                        <input type="text" name="cliente" value="Nome do cliente">
+                        <input id="cliente" type="text" name="cliente" placeholder="Nome do cliente" list="listaCliente">
                         <datalist id="listaCliente" name="listaCliente">
                         <?php
+                            require_once 'global.php';
+
                             $cliente = new Cliente();
                             $lista = $cliente->listar();
 					        foreach ($lista as $linha) {

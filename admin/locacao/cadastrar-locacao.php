@@ -7,10 +7,9 @@ try {
 
     $locacao = new Locacao();
 
-    $locacao->pegarVeiculo($_POST['veiculo']);
-    $locacao->pegarCliente($_POST['cliente']);
-    $locacao->pegarUsuario($_POST['usuario']);
-
+    $locacao->setIdCliente($_POST['cliente']);
+    $locacao->setIdUsuario($_POST['usuario']);
+    $locacao->setIdVeiculo($_POST['veiculo']);
     $locacao->setDataInicial($_POST['dataInicial']);
     $locacao->setDataFinal($_POST['dataFinal']);
     $locacao->setValorTotal($_POST['valorTotal']);
