@@ -1,5 +1,5 @@
 <?php
-class Usuario
+class Cliente
 {
 
     private $idCliente;
@@ -130,7 +130,7 @@ class Usuario
 
         $insert =   "   INSERT INTO     tbcliente(nomeCliente, cpfCliente, cnhCliente, enderecoCliente,
                                         numeroCliente, complementoCliente, bairroCliente, cidadeCliente, cepCliente, ufCliente)
-                        VALUES ('" . $cliente->getNomeCliente() . "',
+                        VALUES (    '" . $cliente->getNomeCliente() . "',
                                     '" . $cliente->getCpfCliente() . "',
                                     '" . $cliente->getCnhCliente() . "',
                                     '" . $cliente->getEnderecoCliente() . "',
@@ -151,7 +151,6 @@ class Usuario
         $conexao = Conexao::pegarConexao();
 
         $update = "     UPDATE  tbcliente
-                        
                         SET     nomeCliente =           '" . $id->getNomeCliente() . "',
                                 cpfCliente =            '" . $id->getCpfCliente() . "',
                                 cnhCliente =            '" . $id->getCnhCliente() . "',
@@ -161,9 +160,8 @@ class Usuario
                                 bairroCliente =         '" . $id->getBairroCliente() . "',
                                 cidadeCliente =         '" . $id->getCidadeCliente() . "',
                                 cepCliente =            '" . $id->getCepCliente() . "',
-                                ufCliente =             '" . $id->getUfCliente() . "',
-                        
-                        WHERE idClientes = " . $id->getIdCliente();
+                                ufCliente =             '" . $id->getUfCliente() . "'
+                        WHERE idCliente = " . $id->getIdCliente(); 
 
         $conexao->exec($update);
         return 'Atualização realizada com sucesso';
@@ -173,8 +171,8 @@ class Usuario
     public function listar()
     {
         $conexao = Conexao::pegarConexao();
-        $select = "SELECT   idClie, nomeCliente, cpfCliente, cnhCliente, enderecoCliente,
-                            numeroCliente, complementoCliente, bairroCliente, cidadeClientente,
+        $select = "SELECT   idCliente, nomeCliente, cpfCliente, cnhCliente, enderecoCliente,
+                            numeroCliente, complementoCliente, bairroCliente, cidadeCliente,
                             cepCliente, ufCliente
 
                     FROM    tbcliente";
@@ -193,9 +191,7 @@ class Usuario
                         
                         FROM tbcliente
                         
-                        WHERE   idCliente, nomeCliente, cpfCliente, cnhCliente, enderecoCliente,
-                                numeroCliente, complementoCliente, bairroCliente, cidadeCliente,
-                                cepCliente, ufCliente
+                        WHERE   nomeCliente
                         LIKE '$campoPesquisa'
                     ";
 
@@ -220,11 +216,16 @@ class Usuario
         $result = Conexao::pegarConexao()->query($select)->fetch();
 
         $cliente = new Cliente();
-        $cliente->setIdCliente($result["idCliente"]);
-        $cliente->setNomeCliente($result["nomeCliente"]);
-        $cliente->setCpfCliente($result["cpfCliente"]);
+        $cliente->setIdCliente($result['idCliente']);
+        $cliente->setNomeCliente($result['nomeCliente']);
+        $cliente->setCpfCliente($result['cpfCliente']);
+        $cliente->setCnhCliente($result['cnhCliente']);
+        $cliente->setCepCliente($result['cepCliente']);
+        $cliente->setEnderecoCliente($result['enderecoCliente']);
+        $cliente->setNumeroCliente($result['numeroCliente']);
+        $cliente->setComplementoCliente($result['complementoCliente']);
+        $cliente->setBairroCliente($result['bairroCliente']);
         $cliente->setCidadeCliente($result["cidadeCliente"]);
-        $cliente->setCepCliente($result["cepCliente"]);
         $cliente->setUfCliente($result["ufCliente"]);
 
         return $cliente;
@@ -237,7 +238,7 @@ class Usuario
         $conexao = Conexao::pegarConexao();
 
         $delete =   "   DELETE FROM tbcliente
-                        idCliente = " . $cliente->getIdCliente();
+                        WHERE idCliente = " . $cliente->getIdCliente();
 
         $conexao->exec($delete);
 

@@ -24,17 +24,31 @@
 	<div class="card">
 		<div class="card-body">
 			<h1 class="card-title">Menu Administrativo</h1>
-			<a href="cadastrar-locacao.php">
+			
+			<a href="locacao/form-cadastrar-locacao.php">
 				<button>
 					Fazer locação
 				</button>
 			</a>
-			<br>
-			<a href="cadastrar-veiculo.php">
+
+			<a href="veiculo/form-cadastrar-veiculo.php">
 				<button>
 					Cadastro veiculo
 				</button>
 			</a>
+
+			<a href="cliente/form-cadastrar-cliente.php">
+				<button>
+					Cadastro cliente
+				</button>
+			</a>
+			
+			<a href="marca/form-cadastrar-marca.php">
+				<button>
+					Cadastro marca
+				</button>
+			</a>
+
 		</div>
 	</div>
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

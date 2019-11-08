@@ -11,13 +11,21 @@
 
 <body>
     <div>
-        <div class="card text-left">
-          <div class="card-body">
-              <h1>Fazer locação</h1>
-          </div>
+        <div class="card">
+            <div class="card-body">
+                <h1 class="card-title">Fazer locação</h1>
+                <a href="../menu-admin.php">
+                    <button style="
+                    width:100%;
+                    height: 40px;    
+                    border: none;">
+                        Voltar
+                    </button>
+                </a>
+            </div>
         </div>
         <form action="cadastrar-locacao.php" method="POST">
-            
+
 
             <div class="card">
                 <div class="card-body">
@@ -46,12 +54,21 @@
             <div class="card">
                 <div class="card-body">
                     <input type="submit" value="Fazer locação">
-                    <a href="../menu-admin.php">
-                        <input type="submit" value="Voltar">
-                    </a>
                 </div>
             </div>
         </form>
+        <div class="card">
+            <div class="card-body">
+                <a href="../menu-admin.php">
+                    <button style="
+                    width:100%;
+                    height: 40px;    
+                    border: none;">
+                        Voltar
+                    </button>
+                </a>
+            </div>
+        </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

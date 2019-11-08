@@ -1,6 +1,5 @@
 <?php
 
-//função que faz parte da SPL que significa Standard PHP Library
 spl_autoload_register('carregarClasse');
 
 function carregarClasse($nomeClasse)
