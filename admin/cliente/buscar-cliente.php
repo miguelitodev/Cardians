@@ -3,10 +3,14 @@
 require_once 'global.php';
 
 try{
+
     $cliente = new Cliente();
+
     if(!empty($_GET['campoPesquisa'])){
+
         $campoPesquisa = $_GET['campoPesquisa']."%";
         $lista = $cliente->pesquisar($campoPesquisa);
+        
         foreach ($lista as $linha){
         echo "<tr>
                 <td> ". $linha['idCliente'] ."</td>
