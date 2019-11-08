@@ -45,7 +45,23 @@
 
             <div class="card">
                 <div class="card-body">
-                    <h3>Dados do funcionário</h3>
+                    <h3>Dados do cliente</h3>
+                        <input type="text" name="cliente" value="Nome do cliente">
+                        <datalist id="listaCliente" name="listaCliente">
+                        <?php
+                            $cliente = new Cliente();
+                            $lista = $cliente->listar();
+					        foreach ($lista as $linha) {
+					            echo ("<option value=" . $linha[idCliente] . ">" . $linha[nomeCliente] . "</option>");
+				            }
+				        ?>
+                        </datalist>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <h3>Dados do Usuário</h3>
                     <input type="text" name="usuario" placeholder="Nome do usuario">
 
                 </div>
