@@ -82,8 +82,9 @@
 
         public function cadastrarLocacao($locacao){
             $conexao = Conexao::pegarConexao();
-            $insert = "  insert into tblocacao(idLocacao, dataInicial, dataFinal, valorTotal, idVeiculo, idUsuario, idCliente)
-                            values ('" . $locacao->getIdLocacao() . "',
+            $insert = "     INSERT INTO tblocacao(idLocacao, dataInicial, dataFinal, valorTotal, idVeiculo, idUsuario, idCliente)
+                            
+                            VALUES ('" . $locacao->getIdLocacao() . "',
                                     '". $locacao->getDataInicial() ."',
                                     '". $locacao->getDataFinal() ."',
                                     '". $locacao->getValorTotal() ."',
@@ -93,23 +94,5 @@
                         ";
             $conexao->exec($insert);
             return 'Cadastro realizado com sucesso!';
-        }
-
-        public static function pegarVeiculo($modelo){
-            $select = "SELECT idVeiculo, modeloVeiculo FROM tbveiculo WHERE modeloVeiculo LIKE " . $modelo . ";";
-            $result = Conexao::pegarConexao()->query($select)->fetch();
-            $locacao = new Locacao();
-            $locacao->setIdVeiculo($result["idVeiculo"]);
-            $locacao->setModeloVeiculo($result["modeloVeiculo"]);
-            return $locacao;
-        }
-
-        public static function pegarFuncionario($usuario){
-            $select = "SELECT idUsuario, nomeUsuario FROM tbusuario WHERE nomeUsuario LIKE " . $usuario . ";";
-            $result = Conexao::pegarConexao()->query($select)->fetch();
-            $locacao = new Locacao();
-            $locacao->setIdUsuario($result["idUsuario"]);
-            $locacao->setNomeUsuario($result["nomeUsuario"]);
-            return $locacao;
         }
     }

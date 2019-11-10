@@ -3,26 +3,16 @@
 require_once 'global.php';
 
 try {
+    //header('Location: form-cadastrar-locacao.php');
+
     $locacao = new Locacao();
 
-    $locacao->setNomeCliente($_POST['nome']);
-    $locacao->setCepCliente($_POST['cpf']);
-    $locacao->setCnhCliente($_POST['cnh']);
-    $locacao->setCepCliente($_POST['cep']);
-    $locacao->setEnderecoCliente($_POST['endereco']);
-    $locacao->setNumeroCliente($_POST['numeroCasa']);
-    $locacao->setComplementoCliente($_POST['complemento']);
-    $locacao->setBairroCliente($_POST['bairro']);
-    $locacao->setCidadeCliente($_POST['cidade']);
-    $locacao->setUfCliente($_POST['uf']);
-    
-    $locacao->pegarVeiculo($_POST['veiculo']);
-    
-    $locacao->set($_POST['dataInicial']);
-    $locacao->set($_POST['dataFinal']);
-    $locacao->set($_POST['valorTotal']);
-
-    $locacao->pegarFuncionario($_POST['usuario']);
+    $locacao->setIdCliente($_POST['cliente']);
+    $locacao->setIdUsuario($_POST['usuario']);
+    $locacao->setIdVeiculo($_POST['veiculo']);
+    $locacao->setDataInicial($_POST['dataInicial']);
+    $locacao->setDataFinal($_POST['dataFinal']);
+    $locacao->setValorTotal($_POST['valorTotal']);
 
     $locacao->cadastrarLocacao($locacao);
 
