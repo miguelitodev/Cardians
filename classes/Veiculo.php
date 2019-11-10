@@ -83,7 +83,7 @@
 
         public function listar(){
             $conexao = Conexao::pegarConexao();
-            $querySelect = "SELECT idVeiculo, anoVeiculo, corVeiculo, modeloVeiculo, valorDiariaVeiculo, idMarca FROM tbveiculo";
+            $querySelect = "SELECT idVeiculo, anoVeiculo, corVeiculo, modeloVeiculo, valorDiariaVeiculo, imgVeiculo, idMarca FROM tbveiculo";
             $resultado = $conexao->query($querySelect);
             $lista = $resultado->fetchAll();
             return $lista;
@@ -92,17 +92,33 @@
         public function pesquisar($campoPesquisa){
             $conexao = Conexao::pegarConexao();
             $select = "select idVeiculo, anoVeiculo, corVeiculo, modeloVeiculo,
-                         valorDiariaVeiculo, idMarca from tbveiculo
+                         valorDiariaVeiculo, imgVeiculo, idMarca from tbveiculo
                             where modeloVeiculo like '$campoPesquisa'";
             $resultado = $conexao->query($select);
             $lista = $resultado->fetchAll();
             return $lista;
         }
 
+        public function pegarIdVeiculo(){
+            $conexao = Conexao::pegarConexao();
+            $select = "SELECT MAX(idVeiculo) AS 'cod' FROM tbveiculo";
+            $resultado = $conexao->query($select);
+            $lista = $resultado->fetchAll();
+            foreach($lista as $linha){
+                $cod = ($linha['cod']);
+            }
+            return $cod;
+        }
 
+        public function fotoVeiculo($carro){
+            $conexao = Conexao::pegarConexao();
+            $update = "UPDATE tbveiculo 
+                        SET imgVeiculo = '".$carro->getImgVeiculo()."' WHERE idVeiculo = ".$carro->getIdVeiculo()."";
+            $conexao->exec($update);
+            return $update;
+        }
 
-        public static function pegarVeiculo($id)
-        {
+        public static function pegarVeiculo($id){
             $sql = "SELECT idVeiculo, modeloVeiculo, corVeiculo, imgVeiculo, anoVeiculo, valorDiariaVeiculo FROM tbveiculo WHERE idveiculo = " . $id . ";";
             $result = Conexao::pegarConexao()->query($sql)->fetch();
             $veiculo = new Veiculo();
