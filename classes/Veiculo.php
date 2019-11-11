@@ -83,7 +83,8 @@
 
         public function listar(){
             $conexao = Conexao::pegarConexao();
-            $querySelect = "SELECT idVeiculo, anoVeiculo, corVeiculo, modeloVeiculo, valorDiariaVeiculo, imgVeiculo, idMarca FROM tbveiculo";
+            $querySelect = "SELECT idVeiculo, anoVeiculo, corVeiculo, modeloVeiculo, valorDiariaVeiculo, imgVeiculo, idMarca
+                            FROM tbveiculo";
             $resultado = $conexao->query($querySelect);
             $lista = $resultado->fetchAll();
             return $lista;

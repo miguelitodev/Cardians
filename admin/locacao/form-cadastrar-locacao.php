@@ -1,3 +1,16 @@
+<?php
+require_once 'global.php';
+
+$cliente = new Cliente();
+$listaCliente = $cliente->listar();
+
+$usuario = new Usuario();
+$listaUsuario = $usuario->listar();
+
+// $veiculo = new Veiculo();
+// $listaVeiculo = $veiculo->listar();
+?>
+
 <!doctype html>
 <html lang="pt-br">
 
@@ -10,82 +23,132 @@
 </head>
 
 <body>
-    <div>
-        <div class="card">
-            <div class="card-body">
-                <h1 class="card-title">Fazer locação</h1>
-                <a href="../menu-admin.php">
-                    <button style="
-                    width:100%;
-                    height: 40px;    
-                    border: none;">
-                        Voltar
-                    </button>
-                </a>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow ">
+        <div class="container-fluid">
+            <a href="index.php">
+                <img src="../../img/menu_pag/logoSite.png" width="45" title="Home">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="carros.php">
+                            <img src="../../img/home/icone-carro.png" style="width: 30px; margin-right: 10px;" title="Carros" />
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contato.php">
+                            <img src="../../img/menu_pag/logoContato.png" style="width: 30px; margin-right: 10px;" title="Contato" />
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
-        <form action="cadastrar-locacao.php" method="POST">
+    </nav>
 
 
-            <div class="card">
-                <div class="card-body">
-                    <h3>Veiculo da locação</h3>
-                    <input type="text" name="veiculo" placeholder="Nome do veiculo">
-                </div>
-            </div>
+    <div class="card">
+        <div class="card-body">
+            <img style="width: 15%;" src="../../img/menu_pag/logoSite.png">
+        </div>
+        <div class="card-body">
+            <h4 class="card-title">Locação</h4>
+            <p class="card-text">Fazer locação</p>
+        </div>
+        <form action="cadastrar-locacao.php" method="post">
 
-            <div class="card">
-                <div class="card-body">
-                    <h3>Dados da locação</h3>
-                    <input type="text" name="dataInicial" placeholder="Data inicial">
-                    <input type="text" name="dataFinal" placeholder="Data final">
-                    <input type="money" name="valorTotal" placeholder="Valor total">
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-body">
-                    <h3>Dados do cliente</h3>
-                        <input id="cliente" type="text" name="cliente" placeholder="Nome do cliente" list="listaCliente">
-                        <datalist id="listaCliente" name="listaCliente">
-                        <?php
-                            require_once 'global.php';
-
-                            $cliente = new Cliente();
-                            $lista = $cliente->listar();
-					        foreach ($lista as $linha) {
-					            echo ("<option value=" . $linha[idCliente] . ">" . $linha[nomeCliente] . "</option>");
-				            }
-				        ?>
-                        </datalist>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-body">
-                    <h3>Dados do Usuário</h3>
-                    <input type="text" name="usuario" placeholder="Nome do usuario">
-
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-body">
-                    <input type="submit" value="Fazer locação">
-                </div>
-            </div>
-        </form>
-        <div class="card">
             <div class="card-body">
-                <a href="../menu-admin.php">
-                    <button style="
-                    width:100%;
-                    height: 40px;    
-                    border: none;">
-                        Voltar
-                    </button>
-                </a>
+                <input type="text" name="usuario" id="usuario" placeholder="Nome do usuário" list="listaUsuario">
+                <datalist id="listaUsuario">
+                    <?php
+                    foreach ($listaUsuario as $linha) {
+                        echo ("<option value=" . $linha[idUsuario] . ">" . $linha[nomeUsuario] . "</option>");
+                    }
+                    ?>
+                </datalist>
             </div>
+
+            <div class="card-body">
+                <input type="text" name="cliente" id="cliente" placeholder="Nome do cliente" list="listaCliente">
+                <datalist id="listaCliente">
+                    <?php
+                    foreach ($listaCliente as $linha) {
+                        echo ("<option value=" . $linha[idCliente] . ">" . $linha[nomeCliente] . "</option>");
+                    }
+                    ?>
+                </datalist>
+            </div>
+
+            <div class="card-body">
+                <input type="text" name="veiculo" id="veiculo" placeholder="Nome do veiculo" list="listaVeiculo">
+                <datalist id="listaVeiculo">
+                    <?php
+                    foreach ($listaVeiculo as $linha) {
+                        echo ("<option value=" . $linha[idVeiculo] . ">" . $linha[modeloVeiculo] . "</option>");
+                    }
+                    ?>
+                </datalist>
+            </div>
+
+            <div class="card-body">
+                <input type="text" name="dataInicial" id="dataInicial" placeholder="Data inicial">
+            </div>
+
+            <div class="card-body">
+                <input type="text" name="dataFinal" id="dataFinal" placeholder="Data final">
+            </div>
+
+            <div class="card-body">
+                <input type="text" name="valorDiaria" id="valorDiaria" placeholder="Valor da diária">
+            </div>
+
+            <div class="card-body">
+                <input type="submit" value="Enviar">
+            </div>
+
+        </form>
+        <div class="card-body">
+            <a href="../menu-admin.php">
+                <button class="botoes">Voltar</button>
+            </a>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Locações Cadastradas</h4>
+            <p class="card-text">Procurar, editar ou apagar uma locação</p>
+            <form action="buscar-locacao.php" method="post">
+                <input type="text" name="buscarLocacao" id="buscarLocacao" placeholder="Pesquisar por uma locação">
+            </form>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Cliente</th>
+                        <th>Veiculo</th>
+                        <th>Data inicial</th>
+                        <th>Data Final</th>
+                        <th>Valor Total</th>
+                        <th class="acao">Editar</th>
+                        <th class="acao">Excluir</th>
+                    </tr>
+                </thead>
+                <tbody id="resultado">
+                    <?php foreach ($lista as $linha) { ?>
+                        <tr>
+                            <td><?php echo $linha['nomeCliente'] ?></td>
+                            <td><?php echo $linha['modeloVeiculo'] ?></td>
+                            <td><?php echo $linha['dataInicial'] ?></td>
+                            <td><?php echo $linha['dataFinal'] ?></td>
+                            <td><?php echo $linha['valorTotal'] ?></td>
+                            <td><a href="form-editar-cliente.php?id=<?php echo $linha['idCliente'] ?>">Editar</a></td>
+                            <td><a href="excluir-cliente.php?id=<?php echo $linha['idCliente'] ?>">Excluir</a></td>
+                        </tr>
+                    <?php } ?>
+                </tbody>
+            </table>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

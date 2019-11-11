@@ -31,6 +31,7 @@ try {
 <body>
 <div class="card">
             <div class="card-body">
+				<img style="width: 15%;"src="../../img/menu_pag/logoSite.png">
 			<h1>Cadastrar veiculo</h1>
 		<form method="POST" action="cadastrar-veiculo.php" enctype="multipart/form-data">
 			<input type="text" placeholder="Modelo do veiculo" name="modelo">
