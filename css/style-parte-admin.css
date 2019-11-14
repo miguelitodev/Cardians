@@ -36,6 +36,7 @@ form{
     height: 40px;
 }
 
+/* Login.html */
 .form-login {
     background-color: #f8f9fa;
     color: #055353;
@@ -57,6 +58,61 @@ form{
     letter-spacing: 5px;
     margin-bottom: 80px;
 }
-input{
+.inputEmail{
+    background-color: #f8f9fa;
     border: none;
+    width: 100%;
+    outline: none;
+}
+
+.inputSenha{
+    background-color: #f8f9fa;
+    border: none;
+    width: 100%;
+    outline: none;
+}
+
+.btnEntrar{
+    background-color: #055353;
+    border: none;
+    color: white;
+    width: 100%;
+    height: 10%;
+    border-radius: 5px;
+}
+
+
+/* form-cadastrar-usuario.php */
+.form-cadastrar {
+    background-color: #f8f9fa;
+    color: #055353;
+    width: 30vw;
+    height: 70vh;
+    margin: 0 auto;
+    margin-top: 130px;
+    margin-bottom: 0;
+    padding: 50px;
+    padding-top: 70px;
+    border-radius: 10px;
+    box-shadow: -10px 20px 60px rgba(0, 50, 30, 0.2);
+}
+.form-cadastrar-title {
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 40pt;
+    font-weight: bold;
+    letter-spacing: 5px;
+    margin-bottom: 80px;
+}
+
+.form-cadastrar input{
+    border: none;
+    outline: none;
+    background-color: #f8f9fa;
+    width: 100%;
+}
+
+.form-cadastrar button{
+    background-color: #055353;
+    color: white;
 }

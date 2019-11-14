@@ -51,13 +51,16 @@ $listaUsuario = $usuario->listar();
 
 
     <div class="card">
+
         <div class="card-body">
             <img style="width: 15%;" src="../../img/menu_pag/logoSite.png">
         </div>
+
         <div class="card-body">
             <h4 class="card-title">Locação</h4>
             <p class="card-text">Fazer locação</p>
         </div>
+
         <form action="cadastrar-locacao.php" method="post">
 
             <div class="card-body">
@@ -110,14 +113,19 @@ $listaUsuario = $usuario->listar();
             </div>
 
         </form>
+
         <div class="card-body">
             <a href="../menu-admin.php">
                 <button class="botoes">Voltar</button>
             </a>
         </div>
+        
     </div>
+
     <div class="card">
+
         <div class="card-body">
+            
             <h4 class="card-title">Locações Cadastradas</h4>
             <p class="card-text">Procurar, editar ou apagar uma locação</p>
             <form action="buscar-locacao.php" method="post">

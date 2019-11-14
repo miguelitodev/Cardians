@@ -39,10 +39,11 @@
 
         public function cadastrar($usuario){
             $conexao = Conexao::pegarConexao();
-            $insert = "  insert into tbusuario(nomeUsuario, loginUsuario, senhaUsuario)
-                            values ('" . $usuario->getNomeUsuario() . "',
-                                    '" . $usuario->getLoginUsuario() . "',
-                                    '" . $usuario->getSenhaUsuario() . "')
+            $insert = " INSERT INTO tbusuario(nomeUsuario, loginUsuario, senhaUsuario)
+                        VALUES( '" . $usuario->getNomeUsuario() . "',
+                                '" . $usuario->getLoginUsuario() . "',
+                                '" . $usuario->getSenhaUsuario() . "'
+                                )
                         ";
             return $conexao->exec($insert);
         }
@@ -50,11 +51,13 @@
         public function editar($id)
         {
             $conexao = Conexao::pegarConexao();
-            $update = "  update tbusuario
-                            set nomeUsuario = '" . $id->getNomeUsuario() . "',
-                            set senhaUsuario = '" . $id->getSenhaUsuario() . "',
-                            set loginUsuario = '" . $id->getLoginUsuario() . "'
-                            where idUsuario = " . $id->getIdUsuario();
+            $update = "     UPDATE tbusuario
+
+                            SET nomeUsuario = '" . $id->getNomeUsuario() . "',
+                                senhaUsuario = '" . $id->getSenhaUsuario() . "',
+                                loginUsuario = '" . $id->getLoginUsuario() . "'
+                            
+                            WHERE idUsuario = " . $id->getIdUsuario();
             $conexao->exec($update);
             return 'Atualização realizada com sucesso';
         }
