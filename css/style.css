@@ -1,17 +1,42 @@
- 
-#title{
-    text-align: center;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+/* index.php */
+
+footer{
+    background-color: aliceblue;
 }
-.card{
-    display: inline-block;
-    float: left; 
-    width: 5%;
+
+
+.campo {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 660px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+ }
+
+.titleIndex img{
+    width: 20%;
 }
-.card-text{
-    text-align: justify;
+
+.parallax{
+    background-attachment: fixed;
 }
-.card{
-    width:100%;
-    height:auto;
-  }
+
+.carro1{
+    background-image: url("../img/home/carro-parallax.jpg");
+}
+
+.carro2{
+    background-image: url("../img/menu_pag/C1_BMW_SLIDER.jpg");
+}
+
+.carro3{
+    background-image: url("../img/menu_pag/C2_TESLA_SLIDER.jpg");
+}
+
+.carro4{
+    background-image: url("../img/menu_pag/C3_MERCEDES_SLIDER.jpg");
+}

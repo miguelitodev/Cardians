@@ -7,14 +7,13 @@ try {
 
     $locacao = new Locacao();
 
-    $locacao->setIdCliente($_POST['cliente']);
     $locacao->setIdUsuario($_POST['usuario']);
     $locacao->setIdVeiculo($_POST['veiculo']);
     $locacao->setDataInicial($_POST['dataInicial']);
     $locacao->setDataFinal($_POST['dataFinal']);
-    $locacao->setValorTotal($_POST['valorTotal']);
+    $locacao->setValorTotal($_POST['valorDiaria']);
 
-    $locacao->cadastrarLocacao($locacao);
+    $locacao->cadastrar($locacao);
 
 } catch (Exception $erro) {
     echo '<pre>';

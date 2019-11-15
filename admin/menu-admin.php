@@ -21,10 +21,47 @@
 </head>
 
 <body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light shadow ">
+		<div class="container-fluid">
+			<a href="index.php">
+				<img src="../img/menu_pag/logoSite.png" width="45" title="Home">
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="carros.php">
+							<img src="../img/home/icone-carro.png" style="width: 30px; margin-right: 10px;" title="Carros" />
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="contato.php">
+							<img src="../img/menu_pag/logoContato.png" style="width: 30px; margin-right: 10px;" title="Contato" />
+						</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Cadastros</a>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="locacao/form-cadastrar-locacao.php">Locação</a>
+							<a class="dropdown-item" href="cliente/form-cadastrar-cliente.php">Cliente</a>
+							<a class="dropdown-item" href="usuario/form-cadastrar-usuario.php">Usário</a>
+							<a class="dropdown-item" href="veiculo/form-cadastrar-veiculo.php">Veiculo</a>
+							<a class="dropdown-item" href="marca/form-cadastrar-marca.php">Marca</a>
+							<a class="dropdown-item" href="menu-admin.php">Menu</a>												
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+
 	<div class="card">
 		<div class="card-body">
 			<h1 class="card-title">Menu Administrativo</h1>
-			
+
 			<a href="locacao/form-cadastrar-locacao.php">
 				<button>
 					Fazer locação
@@ -42,7 +79,7 @@
 					Cadastro cliente
 				</button>
 			</a>
-			
+
 			<a href="marca/form-cadastrar-marca.php">
 				<button>
 					Cadastro marca

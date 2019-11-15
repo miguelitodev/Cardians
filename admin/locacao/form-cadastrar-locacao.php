@@ -7,8 +7,8 @@ $listaCliente = $cliente->listar();
 $usuario = new Usuario();
 $listaUsuario = $usuario->listar();
 
-// $veiculo = new Veiculo();
-// $listaVeiculo = $veiculo->listar();
+$veiculo = new Veiculo();
+$listaVeiculo = $veiculo->listar();
 ?>
 
 <!doctype html>
@@ -97,11 +97,11 @@ $listaUsuario = $usuario->listar();
             </div>
 
             <div class="card-body">
-                <input type="text" name="dataInicial" id="dataInicial" placeholder="Data inicial">
+                <input type="text" name="dataInicial" id="dataInicial" placeholder="Data inicial: AAAA-MM-DD">
             </div>
 
             <div class="card-body">
-                <input type="text" name="dataFinal" id="dataFinal" placeholder="Data final">
+                <input type="text" name="dataFinal" id="dataFinal" placeholder="Data final: AAAA-MM-DD">
             </div>
 
             <div class="card-body">
@@ -119,13 +119,13 @@ $listaUsuario = $usuario->listar();
                 <button class="botoes">Voltar</button>
             </a>
         </div>
-        
+
     </div>
 
     <div class="card">
 
         <div class="card-body">
-            
+
             <h4 class="card-title">Locações Cadastradas</h4>
             <p class="card-text">Procurar, editar ou apagar uma locação</p>
             <form action="buscar-locacao.php" method="post">
