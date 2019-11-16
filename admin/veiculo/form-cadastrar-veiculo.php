@@ -112,10 +112,6 @@ try {
 			</a>
 
 		</div>
-<<<<<<< HEAD
-=======
-	</div>
->>>>>>> da978d6b748ec34140bfa9830dfe71b69b2f862e
 	</div>
 	<div class="card">
 		<div class="card-body">
@@ -158,13 +154,7 @@ try {
 			</table>
 		</div>
 	</div>
-<<<<<<< HEAD
 	
-=======
-	<div>
-
-	</div>
->>>>>>> da978d6b748ec34140bfa9830dfe71b69b2f862e
 	<div class="card">
 		<div class="card-body">
 			<h1 class="card-title">Fazer locação</h1>
@@ -179,48 +169,6 @@ try {
 		</div>
 	</div>
 
-<<<<<<< HEAD
-=======
-
-	<footer class="page-footer font-small indigo" id="desceai">
-        <div class="container">
-            <div class="row text-center d-flex justify-content-center pt-5 mb-3">
-                <div class="col-md-2 mb-3">
-                    <h6 class="text-uppercase font-weight-bold">
-                        <a class="link" href="../../index.php">
-                            Home
-                        </a>
-                    </h6>
-                </div>
-                <div class="col-md-2 mb-3">
-                    <h6 class="text-uppercase font-weight-bold">
-                        <a class="link" id="contato" href="../../contato.php">
-                            Contato
-                        </a>
-                    </h6>
-                </div>
-            </div>
-            <hr class="rgba-white-light">
-            <div class="row d-flex text-center justify-content-center mb-md-0 mb-4">
-                <div class="col-md-8 col-12 mt-5">
-                    <p>
-                        A Eagle's Car atende você com toda a satisfação e prazer,
-                        pois nós trabalhamos com qualidade de serviço, atendimento
-                        e suporte ao usuário. Dedicação total, para que você sai
-                        com um carro que atenda as suas necessidades.
-                    </p>
-                </div>
-            </div>
-            <hr class="clearfix d-md-none rgba-white-light">
-        </div>
-        <div class="footer-copyright text-center py-3">© 2019 Copyright
-            <a class="link" href="../../index.php">
-                Eagle's Car
-            </a>
-        </div>
-    </footer>
-
->>>>>>> da978d6b748ec34140bfa9830dfe71b69b2f862e
 	<script src="../../js/busca-aproximada-veiculo.js"></script>
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

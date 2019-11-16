@@ -65,7 +65,6 @@
                 <img src="img/menu_pag/C3_MERCEDES_SLIDER.jpg" class="d-block w-100 img-fluid" alt="..." style="background-size: cover">
             </div>
         </div>
-<<<<<<< HEAD
         <!-- FIM DO SLIDER -->
         <div class="jumbotron">
             <h1 class="display-4">Cardians</h1>
@@ -112,46 +111,8 @@
 
                         </p>
                     </div>
-=======
-    </div> -->
-
-    <div class="campo carro2 parallax">
-        <div class="jumbotron jumbotron-fluid">
-            <div class="container">
-                <h1 class="display-4">Fluid jumbotron</h1>
-                <p class="lead">Este é um jumbotron modificado que ocupa todo o espaço horizontal de seu elemento pai.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="campo carro3 parallax">
-
-    </div>
-
-    <div class="campo carro4 parallax">
-
-    </div>
-
-    <footer class="page-footer font-small indigo" id="desceai">
-        <div class="container">
-            <div class="row text-center d-flex justify-content-center pt-5 mb-3">
-                <div class="col-md-2 mb-3">
-                    <h6 class="text-uppercase font-weight-bold">
-                        <a class="link" href="index.php">
-                            Home
-                        </a>
-                    </h6>
-                </div>
-                <div class="col-md-2 mb-3">
-                    <h6 class="text-uppercase font-weight-bold">
-                        <a class="link" id="contato" href="contato.php">
-                            Contato
-                        </a>
-                    </h6>
->>>>>>> da978d6b748ec34140bfa9830dfe71b69b2f862e
                 </div>
             </div>
-<<<<<<< HEAD
             <div class="footer-copyright text-center py-3">© 2019 Copyright
                 <a href="index.html">
                     Cardians
@@ -167,32 +128,3 @@
     </body>
 </html>
 
-=======
-            <hr class="rgba-white-light">
-            <div class="row d-flex text-center justify-content-center mb-md-0 mb-4">
-                <div class="col-md-8 col-12 mt-5">
-                    <p>
-                        A Eagle's Car atende você com toda a satisfação e prazer,
-                        pois nós trabalhamos com qualidade de serviço, atendimento
-                        e suporte ao usuário. Dedicação total, para que você sai
-                        com um carro que atenda as suas necessidades.
-                    </p>
-                </div>
-            </div>
-            <hr class="clearfix d-md-none rgba-white-light">
-        </div>
-        <div class="footer-copyright text-center py-3">© 2019 Copyright
-            <a class="link" href="index.php">
-                Eagle's Car
-            </a>
-        </div>
-    </footer>
-
-
-    <script type="text/javascript" src="js/jquery.slim.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/popper.min.js"></script>
-</body>
-
-</html>
->>>>>>> da978d6b748ec34140bfa9830dfe71b69b2f862e
