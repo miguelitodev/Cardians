@@ -70,24 +70,30 @@ $lista = $usuario->listar();
 
 
 	<div class="card">
+
+		<div class="card-body">
+			<img class="logoCard" src="../../img/icons/logoSite.png">
+		</div>
+
 		<div class="card-body">
 			<h4 class="card-title">Cadastrar usuário</h4>
 			<p class="card-text">Fazer o cadastro de novos usuários</p>
 		</div>
-		<div class="card-body">
-			<form action="cadastrar-usuario.php" method="POST">
-				<div class="form-group">
-					<input type="text" class="form-control" name="txtNome" placeholder="Nome Completo" required />
-				</div>
-				<div class="form-group">
-					<input type="email" class="form-control" name="txtEmail" placeholder="E-mail" required />
-				</div>
-				<div class="form-group">
-					<input type="password" class="form-control" name="txtSenha" placeholder="Senha" required />
-				</div>
-				<button type="submit" class="btn btn-secondary btn-lg btn-block">Cadastrar</button>
-			</form>
-		</div>
+		<form action="cadastrar-usuario.php" method="POST">
+			<div class="card-body">
+				<input type="text" class="form-control" name="txtNome" placeholder="Nome Completo" required />
+			</div>
+
+			<div class="card-body">
+				<input type="email" class="form-control" name="txtEmail" placeholder="E-mail" required />
+			</div>
+			<div class="card-body">
+				<input type="password" class="form-control" name="txtSenha" placeholder="Senha" required />
+			</div>
+			<div class="card-body">
+				<button type="submit" class="botoes">Cadastrar</button>
+			</div>
+		</form>
 	</div>
 
 	<div class="card">
@@ -99,6 +105,8 @@ $lista = $usuario->listar();
 			<form action="buscar-usuario.php">
 				<input type="text" name="campoPesquisa" id="campoPesquisa" placeholder="Pesquisar por um usuário">
 			</form>
+		</div>
+		<div class="card-body">
 			<table class="table">
 				<thead>
 					<tr>
@@ -125,43 +133,53 @@ $lista = $usuario->listar();
 	</div>
 
 
-    <footer class="page-footer font-small indigo" id="desceai">
-        <div class="container">
-            <div class="row text-center d-flex justify-content-center pt-5 mb-3">
-                <div class="col-md-2 mb-3">
-                    <h6 class="text-uppercase font-weight-bold">
-                        <a class="link" href="../../index.php">
-                            Home
-                        </a>
-                    </h6>
-                </div>
-                <div class="col-md-2 mb-3">
-                    <h6 class="text-uppercase font-weight-bold">
-                        <a class="link" id="contato" href="../../contato.php">
-                            Contato
-                        </a>
-                    </h6>
-                </div>
-            </div>
-            <hr class="rgba-white-light">
-            <div class="row d-flex text-center justify-content-center mb-md-0 mb-4">
-                <div class="col-md-8 col-12 mt-5">
-                    <p>
-                        A Eagle's Car atende você com toda a satisfação e prazer,
-                        pois nós trabalhamos com qualidade de serviço, atendimento
-                        e suporte ao usuário. Dedicação total, para que você sai
-                        com um carro que atenda as suas necessidades.
-                    </p>
-                </div>
-            </div>
-            <hr class="clearfix d-md-none rgba-white-light">
-        </div>
-        <div class="footer-copyright text-center py-3">© 2019 Copyright
-            <a class="link" href="../../index.php">
-                Eagle's Car
-            </a>
-        </div>
-    </footer>
+	<footer class="page-footer font-small indigo" id="desceai">
+		<div class="container">
+			<div class="row text-center d-flex justify-content-center pt-5 mb-3">
+				<div class="col-md-2 mb-3">
+					<h6 class="text-uppercase font-weight-bold">
+						<a class="link" href="../../index.php">
+							Home
+						</a>
+					</h6>
+				</div>
+				<div class="col-md-2 mb-3">
+					<h6 class="text-uppercase font-weight-bold">
+						<a class="link" href="../../carros.php">
+							Carros
+						</a>
+					</h6>
+				</div>
+				<div class="col-md-2 mb-3">
+					<h6 class="text-uppercase font-weight-bold">
+						<a class="link" href="../../contato.php">
+							Contato
+						</a>
+					</h6>
+				</div>
+
+			</div>
+			<hr class="rgba-white-light" style="margin: 0 15%;">
+			<div class="row d-flex text-center justify-content-center mb-md-0 mb-4">
+				<div class="col-md-8 col-12 mt-5">
+					<p style="line-height: 1.7rem">
+						Os melhores preços e a maior variedade de veículos para aluguel,
+						de forma que atenda as suas necessidades! Nós da Cardians nos preocupamos
+						com o bem-estar de nossos clientes, e prezamos para que desfrutem
+						dos nossos serviços com o mínimo de burocracia e o máximo de comodidade.
+						Faça sua reserva!
+
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="footer-copyright text-center py-3">© 2019 Copyright
+			<a class="link" href="../../index.html">
+				Cardians
+			</a>
+		</div>
+	</footer>
+
 
 	<script type="text/javascript" src="../../js/jquery.slim.min.js"></script>
 	<script type="text/javascript" src="../../js/bootstrap.min.js"></script>

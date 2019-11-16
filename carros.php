@@ -47,7 +47,7 @@
         <source src="img/videos/VIDEO_ROADSTER.mp4" type="video/mp4">
     </video>
 
-    
+
     <canvas id="canvas"></canvas>
 
 
@@ -56,26 +56,25 @@
             <img src="img/icons/left-seta.png" class="left-seta prev" alt="">
             <img src="img/icons/right-seta.png" class="right-seta next" alt="">
             <div class="post-wrapper">
-            <?php
-            require_once 'global.php';
+                <?php
+                require_once 'global.php';
 
-            try {
-                $marca = new Marca();
-                $veiculo = new Veiculo();
-                $lista = $marca->listarMarca();
-                $listaVeiculo = $veiculo->listar();
+                try {
+                    $marca = new Marca();
+                    $veiculo = new Veiculo();
+                    $lista = $marca->listarMarca();
+                    $listaVeiculo = $veiculo->listar();
+                } catch (Exception $erro) {
+                    echo '<pre>';
+                    print_r($erro);
+                    echo '</pre>';
+                    echo $erro->getMessage();
+                }
 
-            } catch (Exception $erro) {
-                echo '<pre>';
-                print_r($erro);
-                echo '</pre>';
-                echo $erro->getMessage();
-            }
+                foreach ($listaVeiculo as $linha) {
+                    ?>
 
-            foreach ($listaVeiculo as $linha) {
-                ?>
 
-                
                     <div class="post">
                         <img class="veiculos" src="<?php echo $linha['imgVeiculo'] ?>" alt="">
                         <h1 class="modelo"><?php echo $linha['modeloVeiculo'] ?></h1>
@@ -88,21 +87,12 @@
                             <button type="button" class="btn" onclick="window.location.href='admin/locacao/form-cadastrar-locacao.php'">Fazer locação</button>
                         </ul>
                     </div>
-
-
-
-
                 <?php } ?>
-                </div>
-
+            </div>
         </div>
     </div>
-    </div>
-    </div>
-    <!-- INICIO DO RODAPÉ -->
-    <!-- <footer class="footer">
-        <p>Footer</p>
-    </footer> -->
+
+
     <footer class="page-footer font-small indigo" style="background-color: #DCDCDC; margin-top: 0%" id="desceai">
         <div class="container">
             <div class="row text-center d-flex justify-content-center pt-5 mb-3">

@@ -66,19 +66,30 @@ div#formulario input {
 }
 
 .carro1 {
-    background-image: url("../img/home/carro-parallax.jpg");
+    background-image: url("../img/index/carro-parallax.jpg");
 }
 
 .carro2 {
-    background-image: url("../img/menu_pag/C1_BMW_SLIDER.jpg");
+    background-image: url("../img/index/carro-parallax2.jpg");
 }
 
 .carro3 {
-    background-image: url("../img/menu_pag/C2_TESLA_SLIDER.jpg");
+    background-image: url("../img/index/carro-parallax3.png");
 }
 
 .carro4 {
-    background-image: url("../img/menu_pag/C3_MERCEDES_SLIDER.jpg");
+    background-image: url("../img/index/carro-parallax4.jpg");
+}
+
+.wpp{
+    background-image: url("../img/outras/bg.jpg");
+}
+
+.inputs{
+    background-color: white;
+    border: none;
+    width: 100%;
+    outline: none;
 }
 
 #canvas {

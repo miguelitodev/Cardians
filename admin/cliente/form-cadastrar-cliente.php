@@ -79,52 +79,72 @@ try {
     </nav>
 
 
-    <div>
-        <div class="card">
-            <div class="card-body">
-                <h1 class="card-title">Cadastrar cliente</h1>
-                <a href="../menu-admin.php">
-                    <button style="
-                    width:100%;
-                    height: 40px;    
-                    border: none;">
-                        Voltar
-                    </button>
-                </a>
-            </div>
-        </div>
-    </div>
-    <form action="cadastrar-cliente.php" method="post">
-        <div class="card">
-            <div class="card-body">
-                <h4 class="card-title">Dados do cliente</h4>
-                <input type="text" name="nome" placeholder="Nome completo">
-                <input type="text" name="cpf" placeholder="CPF">
-                <input type="text" name="cnh" placeholder="CNH">
-                <input type="text" name="cep" id="cep" size='8' onblur="pesquisacep(this.value);" placeholder="CEP">
-                <input type="text" name="endereco" id="endereco" placeholder="Endereço">
-                <input type="text" name="numeroCasa" placeholder="N° casa/apt">
-                <input type="text" name="complemento" placeholder="Complemento">
-                <input type="text" name="bairro" id="bairro" placeholder="Bairro">
-                <input type="text" name="cidade" id="cidade" placeholder="Cidade">
-                <input type="text" name="uf" id="uf" placeholder="UF">
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-body">
-                <input type="submit" value="Cadastrar">
-            </div>
-        </div>
-    </form>
 
     <div class="card">
         <div class="card-body">
-            <h1 class="card-title">Clientes cadastrados</h1>
+            <img class="logoCard" src="../../img/icons/logoSite.png">
+        </div>
+        <div class="card-body">
+            <h4 class="card-title">Cadastrar cliente</h4>
+            <p class="card-text">Aqui você poderá cadastrar novos clientes</p>
+        </div>
+        <form action="cadastrar-cliente.php" method="post">
+            <div class="card-body">
+                <input type="text" name="nome" placeholder="Nome completo">
+            </div>
+            <div class="card-body">
+                <input type="text" name="cpf" placeholder="CPF">
+            </div>
+            <div class="card-body">
+                <input type="text" name="cnh" placeholder="CNH">
+            </div>
+            <div class="card-body">
+                <input type="text" name="cep" id="cep" size='8' onblur="pesquisacep(this.value);" placeholder="CEP">
 
+            </div>
+            <div class="card-body">
+                <input type="text" name="endereco" id="endereco" placeholder="Endereço">
+
+            </div>
+            <div class="card-body">
+                <input type="text" name="numeroCasa" placeholder="N° casa/apt">
+
+            </div>
+            <div class="card-body">
+                <input type="text" name="complemento" placeholder="Complemento">
+
+            </div>
+            <div class="card-body">
+                <input type="text" name="bairro" id="bairro" placeholder="Bairro">
+
+            </div>
+            <div class="card-body">
+                <input type="text" name="cidade" id="cidade" placeholder="Cidade">
+
+            </div>
+            <div class="card-body">
+                <input type="text" name="uf" id="uf" placeholder="UF">
+
+            </div>
+            <div class="card-body">
+                <input class="botoes" type="submit" value="Cadastrar">
+
+            </div>
+        </form>
+    </div>
+
+
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Clientes cadastrados</h4>
+            <p class="card-text">Aqui você poderá ver, pesquisar, editar ou apagar os clientes cadastrados</p>
+        </div>
+        <div class="card-body">
             <form action="buscar-cliente.php">
                 <input type="text" name="campoPesquisa" id="campoPesquisa" placeholder="Pesquisar por nome do cliente">
             </form>
-
+        </div>
+        <div class="card-body">
             <table class="table">
                 <thead>
                     <tr>
@@ -152,22 +172,11 @@ try {
         </div>
     </div>
 
-    <div class="card">
-        <div class="card-body">
-            <a href="../menu-admin.php">
-                <button style="
-                    width:100%;
-                    height: 40px;    
-                    border: none;">
-                    Voltar
-                </button>
-            </a>
-        </div>
-    </div>
 
     <footer class="page-footer font-small indigo" id="desceai">
         <div class="container">
             <div class="row text-center d-flex justify-content-center pt-5 mb-3">
+                
                 <div class="col-md-2 mb-3">
                     <h6 class="text-uppercase font-weight-bold">
                         <a class="link" href="../../index.php">
@@ -175,33 +184,45 @@ try {
                         </a>
                     </h6>
                 </div>
+
                 <div class="col-md-2 mb-3">
                     <h6 class="text-uppercase font-weight-bold">
-                        <a class="link" id="contato" href="../../contato.php">
+                        <a class="link" href="../../carros.php">
+                            Carros
+                        </a>
+                    </h6>
+                </div>
+
+                <div class="col-md-2 mb-3">
+                    <h6 class="text-uppercase font-weight-bold">
+                        <a class="link" href="../../contato.php">
                             Contato
                         </a>
                     </h6>
                 </div>
+
             </div>
-            <hr class="rgba-white-light">
+            <hr class="rgba-white-light" style="margin: 0 15%;">
             <div class="row d-flex text-center justify-content-center mb-md-0 mb-4">
                 <div class="col-md-8 col-12 mt-5">
-                    <p>
-                        A Eagle's Car atende você com toda a satisfação e prazer,
-                        pois nós trabalhamos com qualidade de serviço, atendimento
-                        e suporte ao usuário. Dedicação total, para que você sai
-                        com um carro que atenda as suas necessidades.
+                    <p style="line-height: 1.7rem">
+                        Os melhores preços e a maior variedade de veículos para aluguel,
+                        de forma que atenda as suas necessidades! Nós da Cardians nos preocupamos
+                        com o bem-estar de nossos clientes, e prezamos para que desfrutem
+                        dos nossos serviços com o mínimo de burocracia e o máximo de comodidade.
+                        Faça sua reserva!
+
                     </p>
                 </div>
             </div>
-            <hr class="clearfix d-md-none rgba-white-light">
         </div>
         <div class="footer-copyright text-center py-3">© 2019 Copyright
-            <a class="link" href="../../index.php">
-                Eagle's Car
+            <a class="link" href="../../index.html">
+                Cardians
             </a>
         </div>
     </footer>
+
 
     <script type='text/javascript' src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

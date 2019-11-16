@@ -204,38 +204,48 @@ $listaVeiculo = $veiculo->listar();
             <div class="row text-center d-flex justify-content-center pt-5 mb-3">
                 <div class="col-md-2 mb-3">
                     <h6 class="text-uppercase font-weight-bold">
-                        <a class="link" href="../../index.php">
+                        <a href="../../index.php">
                             Home
                         </a>
                     </h6>
                 </div>
                 <div class="col-md-2 mb-3">
                     <h6 class="text-uppercase font-weight-bold">
-                        <a class="link" id="contato" href="../../contato.php">
+                        <a href="../../carros.php">
+                            Carros
+                        </a>
+                    </h6>
+                </div>
+                <div class="col-md-2 mb-3">
+                    <h6 class="text-uppercase font-weight-bold">
+                        <a href="../../contato.php">
                             Contato
                         </a>
                     </h6>
                 </div>
+
             </div>
-            <hr class="rgba-white-light">
+            <hr class="rgba-white-light" style="margin: 0 15%;">
             <div class="row d-flex text-center justify-content-center mb-md-0 mb-4">
                 <div class="col-md-8 col-12 mt-5">
-                    <p>
-                        A Eagle's Car atende você com toda a satisfação e prazer,
-                        pois nós trabalhamos com qualidade de serviço, atendimento
-                        e suporte ao usuário. Dedicação total, para que você sai
-                        com um carro que atenda as suas necessidades.
+                    <p style="line-height: 1.7rem">
+                        Os melhores preços e a maior variedade de veículos para aluguel,
+                        de forma que atenda as suas necessidades! Nós da Cardians nos preocupamos
+                        com o bem-estar de nossos clientes, e prezamos para que desfrutem
+                        dos nossos serviços com o mínimo de burocracia e o máximo de comodidade.
+                        Faça sua reserva!
+
                     </p>
                 </div>
             </div>
-            <hr class="clearfix d-md-none rgba-white-light">
         </div>
         <div class="footer-copyright text-center py-3">© 2019 Copyright
-            <a class="link" href="../../index.php">
-                Eagle's Car
+            <a href="../../index.html">
+                Cardians
             </a>
         </div>
     </footer>
+
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
