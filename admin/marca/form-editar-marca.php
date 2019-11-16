@@ -13,8 +13,10 @@
 require_once 'global.php';
 
 try {
+
     $marca = new Marca();
     $marca = Marca::pegarMarca($_GET['id']);
+
 } catch (Exception $e) {
     echo '<pre>';
     print_r($e);
@@ -30,7 +32,6 @@ try {
             <h1>Editar marca</h1>
             <form name="edicao" method="post" action="editar-marca.php?id=<?php echo $marca->getIdMarca(); ?>">
                 <input type="text" name="marca" value="<?php echo $marca->getNomeMarca(); ?>">
-                <br>
                 <input type="submit" value="Salvar">
             </form>
         </div>

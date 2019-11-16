@@ -6,6 +6,19 @@ body{
     background-size: 100%;
     text-align: center;
 }
+
+footer{
+    background-color: aliceblue;
+    color: #055353;
+    text-decoration: none;
+}
+
+
+.link{
+    text-decoration: none;
+    color: #2DC874;
+}
+
 .card {
     width: 60%;
     margin: 0 auto;
@@ -35,6 +48,9 @@ form{
     width: 100%;
     border: none;
     height: 40px;
+    background-color: #055353;
+    color: #f8f9fa;
+    border-radius: 10px;
 }
 
 /* Login.html */
@@ -116,4 +132,23 @@ form{
 .form-cadastrar button{
     background-color: #055353;
     color: white;
+}
+
+/* menu-admin.php */
+
+.dropdown{
+    font-size: 20px;
+}
+
+.ajusteTamanho{
+    width: 40px;
+}
+
+
+.pequeno{
+    width: 40%;
+}
+
+.logoCard{
+    width: 20%;
 }
