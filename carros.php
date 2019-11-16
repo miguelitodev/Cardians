@@ -46,7 +46,7 @@
         <img src="<?php echo $linha?>">
 
         <!-- INICIO DO RODAPÉ -->
-        <footer class="page-footer font-small indigo" style="background-color: #DCDCDC;" id="desceai">
+        <footer class="page-footer font-small indigo" id="desceai">
             <div class="container">
                 <div class="row text-center d-flex justify-content-center pt-5 mb-3">
                     <div class="col-md-2 mb-3">
