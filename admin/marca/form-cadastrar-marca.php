@@ -2,10 +2,9 @@
 require_once 'global.php';
 
 try {
-    
+
     $marca = new Marca();
     $lista = $marca->listar();
-
 } catch (Exception $e) {
     echo '<pre>';
     print_r($e);
@@ -27,6 +26,58 @@ try {
 </head>
 
 <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
+
+        <div class="container-fluid">
+
+            <a href="../../index.php">
+                <img class="ajusteTamanho" src="../../img/icons/logoSite.png" title="Home">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+
+                <ul class="navbar-nav ml-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../carros.php">
+                            <img class="ajusteTamanho carro" src="../../img/icons/icone-carro.png" title="Carros" />
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../contato.php">
+                            <img class="ajusteTamanho" src="../../img/icons/logoContato.png" title="Contato" />
+                        </a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                            <img class="ajusteTamanho" src="../../img/icons/logo-opcoes.png">
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="../locacao/form-cadastrar-locacao.php">Locação</a>
+                            <a class="dropdown-item" href="../cliente/form-cadastrar-cliente.php">Cliente</a>
+                            <a class="dropdown-item" href="../usuario/form-cadastrar-usuario.php">Usário</a>
+                            <a class="dropdown-item" href="../veiculo/form-cadastrar-veiculo.php">Veiculo</a>
+                            <a class="dropdown-item" href="marca/form-cadastrar-marca.php">Marca</a>
+                            <a class="dropdown-item" href="../menu-admin.php">Menu</a>
+                        </div>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
     <div>
 
         <div class="card">
@@ -43,11 +94,11 @@ try {
         <div class="card">
             <div class="card-body">
                 <h1>Marcas cadastradas</h1>
-                
+
                 <form action="buscar-marca.php">
                     <input type="text" name="campoPesquisa" id="campoPesquisa" placeholder="Pesquisar marca">
                 </form>
-                
+
                 <table class="table">
                     <thead>
                         <tr>
@@ -72,6 +123,45 @@ try {
         </div>
 
     </div>
+
+    <footer class="page-footer font-small indigo" id="desceai">
+        <div class="container">
+            <div class="row text-center d-flex justify-content-center pt-5 mb-3">
+                <div class="col-md-2 mb-3">
+                    <h6 class="text-uppercase font-weight-bold">
+                        <a class="link" href="../../index.php">
+                            Home
+                        </a>
+                    </h6>
+                </div>
+                <div class="col-md-2 mb-3">
+                    <h6 class="text-uppercase font-weight-bold">
+                        <a class="link" id="contato" href="../../contato.php">
+                            Contato
+                        </a>
+                    </h6>
+                </div>
+            </div>
+            <hr class="rgba-white-light">
+            <div class="row d-flex text-center justify-content-center mb-md-0 mb-4">
+                <div class="col-md-8 col-12 mt-5">
+                    <p>
+                        A Eagle's Car atende você com toda a satisfação e prazer,
+                        pois nós trabalhamos com qualidade de serviço, atendimento
+                        e suporte ao usuário. Dedicação total, para que você sai
+                        com um carro que atenda as suas necessidades.
+                    </p>
+                </div>
+            </div>
+            <hr class="clearfix d-md-none rgba-white-light">
+        </div>
+        <div class="footer-copyright text-center py-3">© 2019 Copyright
+            <a class="link" href="../../index.php">
+                Eagle's Car
+            </a>
+        </div>
+    </footer>
+
     <script src="../../js/busca-aproximada.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
