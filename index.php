@@ -77,60 +77,42 @@
             <p>Venha nos conhecer!</p>
           </div>
         <!-- INICIO DO RODAPÉ -->
-        <footer class="page-footer font-small indigo" style="background-color: #DCDCDC;" id="desceai">
+        <footer class="page-footer font-small indigo" style="background-color: #DCDCDC; margin-top: 7%" id="desceai">
             <div class="container">
                 <div class="row text-center d-flex justify-content-center pt-5 mb-3">
                     <div class="col-md-2 mb-3">
                         <h6 class="text-uppercase font-weight-bold">
-                            <a href="index.html">
+                            <a href="index.php">
                                 Home
                             </a>
                         </h6>
                     </div>
                     <div class="col-md-2 mb-3">
                         <h6 class="text-uppercase font-weight-bold">
-                            <a href="bmw.html">
-                                BMW
+                            <a href="carros.php">
+                                Carros
                             </a>
                         </h6>
                     </div>
                     <div class="col-md-2 mb-3">
                         <h6 class="text-uppercase font-weight-bold">
-                            <a href="tesla.html">
-                                Tesla
-                            </a>
-                        </h6>
-                    </div>
-                    <div class="col-md-2 mb-3">
-                        <h6 class="text-uppercase font-weight-bold">
-                            <a href="mercedes.html">
-                                Mercedes
-                            </a>
-                        </h6>
-                    </div>
-                    <div class="col-md-2 mb-3">
-                        <h6 class="text-uppercase font-weight-bold">
-                            <a id="contato" href="#contato">
+                            <a href="contato.php">
                                 Contato
                             </a>
                         </h6>
                     </div>
-                    <div class="col-md-2 mb-3">
-                        <h6 class="text-uppercase font-weight-bold">
-                            <a href="orcamento.html">
-                                Orçamento
-                            </a>
-                        </h6>
-                    </div>
+                   
                 </div>
                 <hr class="rgba-white-light" style="margin: 0 15%;">
                 <div class="row d-flex text-center justify-content-center mb-md-0 mb-4">
                     <div class="col-md-8 col-12 mt-5">
                         <p style="line-height: 1.7rem">
-                            A Eagle's Car atende você com toda a satisfação e prazer, 
-                            pois nós trabalhamos com qualidade de serviço, atendimento
-                            e suporte ao usuário. Dedicação total, para que você sai 
-                            com um carro que atenda as suas necessidades.
+                        Os melhores preços e a maior variedade de veículos para aluguel,
+                        de forma que atenda as suas necessidades! Nós da Cardians nos preocupamos
+                        com o bem-estar de nossos clientes, e prezamos para que desfrutem
+                        dos nossos serviços com o mínimo de burocracia e o máximo de comodidade.
+                        Faça sua reserva! 
+
                         </p>
                     </div>
                 </div>
@@ -138,13 +120,16 @@
             </div>
             <div class="footer-copyright text-center py-3">© 2019 Copyright
                 <a href="index.html">
-                    Eagle's Car
+                    Cardians
                 </a>
             </div>
         </footer>
+
+        
         <!-- FIM DO RODAPÉ -->
         <script type="text/javascript" src="js/jquery.slim.min.js"></script>
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
         <script type="text/javascript" src="js/popper.min.js"></script>
     </body>
 </html>
+

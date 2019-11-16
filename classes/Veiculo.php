@@ -83,8 +83,24 @@
 
         public function listar(){
             $conexao = Conexao::pegarConexao();
-            $querySelect = "SELECT idVeiculo, anoVeiculo, corVeiculo, modeloVeiculo, valorDiariaVeiculo, imgVeiculo, idMarca
-                            FROM tbveiculo";
+            $querySelect = "SELECT v.idVeiculo, v.anoVeiculo, v.corVeiculo, v.modeloVeiculo, v.valorDiariaVeiculo, v.imgVeiculo, m.nomeMarca
+                            FROM tbveiculo AS v
+                            INNER JOIN tbmarca AS m
+                            ON v.idMarca = m.idMarca
+                            ";
+            $resultado = $conexao->query($querySelect);
+            $lista = $resultado->fetchAll();
+            return $lista;
+        }
+
+
+        public function listarMarca(){
+            $conexao = Conexao::pegarConexao();
+            $querySelect = "SELECT v.idVeiculo, v.anoVeiculo, v.corVeiculo, v.modeloVeiculo, 
+                            v.valorDiariaVeiculo, v.imgVeiculo, m.nomeMarca
+                            FROM tbveiculo AS v
+                            INNER JOIN tbmarca AS m
+                            ON v.idMarca = m.idMarca";
             $resultado = $conexao->query($querySelect);
             $lista = $resultado->fetchAll();
             return $lista;
@@ -119,8 +135,18 @@
             return $update;
         }
 
+        public function pegarMarca($marca){
+            $conexao = Conexao::pegarConexao();
+            $select = "SELECT v.idVeiculo m.nomeMarca
+                        FROM tbVeiculo AS v
+                        INNER JOIN tbMarca AS m 
+                        ON v.idMarca = m.idMarca";
+        }
+
         public static function pegarVeiculo($id){
-            $sql = "SELECT idVeiculo, modeloVeiculo, corVeiculo, imgVeiculo, anoVeiculo, valorDiariaVeiculo FROM tbveiculo WHERE idveiculo = " . $id . ";";
+            $sql = "SELECT idVeiculo, modeloVeiculo, corVeiculo, imgVeiculo, anoVeiculo, valorDiariaVeiculo
+            FROM tbveiculo 
+             WHERE idveiculo = " . $id . ";";
             $result = Conexao::pegarConexao()->query($sql)->fetch();
             $veiculo = new Veiculo();
             $veiculo->setIdVeiculo($result["idVeiculo"]);
@@ -158,6 +184,3 @@
             return 'Atualização realizada com sucesso';
         }
     }
-    
-
-?>

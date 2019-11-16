@@ -20,7 +20,7 @@ class Marca
         $this->idMarca = $id;
     }
 
-    public function setnomeMarca($nome)
+    public function setNomeMarca($nome)
     {
         $this->nomeMarca = $nome;
     }
@@ -49,6 +49,18 @@ class Marca
         $conexao = Conexao::pegarConexao();
         $select = "SELECT idMarca, nomeMarca FROM tbmarca";
         $resultado = $conexao->query($select);
+        $lista = $resultado->fetchAll();
+        return $lista;
+    }
+
+    public function listarMarca(){
+        $conexao = Conexao::pegarConexao();
+        $querySelect = "SELECT v.idVeiculo, v.anoVeiculo, v.corVeiculo, v.modeloVeiculo, 
+                        v.valorDiariaVeiculo, v.imgVeiculo, m.nomeMarca
+                        FROM tbveiculo AS v
+                        INNER JOIN tbmarca AS m
+                        ON v.idMarca = m.idMarca";
+        $resultado = $conexao->query($querySelect);
         $lista = $resultado->fetchAll();
         return $lista;
     }

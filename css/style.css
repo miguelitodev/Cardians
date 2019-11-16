@@ -1,17 +1,134 @@
- 
-#title{
+/* index.php */
+
+body {
+    margin-bottom: 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    background-color: aliceblue;
+}
+
+#title {
     text-align: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
-.card{
+
+a {
+    color: #188a62;
+}
+
+.titulo {
+    text-align: center;
+    margin-top: 10%;
+}
+
+div#formulario {
+    width: 50%;
+    margin: 12ch auto;
+    background-color: rgba(91, 91, 91, .2);
+    padding: 30px;
+    text-align: center;
+}
+
+form {
+    width: 100%;
+    height: 100%;
+}
+
+div#formulario input {
+    margin: 3ch .5ch;
+}
+
+.post-slider {
+    margin-top: -49%
+}
+
+.campo {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 660px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.titleIndex img {
+    width: 20%;
+}
+
+.parallax {
+    background-attachment: fixed;
+}
+
+.carro1 {
+    background-image: url("../img/home/carro-parallax.jpg");
+}
+
+.carro2 {
+    background-image: url("../img/menu_pag/C1_BMW_SLIDER.jpg");
+}
+
+.carro3 {
+    background-image: url("../img/menu_pag/C2_TESLA_SLIDER.jpg");
+}
+
+.carro4 {
+    background-image: url("../img/menu_pag/C3_MERCEDES_SLIDER.jpg");
+}
+
+#canvas {
+    background-image: url('../img/outras/bg.jpg');
+    background-attachment: fixed;
+    /* background-repeat: no-repeat; */
+    height: 700px;
+}
+
+.post-slider .post-wrapper {
+    width: 79.5%;
+    height: 610px;
+    margin: 0px auto;
+    overflow: hidden;
+    /* border: 1px dashed red; */
+}
+
+.post-slider .post-wrapper .post {
+    width: 300px;
+    height: 610px;
     display: inline-block;
-    float: left; 
-    width: 5%;
+    background: #fff;
+    margin: 0px 10px;
 }
-.card-text{
-    text-align: justify;
+
+.left-seta {
+    width: 90px;
+    position: absolute;
+    top: 120%;
+    cursor: pointer;
 }
-.card{
-    width:100%;
-    height:auto;
-  }
+
+.right-seta {
+    width: 90px;
+    position: absolute;
+    top: 120%;
+    left: 90%;
+    cursor: pointer;
+}
+
+
+/* fotos dos cards */
+
+.veiculos {
+    width: 339px
+}
+
+.modelo {
+    text-align: left;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 5%
+}
