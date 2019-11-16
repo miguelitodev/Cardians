@@ -1,6 +1,9 @@
 <?php
 require_once 'global.php';
 
+$locacao = new Locacao();
+$listaLocacao = $locacao->listar();
+
 $cliente = new Cliente();
 $listaCliente = $cliente->listar();
 
@@ -64,14 +67,15 @@ $listaVeiculo = $veiculo->listar();
         <form action="cadastrar-locacao.php" method="post">
 
             <div class="card-body">
-                <input type="text" name="usuario" id="usuario" placeholder="Nome do usuário" list="listaUsuario">
-                <datalist id="listaUsuario">
-                    <?php
-                    foreach ($listaUsuario as $linha) {
-                        echo ("<option value=" . $linha[idUsuario] . ">" . $linha[nomeUsuario] . "</option>");
-                    }
-                    ?>
-                </datalist>
+                <input type="text" name="dataInicial" id="dataInicial" placeholder="Data inicial: AAAA-MM-DD">
+            </div>
+
+            <div class="card-body">
+                <input type="text" name="dataFinal" id="dataFinal" placeholder="Data final: AAAA-MM-DD">
+            </div>
+
+            <div class="card-body">
+                <input type="text" name="valorDiaria" id="valorDiaria" placeholder="Valor da diária">
             </div>
 
             <div class="card-body">
@@ -97,15 +101,23 @@ $listaVeiculo = $veiculo->listar();
             </div>
 
             <div class="card-body">
-                <input type="text" name="dataInicial" id="dataInicial" placeholder="Data inicial: AAAA-MM-DD">
+                <input type="text" name="usuario" id="usuario" placeholder="Nome do usuário" list="listaUsuario">
+                <datalist id="listaUsuario">
+                    <?php
+                    foreach ($listaUsuario as $linha) {
+                        echo ("<option value=" . $linha[idUsuario] . ">" . $linha[nomeUsuario] . "</option>");
+                    }
+                    ?>
+                </datalist>
             </div>
-
+            
             <div class="card-body">
-                <input type="text" name="dataFinal" id="dataFinal" placeholder="Data final: AAAA-MM-DD">
-            </div>
-
-            <div class="card-body">
-                <input type="text" name="valorDiaria" id="valorDiaria" placeholder="Valor da diária">
+            <input type="text" name="status" id="status" placeholder="Status da locação" list="listaStatus">
+                <datalist id="listaStatus">
+                    <option value="Em processo"></option>
+                    <option value="Concluida"></option>
+                    <option value="Trancada"></option>
+                </datalist>
             </div>
 
             <div class="card-body">
@@ -129,30 +141,32 @@ $listaVeiculo = $veiculo->listar();
             <h4 class="card-title">Locações Cadastradas</h4>
             <p class="card-text">Procurar, editar ou apagar uma locação</p>
             <form action="buscar-locacao.php" method="post">
-                <input type="text" name="buscarLocacao" id="buscarLocacao" placeholder="Pesquisar por uma locação">
+                <input type="text" name="campoPesquisa" id="campoPesquisa" placeholder="Pesquisar por uma locação">
             </form>
             <table class="table">
                 <thead>
                     <tr>
+                        <th>ID</th>
                         <th>Cliente</th>
                         <th>Veiculo</th>
                         <th>Data inicial</th>
                         <th>Data Final</th>
                         <th>Valor Total</th>
+                        <th>Status</th>
                         <th class="acao">Editar</th>
-                        <th class="acao">Excluir</th>
                     </tr>
                 </thead>
                 <tbody id="resultado">
-                    <?php foreach ($lista as $linha) { ?>
+                    <?php foreach ($listaLocacao as $linha) { ?>
                         <tr>
+                            <td><?php echo $linha['idLocacao']?></td>
                             <td><?php echo $linha['nomeCliente'] ?></td>
                             <td><?php echo $linha['modeloVeiculo'] ?></td>
                             <td><?php echo $linha['dataInicial'] ?></td>
                             <td><?php echo $linha['dataFinal'] ?></td>
                             <td><?php echo $linha['valorTotal'] ?></td>
-                            <td><a href="form-editar-cliente.php?id=<?php echo $linha['idCliente'] ?>">Editar</a></td>
-                            <td><a href="excluir-cliente.php?id=<?php echo $linha['idCliente'] ?>">Excluir</a></td>
+                            <td><?php echo $linha['statusLocacao'] ?></td>
+                            <td><a href="form-editar-locacao.php?id=<?php echo $linha['idLocacao'] ?>">Editar</a></td>
                         </tr>
                     <?php } ?>
                 </tbody>
@@ -162,6 +176,7 @@ $listaVeiculo = $veiculo->listar();
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="../../js/busca-aproximada-locacao.js"></script>
 </body>
 
 </html>

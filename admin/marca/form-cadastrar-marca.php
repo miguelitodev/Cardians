@@ -2,8 +2,10 @@
 require_once 'global.php';
 
 try {
+    
     $marca = new Marca();
     $lista = $marca->listar();
+
 } catch (Exception $e) {
     echo '<pre>';
     print_r($e);

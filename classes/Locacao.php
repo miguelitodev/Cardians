@@ -12,6 +12,17 @@ class Locacao
     private $modeloVeiculo;
     private $nomeUsuario;
     private $idCliente;
+    private $statusLocacao;
+
+    public function getStatusLocacao()
+    {
+        return $this->statusLocacao;
+    }
+
+    public function setStatusLocacao($status)
+    {
+        $this->statusLocacao = $status;
+    }
 
     public function getIdCliente()
     {
@@ -108,16 +119,102 @@ class Locacao
     public function cadastrar($locacao)
     {
         $conexao = Conexao::pegarConexao();
-        $insert = "     INSERT INTO tblocacao(dataInicial, dataFinal, valorTotal, idVeiculo, idUsuario, idCliente)
+        $insert = "     INSERT INTO tblocacao(dataInicial, dataFinal, valorTotal, idVeiculo, idUsuario, idCliente, statusLocacao)
                             
-                            VALUES ('" . $locacao->getDataInicial() . "',
-                                    '" . $locacao->getDataFinal() . "',
-                                    '" . $locacao->getValorTotal() . "',
-                                    '" . $locacao->getIdVeiculo() . "',
-                                    '" . $locacao->getIdUsuario() . "',
-                                    '" . $locacao->getIdCliente() . "')
+                            VALUES ('" . $locacao->getDataInicial()     . "',
+                                    '" . $locacao->getDataFinal()       . "',
+                                    '" . $locacao->getValorTotal()      . "',
+                                    '" . $locacao->getIdVeiculo()       . "',
+                                    '" . $locacao->getIdUsuario()       . "',
+                                    '" . $locacao->getIdCliente()       . "',
+                                    '" . $locacao->getStatusLocacao()   . "')
                         ";
         $conexao->exec($insert);
         return 'Cadastro realizado com sucesso!';
+    }
+
+    public function listar()
+    {
+        $conexao = Conexao::pegarConexao();
+        $select = "   SELECT  tblocacao.idLocacao, tblocacao.dataInicial, tblocacao.dataFinal, tblocacao.valorTotal,
+                                tblocacao.statusLocacao, tbveiculo.modeloVeiculo, tbusuario.nomeUsuario, tbcliente.nomeCliente
+
+                    FROM tblocacao
+                    
+                    INNER JOIN tbveiculo
+                        ON tblocacao.idVeiculo = tbveiculo.idVeiculo
+                    
+                    INNER JOIN tbusuario
+                        ON tblocacao.idusuario = tbusuario.idUsuario
+                    
+                    INNER JOIN tbcliente
+                        ON tblocacao.idCliente = tbcliente.idCliente
+                    
+                ";
+        $resultado = $conexao->query($select);
+        $lista = $resultado->fetchAll();
+        return $lista;
+    }
+
+    public function pesquisar($campoPesquisa)
+    {
+        $conexao = Conexao::pegarConexao();
+        $select = " SELECT  tblocacao.idLocacao, tblocacao.dataInicial, tblocacao.dataFinal, tblocacao.valorTotal,
+                            tblocacao.statusLocacao, tbveiculo.modeloVeiculo, tbusuario.nomeUsuario, tbcliente.nomeCliente
+
+                    FROM tblocacao
+
+                    INNER JOIN tbveiculo
+                        ON tblocacao.idVeiculo = tbveiculo.idVeiculo
+
+                    INNER JOIN tbusuario
+                        ON tblocacao.idusuario = tbusuario.idUsuario
+
+                    INNER JOIN tbcliente
+                        ON tblocacao.idCliente = tbcliente.idCliente
+
+                    WHERE nomeCliente LIKE '$campoPesquisa'";
+        $resultado = $conexao->query($select);
+        $lista = $resultado->fetchAll();
+        return $lista;
+    }
+
+    public function editar($id)
+    {
+        $conexao = Conexao::pegarConexao();
+
+
+
+        $update = " UPDATE tblocacao
+                    SET statusLocacao = '" . $id->getStatusLocacao() . "'
+                    WHERE   idLocacao = " . $id->getIdLocacao() . ";";
+        $conexao->exec($update);
+
+        return 'Atualização realizada com sucesso';
+    }
+
+    public static function pegarLocacao($id)
+    {
+        $sql = "SELECT  idLocacao, dataInicial, dataFinal, valorTotal, 
+                        idVeiculo, idUsuario, idCliente, statusLocacao
+                
+                FROM tblocacao 
+                
+                WHERE idLocacao = " . $id . ";";
+
+        $result = Conexao::pegarConexao()->query($sql)->fetch();
+
+        $locacao = new Locacao();
+
+        $locacao->setIdLocacao($result['idLocacao']);
+        $locacao->setDataInicial($result['dataInicial']);
+        $locacao->setDataFinal($result['dataFinal']);
+        $locacao->setValorTotal($result['valorDiaria']);
+        $locacao->setIdCliente($result['idCliente']);
+        $locacao->setIdVeiculo($result['idVeiculo']);
+        $locacao->setIdUsuario($result['idUsuario']);
+        $locacao->setStatusLocacao($result['statusLocacao']);
+
+        return $locacao;
     }
 }
