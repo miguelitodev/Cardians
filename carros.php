@@ -85,7 +85,7 @@
                             <li class="list-group-item"><b>Marca: </b><?php echo $linha['nomeMarca'] ?></li>
                             <li class="list-group-item"><b>Ano: </b><?php echo $linha['anoVeiculo'] ?></li>
                             <li class="list-group-item"><b>Valor da diária: </b><?php echo $linha['valorDiariaVeiculo'] ?></li>
-                            <button class="btn" href="admin/locacao/form-cadastrar-locacao.php">Fazer locação</button>
+                            <button type="button" class="btn" onclick="window.location.href='admin/locacao/form-cadastrar-locacao.php'">Fazer locação</button>
                         </ul>
                     </div>
 
