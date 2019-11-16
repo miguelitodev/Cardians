@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="stylesheet" type="text/css" href="css/style-parte-admin.css" />
-    <link rel="shortcut icon" href="img/menu_pag/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="img/icons/favicon.ico" type="image/x-icon" />
     <!-- <link rel="" -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 
@@ -20,7 +20,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
         <div class="container-fluid">
             <a href="index.php">
-                <img src="img/menu_pag/logoSite.png" width="45" title="Home">
+                <img src="img/icons/logoSite.png" width="45" title="Home">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -29,12 +29,12 @@
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="carros.php">
-                            <img src="img/home/icone-carro.png" style="width: 30px; margin-right: 10px;" title="Carros" />
+                            <img src="img/icons/icone-carro.png" style="width: 30px; margin-right: 10px;" title="Carros" />
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contato.php">
-                            <img src="img/menu_pag/logoContato.png" style="width: 30px; margin-right: 10px;" title="Contato" />
+                            <img src="img/icons/logoContato.png" style="width: 30px; margin-right: 10px;" title="Contato" />
                         </a>
                     </li>
                 </ul>
@@ -85,7 +85,7 @@
                             <li class="list-group-item"><b>Marca: </b><?php echo $linha['nomeMarca'] ?></li>
                             <li class="list-group-item"><b>Ano: </b><?php echo $linha['anoVeiculo'] ?></li>
                             <li class="list-group-item"><b>Valor da diária: </b><?php echo $linha['valorDiariaVeiculo'] ?></li>
-                            <a class="list-group-item" style="margin-top: 30%" href="admin/locacao/form-cadastrar-locacao.php" class="card-link">Fazer locação</a>
+                            <button class="btn" href="admin/locacao/form-cadastrar-locacao.php">Fazer locação</button>
                         </ul>
                     </div>
 
@@ -120,7 +120,6 @@
                         </a>
                     </h6>
                 </div>
-<<<<<<< HEAD
 
             </div>
             <hr class="rgba-white-light" style="margin: 0 15%;">
@@ -145,33 +144,10 @@
         </div>
     </footer>
 
-=======
-            </div>
-            <hr class="rgba-white-light">
-            <div class="row d-flex text-center justify-content-center mb-md-0 mb-4">
-                <div class="col-md-8 col-12 mt-5">
-                    <p>
-                        A Eagle's Car atende você com toda a satisfação e prazer,
-                        pois nós trabalhamos com qualidade de serviço, atendimento
-                        e suporte ao usuário. Dedicação total, para que você sai
-                        com um carro que atenda as suas necessidades.
-                    </p>
-                </div>
-            </div>
-            <hr class="clearfix d-md-none rgba-white-light">
-        </div>
-        <div class="footer-copyright text-center py-3">© 2019 Copyright
-            <a class="link" href="index.php">
-                Eagle's Car
-            </a>
-        </div>
-    </footer>
->>>>>>> da978d6b748ec34140bfa9830dfe71b69b2f862e
     <!-- FIM DO RODAPÉ -->
     <script type="text/javascript" src="js/jquery.slim.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/popper.min.js"></script>
-<<<<<<< HEAD
     <script type="text/javascript" src="js/slick.min.js"></script>
     <script src="js/particles.js"></script>
     <script src="js/script.js"></script>
@@ -180,8 +156,6 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
 
-=======
->>>>>>> da978d6b748ec34140bfa9830dfe71b69b2f862e
 </body>
 
 </html>

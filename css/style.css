@@ -1,6 +1,5 @@
 /* index.php */
 
-<<<<<<< HEAD
 body {
     margin-bottom: 0px;
     display: flex;
@@ -45,12 +44,6 @@ div#formulario input {
 .post-slider {
     margin-top: -49%
 }
-=======
-footer{
-    background-color: aliceblue;
-}
-
->>>>>>> da978d6b748ec34140bfa9830dfe71b69b2f862e
 
 .campo {
     background-position: center;
@@ -62,7 +55,6 @@ footer{
     justify-content: center;
     align-items: center;
     position: relative;
-<<<<<<< HEAD
 }
 
 .titleIndex img {
@@ -115,14 +107,15 @@ footer{
 .left-seta {
     width: 90px;
     position: absolute;
-    top: 120%;
+    top: 110%;
+    left: 0%;
     cursor: pointer;
 }
 
 .right-seta {
     width: 90px;
     position: absolute;
-    top: 120%;
+    top: 110%;
     left: 90%;
     cursor: pointer;
 }
@@ -139,37 +132,22 @@ footer{
     margin-top: 5%;
     margin-bottom: 5%;
     margin-left: 5%
-=======
- }
-
-.titleIndex img{
-    width: 20%;
 }
 
-.parallax{
-    background-attachment: fixed;
+.list-group-item {
+    text-align: left;
 }
 
-.carro1{
-    background-image: url("../img/index/carro-parallax.jpg");
-}
-
-.carro2{
-    background-image: url("../img/index/carro-parallax2.jpg");
-}
-
-.carro3{
-    background-image: url("../img/index/carro-parallax3.png");
-}
-
-.carro4{
-    background-image: url("../img/index/carro-parallax4.jpg");
-}
-
-.inputs{
-    background-color: white;
+.btn {
+    background-color: #188a62;
+    height: 73px;
     border: none;
-    width: 100%;
-    outline: none;
->>>>>>> da978d6b748ec34140bfa9830dfe71b69b2f862e
+    color: white;
+}
+
+.btn:hover {
+    background-color: #2DC874;
+    height: 73px;
+    border: none;
+    color: white;
 }
