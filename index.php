@@ -7,7 +7,7 @@
     <meta name="description" content="Venha comprar na melhor loja de automoveis do século XXI" />
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <link rel="shortcut icon" href="img/menu_pag/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="img/icons/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style-parte-admin.css">
     <title>Eagle's Car</title>

@@ -24,6 +24,7 @@ try {
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="../../css/style-parte-admin.css" />
+    <link rel="shortcut icon" href="../../img/icons/favicon.ico" type="image/x-icon" />
 </head>
 
 <body>
@@ -176,7 +177,6 @@ try {
     <footer class="page-footer font-small indigo" id="desceai">
         <div class="container">
             <div class="row text-center d-flex justify-content-center pt-5 mb-3">
-                
                 <div class="col-md-2 mb-3">
                     <h6 class="text-uppercase font-weight-bold">
                         <a class="link" href="../../index.php">
@@ -184,7 +184,6 @@ try {
                         </a>
                     </h6>
                 </div>
-
                 <div class="col-md-2 mb-3">
                     <h6 class="text-uppercase font-weight-bold">
                         <a class="link" href="../../carros.php">
@@ -192,7 +191,6 @@ try {
                         </a>
                     </h6>
                 </div>
-
                 <div class="col-md-2 mb-3">
                     <h6 class="text-uppercase font-weight-bold">
                         <a class="link" href="../../contato.php">
@@ -202,7 +200,7 @@ try {
                 </div>
 
             </div>
-            <hr class="rgba-white-light" style="margin: 0 15%;">
+            <hr class="rgba-white-light">
             <div class="row d-flex text-center justify-content-center mb-md-0 mb-4">
                 <div class="col-md-8 col-12 mt-5">
                     <p style="line-height: 1.7rem">

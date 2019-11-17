@@ -25,6 +25,8 @@ try {
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" href="../../css/style-parte-admin.css">
+    <link rel="shortcut icon" href="../../img/icons/favicon.ico" type="image/x-icon" />
+
 </head>
 
 <body>
@@ -62,9 +64,9 @@ try {
 						</a>
 						<div class="dropdown-menu">
 							<a class="dropdown-item" href="../locacao/form-cadastrar-locacao.php">Locação</a>
-							<a class="dropdown-item" href="../cliente/form-cadastrar-cliente.php">Cliente</a>
+							<a class="dropdown-item" href="cliente/form-cadastrar-cliente.php">Cliente</a>
 							<a class="dropdown-item" href="../usuario/form-cadastrar-usuario.php">Usário</a>
-							<a class="dropdown-item" href="veiculo/form-cadastrar-veiculo.php">Veiculo</a>
+							<a class="dropdown-item" href="../veiculo/form-cadastrar-veiculo.php">Veiculo</a>
 							<a class="dropdown-item" href="../marca/form-cadastrar-marca.php">Marca</a>
 							<a class="dropdown-item" href="../menu-admin.php">Menu</a>
 						</div>
@@ -82,143 +84,141 @@ try {
 
 	<div class="card">
 		<div class="card-body">
-			<img style="width: 15%;" src="../../img/menu_pag/logoSite.png">
-			<h1>Cadastrar veiculo</h1>
-			<form method="POST" action="cadastrar-veiculo.php" enctype="multipart/form-data">
+			<img class="logoCard" src="../../img/icons/logoSite.png">
+		</div>
+		<div class="card-body">
+
+			<h4 class="card-title">Cadastrar veiculo</h4>
+			<p class="card-text">Insira os dados nos campos abaixo para cadastrar um novo veiculo</p>
+		</div>
+		<form method="POST" action="cadastrar-veiculo.php" enctype="multipart/form-data">
+			<div class="card-body">
 				<input type="text" placeholder="Modelo do veiculo" name="modelo">
-				<br>
+			</div>
+			<div class="card-body">
 				<input type="text" placeholder="Ano do veiculo" name="ano">
-				<br>
+			</div>
+			<div class="card-body">
 				<input type="text" placeholder="Cor do veiculo" name="cor">
-				<br>
+			</div>
+			<div class="card-body">
 				<input type="money" placeholder="Valor da diaria" name="valorDiaria">
-				<br>
-				<input type="file" name="img">
-				<br>
-				<select name="idMarca" title="Marca do veiculo">
+			</div>
+			<div class="card-body">
+				<input  type="file" name="img">
+			</div>
+			<div class="card-body">
+				<select class="select" name="idMarca" title="Marca do veiculo">
 					<?php
 					foreach ($lista as $linha) {
 						echo ("<option value=" . $linha[idMarca] . ">" . $linha[nomeMarca] . "</option>");
 					}
 					?>
 				</select>
-				<br>
-				<input type="submit" value="Cadastrar" name="cadastrar">
-			</form>
-			<a href="menu-admin.php">
-				<button>
-					Voltar
-				</button>
-			</a>
-
-		</div>
+			</div>
+			<div class="card-body">
+				<input class="botoes" type="submit" value="Cadastrar" name="cadastrar">
+			</div>
+		</form>
 	</div>
 	<div class="card">
 		<div class="card-body">
-			<h1>Veiculos cadastrados</h1>
-			<form action="buscar-veiculo.php">
-				<input type="text" name="campoPesquisa" id="campoPesquisa" placeholder="Pesquisar veículo">
-
-			</form>
-			<table class="table">
-				<thead>
-					<tr>
-						<th>ID</th>
-						<th>Modelo</th>
-						<th>Cor</th>
-						<th>Marca</th>
-						<th>Ano</th>
-						<th>Valor diária</th>
-						<th>Imagem</th>
-						<th class="acao">Editar</th>
-						<th class="acao">Excluir</th>
-
-					</tr>
-				</thead>
-				<tbody id="resultado">
-					<?php foreach ($listaVeiculo as $linha) { ?>
+			<div class="card-body">
+				<h4 class="card-title">Veiculos cadastrados</h4>
+				<p class="card-text">Aqui você poderá ver, Pesquisar, editar e apagar veiculos já cadastrados</p>
+			</div>
+			<div class="card-body">
+				<form action="buscar-veiculo.php">
+					<input type="text" name="campoPesquisa" id="campoPesquisa" placeholder="Pesquisar veículo">
+				</form>
+			</div>
+			<div class="card-body">
+				<table class="table">
+					<thead>
 						<tr>
-							<td><?php echo $linha['idVeiculo'] ?></td>
-							<td><?php echo $linha['modeloVeiculo'] ?></td>
-							<td><?php echo $linha['corVeiculo'] ?></td>
-							<td><?php echo $linha['idMarca'] ?></td>
-							<td><?php echo $linha['anoVeiculo'] ?></td>
-							<td><?php echo $linha['valorDiariaVeiculo'] ?></td>
-							<td><img src="<?php echo $linha['imgVeiculo'] ?>" width="80px"></td>
-							<td><a href="form-editar-veiculo.php?id=<?php echo $linha['idVeiculo'] ?>">Editar</td>
-							<td><a href="excluir-veiculo.php?id=<?php echo $linha['idVeiculo'] ?>">Excluir</td>
+							<th>ID</th>
+							<th>Modelo</th>
+							<th>Cor</th>
+							<th>Marca</th>
+							<th>Ano</th>
+							<th>Valor diária</th>
+							<th>Imagem</th>
+							<th class="acao">Editar</th>
+							<th class="acao">Excluir</th>
+
 						</tr>
+					</thead>
+					<tbody id="resultado">
+						<?php foreach ($listaVeiculo as $linha) { ?>
+							<tr>
+								<td><?php echo $linha['idVeiculo'] ?></td>
+								<td><?php echo $linha['modeloVeiculo'] ?></td>
+								<td><?php echo $linha['corVeiculo'] ?></td>
+								<td><?php echo $linha['idMarca'] ?></td>
+								<td><?php echo $linha['anoVeiculo'] ?></td>
+								<td><?php echo $linha['valorDiariaVeiculo'] ?></td>
+								<td><img src="<?php echo $linha['imgVeiculo'] ?>" width="80px"></td>
+								<td><a href="form-editar-veiculo.php?id=<?php echo $linha['idVeiculo'] ?>">Editar</td>
+								<td><a href="excluir-veiculo.php?id=<?php echo $linha['idVeiculo'] ?>">Excluir</td>
+							</tr>
 
-					<?php } ?>
-				</tbody>
-			</table>
+						<?php } ?>
+					</tbody>
+				</table>
+			</div>
 		</div>
 	</div>
 
-	<div class="card">
-		<div class="card-body">
-			<h1 class="card-title">Fazer locação</h1>
-			<a href="../menu-admin.php">
-				<button style="
-                    width:100%;
-                    height: 40px;    
-                    border: none;">
-					Voltar
-				</button>
-			</a>
-		</div>
-	</div>
+		<footer class="page-footer font-small indigo" id="desceai">
+			<div class="container">
+				<div class="row text-center d-flex justify-content-center pt-5 mb-3">
+					<div class="col-md-2 mb-3">
+						<h6 class="text-uppercase font-weight-bold">
+							<a class="link" href="../../index.php">
+								Home
+							</a>
+						</h6>
+					</div>
+					<div class="col-md-2 mb-3">
+						<h6 class="text-uppercase font-weight-bold">
+							<a class="link" href="../../carros.php">
+								Carros
+							</a>
+						</h6>
+					</div>
+					<div class="col-md-2 mb-3">
+						<h6 class="text-uppercase font-weight-bold">
+							<a class="link" href="../../contato.php">
+								Contato
+							</a>
+						</h6>
+					</div>
 
-	<footer class="page-footer font-small indigo" id="desceai">
-		<div class="container">
-			<div class="row text-center d-flex justify-content-center pt-5 mb-3">
-				<div class="col-md-2 mb-3">
-					<h6 class="text-uppercase font-weight-bold">
-						<a href="../../index.php">
-							Home
-						</a>
-					</h6>
 				</div>
-				<div class="col-md-2 mb-3">
-					<h6 class="text-uppercase font-weight-bold">
-						<a href="../../carros.php">
-							Carros
-						</a>
-					</h6>
-				</div>
-				<div class="col-md-2 mb-3">
-					<h6 class="text-uppercase font-weight-bold">
-						<a href="../../contato.php">
-							Contato
-						</a>
-					</h6>
-				</div>
+				<hr class="rgba-white-light">
+				<div class="row d-flex text-center justify-content-center mb-md-0 mb-4">
+					<div class="col-md-8 col-12 mt-5">
+						<p style="line-height: 1.7rem">
+							Os melhores preços e a maior variedade de veículos para aluguel,
+							de forma que atenda as suas necessidades! Nós da Cardians nos preocupamos
+							com o bem-estar de nossos clientes, e prezamos para que desfrutem
+							dos nossos serviços com o mínimo de burocracia e o máximo de comodidade.
+							Faça sua reserva!
 
-			</div>
-			<hr class="rgba-white-light" style="margin: 0 15%;">
-			<div class="row d-flex text-center justify-content-center mb-md-0 mb-4">
-				<div class="col-md-8 col-12 mt-5">
-					<p style="line-height: 1.7rem">
-						Os melhores preços e a maior variedade de veículos para aluguel,
-						de forma que atenda as suas necessidades! Nós da Cardians nos preocupamos
-						com o bem-estar de nossos clientes, e prezamos para que desfrutem
-						dos nossos serviços com o mínimo de burocracia e o máximo de comodidade.
-						Faça sua reserva!
-
-					</p>
+						</p>
+					</div>
 				</div>
 			</div>
-		</div>
-		<div class="footer-copyright text-center py-3">© 2019 Copyright
-			<a href="../../index.html">
-				Cardians
-			</a>
-		</div>
-	</footer>
+			<div class="footer-copyright text-center py-3">© 2019 Copyright
+				<a class="link" href="../../index.html">
+					Cardians
+				</a>
+			</div>
+		</footer>
 
 
-	<script src="../../js/busca-aproximada-veiculo.js"></script>
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+		<script src="../../js/busca-aproximada-veiculo.js"></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
