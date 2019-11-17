@@ -48,16 +48,15 @@
             return $conexao->exec($insert);
         }
 
-        public function editar($id)
-        {
+        public function editar($id){
             $conexao = Conexao::pegarConexao();
-            $update = "     UPDATE tbusuario
+            $update = " UPDATE tbusuario
 
-                            SET nomeUsuario = '" . $id->getNomeUsuario() . "',
-                                senhaUsuario = '" . $id->getSenhaUsuario() . "',
-                                loginUsuario = '" . $id->getLoginUsuario() . "'
+                        SET nomeUsuario = '" . $id->getNomeUsuario() . "',
+                            senhaUsuario = '" . $id->getSenhaUsuario() . "',
+                            loginUsuario = '" . $id->getLoginUsuario() . "'
                             
-                            WHERE idUsuario = " . $id->getIdUsuario();
+                        WHERE idUsuario = " . $id->getIdUsuario();
             $conexao->exec($update);
             return 'Atualização realizada com sucesso';
         }
