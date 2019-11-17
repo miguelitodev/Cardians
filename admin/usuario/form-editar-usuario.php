@@ -83,7 +83,7 @@
 			<h4 class="card-title">Editar usuário</h4>
 			<p>Aqui você poderá editar os dados do usuário</p>
 		</div>
-		<form action="editar-usuario.php?id=<?php echo $usuario->getIdUsuario(); ?>" method="get">
+		<form action="editar-usuario.php?id=<?php echo $usuario->getIdUsuario(); ?>" method="post">
 
 			<div class="card-body">
 				<input type="text" name="nome" id="nome" value="<?php echo $usuario->getNomeUsuario(); ?>" placeholder="Nome do usuário">
