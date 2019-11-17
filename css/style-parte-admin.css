@@ -13,6 +13,14 @@ footer{
     text-decoration: none;
 }
 
+.select{
+    height: 40px;
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: white;
+}
+
 
 .link{
     text-decoration: none;

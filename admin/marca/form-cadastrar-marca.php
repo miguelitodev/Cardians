@@ -23,6 +23,8 @@ try {
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="../../css/style-parte-admin.css">
+    <link rel="shortcut icon" href="../../img/icons/favicon.ico" type="image/x-icon" />
+
 </head>
 
 <body>
@@ -81,8 +83,14 @@ try {
     <div>
 
         <div class="card">
+            <div class="cad-body">
+                <img class="logoCard" src="../../img/icons/logoSite.png">
+            </div>
             <div class="card-body">
-                <h1>Cadastrar marcas</h1>
+                <h4>Cadastrar marcas</h4>
+                <p>Aqui você poderá cadastrar novas marcas</p>
+            </div>
+            <div class="card-body">
                 <form method="POST" action="cadastrar-marca.php">
                     <input type="text" name="marca" placeholder="Nome da marca">
                     <input type="submit" value="Cadastrar">
@@ -93,12 +101,15 @@ try {
 
         <div class="card">
             <div class="card-body">
-                <h1>Marcas cadastradas</h1>
-
+                <h4 class="card-title">Marcas cadastradas</h4>
+                <p>Aqui você poderá pesquisar, ver, editar ou excluir marcas já cadastradas</p>
+            </div>
+            <div class="card-body">
                 <form action="buscar-marca.php">
                     <input type="text" name="campoPesquisa" id="campoPesquisa" placeholder="Pesquisar marca">
                 </form>
-
+            </div>
+            <div class="card-body">
                 <table class="table">
                     <thead>
                         <tr>
@@ -121,6 +132,7 @@ try {
                 </table>
             </div>
         </div>
+    </div>
 
     </div>
 
@@ -129,28 +141,28 @@ try {
             <div class="row text-center d-flex justify-content-center pt-5 mb-3">
                 <div class="col-md-2 mb-3">
                     <h6 class="text-uppercase font-weight-bold">
-                        <a href="../../index.php">
+                        <a class="link" href="../../index.php">
                             Home
                         </a>
                     </h6>
                 </div>
                 <div class="col-md-2 mb-3">
                     <h6 class="text-uppercase font-weight-bold">
-                        <a href="../../carros.php">
+                        <a class="link" href="../../carros.php">
                             Carros
                         </a>
                     </h6>
                 </div>
                 <div class="col-md-2 mb-3">
                     <h6 class="text-uppercase font-weight-bold">
-                        <a href="../../contato.php">
+                        <a class="link" href="../../contato.php">
                             Contato
                         </a>
                     </h6>
                 </div>
 
             </div>
-            <hr class="rgba-white-light" style="margin: 0 15%;">
+            <hr class="rgba-white-light">
             <div class="row d-flex text-center justify-content-center mb-md-0 mb-4">
                 <div class="col-md-8 col-12 mt-5">
                     <p style="line-height: 1.7rem">
@@ -165,7 +177,7 @@ try {
             </div>
         </div>
         <div class="footer-copyright text-center py-3">© 2019 Copyright
-            <a href="../../index.html">
+            <a class="link" href="../../index.html">
                 Cardians
             </a>
         </div>

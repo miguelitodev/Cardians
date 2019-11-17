@@ -209,7 +209,7 @@ class Locacao
         $locacao->setIdLocacao($result['idLocacao']);
         $locacao->setDataInicial($result['dataInicial']);
         $locacao->setDataFinal($result['dataFinal']);
-        $locacao->setValorTotal($result['valorDiaria']);
+        $locacao->setValorTotal($result['valorTotal']);
         $locacao->setIdCliente($result['idCliente']);
         $locacao->setIdVeiculo($result['idVeiculo']);
         $locacao->setIdUsuario($result['idUsuario']);
