@@ -154,7 +154,7 @@ try {
 								<td><?php echo $linha['idVeiculo'] ?></td>
 								<td><?php echo $linha['modeloVeiculo'] ?></td>
 								<td><?php echo $linha['corVeiculo'] ?></td>
-								<td><?php echo $linha['idMarca'] ?></td>
+								<td><?php echo $linha['nomeMarca'] ?></td>
 								<td><?php echo $linha['anoVeiculo'] ?></td>
 								<td><?php echo $linha['valorDiariaVeiculo'] ?></td>
 								<td><img src="<?php echo $linha['imgVeiculo'] ?>" width="80px"></td>

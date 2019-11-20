@@ -7,7 +7,7 @@
     <meta name="description" content="Venha comprar na melhor loja de automoveis do século XXI" />
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <link rel="stylesheet" type="text/css" href="css/style-parte-admin.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="css/style-parte-admin.css" /> -->
     <link rel="shortcut icon" href="img/icons/favicon.ico" type="image/x-icon" />
     <!-- <link rel="" -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
@@ -43,18 +43,18 @@
     </nav>
     <!-- FIM DO MENU DA PÁGINA -->
 
-    <video autoplay muted loop width="100%">
+    <!-- <video autoplay muted loop width="100%">
         <source src="img/videos/VIDEO_ROADSTER.mp4" type="video/mp4">
     </video>
-
+ -->
 
     <canvas id="canvas"></canvas>
-
 
     <div class="page-wrapper">
         <div class="post-slider">
             <img src="img/icons/left-seta.png" class="left-seta prev" alt="">
             <img src="img/icons/right-seta.png" class="right-seta next" alt="">
+            <p class="maisProcurados">Carros mais procurados!</p>
             <div class="post-wrapper">
                 <?php
                 require_once 'global.php';
@@ -92,6 +92,83 @@
         </div>
     </div>
 
+
+
+
+    <div class="allVeiculos">
+        <br><br>
+        <form action="admin/buscar-carro.php">
+            <input type="text" name="campoPesquisa" id="campoPesquisa" placeholder="Pesquisar veículo">
+        </form>
+        <br><br>
+        <?php
+        require_once 'global.php';
+
+        try {
+            $marca = new Marca();
+            $veiculo = new Veiculo();
+            $lista = $marca->listarMarca();
+            $listaVeiculo = $veiculo->listar();
+        } catch (Exception $erro) {
+            echo '<pre>';
+            print_r($erro);
+            echo '</pre>';
+            echo $erro->getMessage();
+        }
+
+        foreach ($listaVeiculo as $linha) {
+            ?>
+
+            <table>
+                <tr>
+                    <div class="card">
+                        <img class="veiculos" src="<?php echo $linha['imgVeiculo'] ?>" alt="">
+                        <h1 class="modelo"><?php echo $linha['modeloVeiculo'] ?></h1>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><b>Modelo: </b><?php echo $linha['modeloVeiculo'] ?></li>
+                            <li class="list-group-item"><b>Cor: </b><?php echo $linha['corVeiculo'] ?></li>
+                            <li class="list-group-item"><b>Marca: </b><?php echo $linha['nomeMarca'] ?></li>
+                            <li class="list-group-item"><b>Ano: </b><?php echo $linha['anoVeiculo'] ?></li>
+                            <li class="list-group-item"><b>Valor da diária: </b><?php echo $linha['valorDiariaVeiculo'] ?></li>
+                            <button type="button" class="btn" onclick="window.location.href='admin/locacao/form-cadastrar-locacao.php'">Fazer locação</button>
+                        </ul>
+                    </div>
+                </tr>
+            </table>
+        <?php } ?>
+        <table class="table">
+					<thead>
+						<tr>
+							<th>ID</th>
+							<th>Modelo</th>
+							<th>Cor</th>
+							<th>Marca</th>
+							<th>Ano</th>
+							<th>Valor diária</th>
+							<th>Imagem</th>
+							<th class="acao">Editar</th>
+							<th class="acao">Excluir</th>
+
+						</tr>
+					</thead>
+					<tbody id="resultado">
+						<?php foreach ($listaVeiculo as $linha) { ?>
+							<tr>
+								<td><?php echo $linha['idVeiculo'] ?></td>
+								<td><?php echo $linha['modeloVeiculo'] ?></td>
+								<td><?php echo $linha['corVeiculo'] ?></td>
+								<td><?php echo $linha['nomeMarca'] ?></td>
+								<td><?php echo $linha['anoVeiculo'] ?></td>
+								<td><?php echo $linha['valorDiariaVeiculo'] ?></td>
+								<td><img src="<?php echo $linha['imgVeiculo'] ?>" width="80px"></td>
+								<td><a href="form-editar-veiculo.php?id=<?php echo $linha['idVeiculo'] ?>">Editar</td>
+								<td><a href="excluir-veiculo.php?id=<?php echo $linha['idVeiculo'] ?>">Excluir</td>
+							</tr>
+
+						<?php } ?>
+					</tbody>
+				</table>
+    </div>
 
     <footer class="page-footer font-small indigo" style="background-color: #DCDCDC; margin-top: 0%" id="desceai">
         <div class="container">
@@ -139,9 +216,9 @@
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/popper.min.js"></script>
     <script type="text/javascript" src="js/slick.min.js"></script>
+    <script src="js/busca-aproximada-carro.js"></script>
     <script src="js/particles.js"></script>
     <script src="js/script.js"></script>
-
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 

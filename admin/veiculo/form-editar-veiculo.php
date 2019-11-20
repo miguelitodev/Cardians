@@ -90,7 +90,7 @@ try {
             <p class="card-text">Aqui você poderá editar os campos do veiculo</p>
         </div>
 
-        <form name="edicao" method="post" action="editar-veiculo.php?id=<?php echo $veiculo->getIdVeiculo(); ?>">
+        <form name="edicao" method="post" enctype="multipart/form-data" action="editar-veiculo.php?id=<?php echo $veiculo->getIdVeiculo(); ?>">
             <div class="card-body">
                 <input type="text" name="modelo" value="<?php echo $veiculo->getModeloVeiculo(); ?>">
             </div>
@@ -101,7 +101,7 @@ try {
                 <select class="select" name="idMarca" title="Marca do veiculo" value="<?php echo $marca->getIdMarca(); ?>">
                     <?php
                     foreach ($lista as $linha) {
-                        echo ("<option value=" . $linha[idMarca] . ">" . $linha[nomeMarca] . "</option>");
+                        echo ("<option value=" . $linha['idMarca'] . ">" . $linha['nomeMarca'] . "</option>");
                     }
                     ?>
                 </select>
@@ -111,6 +111,9 @@ try {
             </div>
             <div class="card-body">
                 <input type="text" name="valorDiaria" value="<?php echo $veiculo->getValorDiariaVeiculo(); ?>">
+            </div>
+            <div class="card-body">
+                <input type="file" name="img">
             </div>
             <div class="card-body">
                 <input class="botoes" type="submit" value="Salvar">
