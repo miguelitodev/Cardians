@@ -113,42 +113,40 @@ $listaVeiculo = $veiculo->listar();
                     }
                     ?>
                 </datalist>
-            </div>
+                <div class="card-body">
+                    <input type="text" name="veiculo" id="veiculo" placeholder="Nome do veiculo" list="listaVeiculo">
+                    <datalist id="listaVeiculo">
+                        <?php
+                        foreach ($listaVeiculo as $linha) {
+                            echo ("<option value=" . $linha[idVeiculo] . ">" . $linha[modeloVeiculo] . "</option>");
+                        }
+                        ?>
+                    </datalist>
+                </div>
 
-            <div class="card-body">
-                <input type="text" name="veiculo" id="veiculo" placeholder="Nome do veiculo" list="listaVeiculo">
-                <datalist id="listaVeiculo">
-                    <?php
-                    foreach ($listaVeiculo as $linha) {
-                        echo ("<option value=" . $linha[idVeiculo] . ">" . $linha[modeloVeiculo] . "</option>");
-                    }
-                    ?>
-                </datalist>
-            </div>
+                <div class="card-body">
+                    <input type="text" name="usuario" id="usuario" placeholder="Nome do usuário" list="listaUsuario">
+                    <datalist id="listaUsuario">
+                        <?php
+                        foreach ($listaUsuario as $linha) {
+                            echo ("<option value=" . $linha[idUsuario] . ">" . $linha[nomeUsuario] . "</option>");
+                        }
+                        ?>
+                    </datalist>
+                </div>
 
-            <div class="card-body">
-                <input type="text" name="usuario" id="usuario" placeholder="Nome do usuário" list="listaUsuario">
-                <datalist id="listaUsuario">
-                    <?php
-                    foreach ($listaUsuario as $linha) {
-                        echo ("<option value=" . $linha[idUsuario] . ">" . $linha[nomeUsuario] . "</option>");
-                    }
-                    ?>
-                </datalist>
-            </div>
+                <div class="card-body">
+                    <input type="text" name="status" id="status" placeholder="Status da locação" list="listaStatus">
+                    <datalist id="listaStatus">
+                        <option value="Em processo"></option>
+                        <option value="Concluida"></option>
+                        <option value="Trancada"></option>
+                    </datalist>
+                </div>
 
-            <div class="card-body">
-                <input type="text" name="status" id="status" placeholder="Status da locação" list="listaStatus">
-                <datalist id="listaStatus">
-                    <option value="Em processo"></option>
-                    <option value="Concluida"></option>
-                    <option value="Trancada"></option>
-                </datalist>
-            </div>
-
-            <div class="card-body">
-                <input type="submit" value="Enviar">
-            </div>
+                <div class="card-body">
+                    <input type="submit" value="Enviar">
+                </div>
 
         </form>
 
@@ -198,6 +196,7 @@ $listaVeiculo = $veiculo->listar();
                 </tbody>
             </table>
         </div>
+    </div>
     </div>
 
     <footer class="page-footer font-small indigo" id="desceai">
