@@ -55,12 +55,70 @@
     </div>
 
     <div class="campo carro2 parallax">
+        <div style="background-color: rgba(0, 0, 0, 0.5);
+                    color: #fff;
+                    width: 70%;">
+            <b>
+                <h1>Quem somos</h1>
+            </b>
+
+            ​​​​​A Cardians é uma empresa especializada em aluguel de carros no Brasil e na América Latina. Com nossa experiência de
+            46 anos, gostaríamos de convidar você a repensar e a construir um novo significado para a mobilidade.
+
+            Porque, para nós, mobilidade tem tudo a ver com liberdade. É poder chegar aonde você quer da maneira mais
+            prática e segura possível. Nós adoramos essa liberdade, mas também entendemos que ela possui diferentes
+            significados para cada um. Por isso, nossa missão é oferecer a você a melhor opção para estar ao seu lado em
+            cada trajeto.
+        </div>
     </div>
-    
+
     <div class="campo carro3 parallax">
+        <div style="background-color: rgba(0, 0, 0, 0.5);
+                    color: #fff;
+                    width: 70%;
+                    text-align:justify;">
+            <b>
+                <h1>Aluguel de carros</h1>
+            </b>
+            <p>
+                Responsável pela operação das agências corporativas, a Cardians
+                é a solução para suas necessidades em mobilidade, com toda a conveniência que só quem mais
+                entende de aluguel de carros no Brasil pode oferecer.
+
+                Para que você possa conduzir boas histórias, aqui você escolhe qual modelo de carro é melhor
+                para você: econômicos, intermediários, executivos, utilitários, blindados. Com a frota mais
+                nova do país, estamos prontos para atender nossos clientes em qualquer tipo de necessidade.
+                E você ainda conta com comodidades como locação com motorista, cadeiras de bebês e GPS,
+                tarifas e pacotes especiais de aluguel.
+
+                São 222 mil carros disponíveis, distribuídos em 589 agências nas principais cidades. Junte-se
+                aos 8,3 milhões de clientes que escolheram a Cardians como copiloto em suas viagens.
+            </p>
+        </div>
     </div>
 
     <div class="campo carro4 parallax">
+        <div style="background-color: rgba(0, 0, 0, 0.5);
+                    color: #fff;
+                    width: 70%;
+                    text-align:justify;">
+            <b>
+                <h1>Seminovos</h1>
+            </b>
+            <p>
+                Divisão da Plataforma Cardians que realiza a venda de veículos seminovos da Cardians
+                Aluguel de Carros e Gestão de Frotas, após determinado período de uso.
+
+                Enquanto estão no aluguel, nossos carros são submetidos a constantes processos
+                de revisão e manutenção, o que os confere estado de excelência em termos de
+                qualidade e conservação.
+
+                Com uma capacidade de venda de até 80 mil carros por ano, a Cardians Seminovos
+                possui 88 lojas em 56 cidades brasileiras, oferecendo as melhores oportunidades
+                para a aquisição de veículos seminovos, todos com a garantia de qualidade e a
+                confiabilidade da marca Cardians.
+            </p>
+        </div>
     </div>
 
     <footer class="page-footer font-small indigo" id="desceai">
