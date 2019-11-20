@@ -94,13 +94,11 @@
 
 
 
+    <form action="admin/buscar-carro.php">
+        <input type="text" name="campoPesquisa" id="campoPesquisa" placeholder="Digite o modelo procurado">
+    </form>
+    <div class="cont" id="resultado">
 
-    <div class="allVeiculos">
-        <br><br>
-        <form action="admin/buscar-carro.php">
-            <input type="text" name="campoPesquisa" id="campoPesquisa" placeholder="Pesquisar veículo">
-        </form>
-        <br><br>
         <?php
         require_once 'global.php';
 
@@ -119,64 +117,36 @@
         foreach ($listaVeiculo as $linha) {
             ?>
 
-            <table>
-                <tr>
-                    <div class="card">
-                        <img class="veiculos" src="<?php echo $linha['imgVeiculo'] ?>" alt="">
-                        <h1 class="modelo"><?php echo $linha['modeloVeiculo'] ?></h1>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item"><b>Modelo: </b><?php echo $linha['modeloVeiculo'] ?></li>
-                            <li class="list-group-item"><b>Cor: </b><?php echo $linha['corVeiculo'] ?></li>
-                            <li class="list-group-item"><b>Marca: </b><?php echo $linha['nomeMarca'] ?></li>
-                            <li class="list-group-item"><b>Ano: </b><?php echo $linha['anoVeiculo'] ?></li>
-                            <li class="list-group-item"><b>Valor da diária: </b><?php echo $linha['valorDiariaVeiculo'] ?></li>
-                            <button type="button" class="btn" onclick="window.location.href='admin/locacao/form-cadastrar-locacao.php'">Fazer locação</button>
-                        </ul>
-                    </div>
-                </tr>
-            </table>
+
+            <div class='card'>
+                <img class='veiculos' src="<?php echo $linha['imgVeiculo'] ?>" alt=''>
+                <h1 class='modelo'><?php echo $linha['modeloVeiculo'] ?></h1>
+                <ul class='list-group list-group-flush'>
+                    <li class='list-group-item'><b>Modelo: </b><?php echo $linha['modeloVeiculo'] ?></li>
+                    <li class='list-group-item'><b>Cor: </b><?php echo $linha['corVeiculo'] ?></li>
+                    <li class='list-group-item'><b>Marca: </b><?php echo $linha['nomeMarca'] ?></li>
+                    <li class='list-group-item'><b>Ano: </b><?php echo $linha['anoVeiculo'] ?></li>
+                    <li class='list-group-item'><b>Valor da diária: </b><?php echo $linha['valorDiariaVeiculo'] ?></li>
+                    <button type='button' class='btn' onclick="window.location.href='admin/locacao/form-cadastrar-locacao.php'">Fazer locação</button>
+                </ul>
+            </div>
         <?php } ?>
-        <table class="table">
-					<thead>
-						<tr>
-							<th>ID</th>
-							<th>Modelo</th>
-							<th>Cor</th>
-							<th>Marca</th>
-							<th>Ano</th>
-							<th>Valor diária</th>
-							<th>Imagem</th>
-							<th class="acao">Editar</th>
-							<th class="acao">Excluir</th>
-
-						</tr>
-					</thead>
-					<tbody id="resultado">
-						<?php foreach ($listaVeiculo as $linha) { ?>
-							<tr>
-								<td><?php echo $linha['idVeiculo'] ?></td>
-								<td><?php echo $linha['modeloVeiculo'] ?></td>
-								<td><?php echo $linha['corVeiculo'] ?></td>
-								<td><?php echo $linha['nomeMarca'] ?></td>
-								<td><?php echo $linha['anoVeiculo'] ?></td>
-								<td><?php echo $linha['valorDiariaVeiculo'] ?></td>
-								<td><img src="<?php echo $linha['imgVeiculo'] ?>" width="80px"></td>
-								<td><a href="form-editar-veiculo.php?id=<?php echo $linha['idVeiculo'] ?>">Editar</td>
-								<td><a href="excluir-veiculo.php?id=<?php echo $linha['idVeiculo'] ?>">Excluir</td>
-							</tr>
-
-						<?php } ?>
-					</tbody>
-				</table>
     </div>
 
-    <footer class="page-footer font-small indigo" style="background-color: #DCDCDC; margin-top: 0%" id="desceai">
+    <footer class="page-footer font-small indigo" id="desceai">
         <div class="container">
             <div class="row text-center d-flex justify-content-center pt-5 mb-3">
                 <div class="col-md-2 mb-3">
                     <h6 class="text-uppercase font-weight-bold">
                         <a href="index.php">
                             Home
+                        </a>
+                    </h6>
+                </div>
+                <div class="col-md-2 mb-3">
+                    <h6 class="text-uppercase font-weight-bold">
+                        <a href="carros.php">
+                            Carros
                         </a>
                     </h6>
                 </div>
@@ -202,7 +172,6 @@
                     </p>
                 </div>
             </div>
-            <hr class="clearfix d-md-none rgba-white-light" style="margin: 10% 15% 5%;">
         </div>
         <div class="footer-copyright text-center py-3">© 2019 Copyright
             <a href="index.html">
