@@ -27,6 +27,57 @@ try {
 ?>
 
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
+
+        <div class="container-fluid">
+
+            <a href="../../index.php">
+                <img class="ajusteTamanho" src="../../img/icons/logoSite.png" title="Home">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+
+                <ul class="navbar-nav ml-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../carros.php">
+                            <img class="ajusteTamanho carro" src="../../img/icons/icone-carro.png" title="Carros" />
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../contato.php">
+                            <img class="ajusteTamanho" src="../../img/icons/logoContato.png" title="Contato" />
+                        </a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                            <img class="ajusteTamanho" src="../../img/icons/logo-opcoes.png">
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="../locacao/form-cadastrar-locacao.php">Locação</a>
+                            <a class="dropdown-item" href="cliente/form-cadastrar-cliente.php">Cliente</a>
+                            <a class="dropdown-item" href="../usuario/form-cadastrar-usuario.php">Usuário</a>
+                            <a class="dropdown-item" href="../veiculo/form-cadastrar-veiculo.php">Veiculo</a>
+                            <a class="dropdown-item" href="../marca/form-cadastrar-marca.php">Marca</a>
+                            <a class="dropdown-item" href="../menu-admin.php">Menu</a>
+                        </div>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
     <div class="card">
         <div class="card-body">
             <h1 class="card-title">Editar cliente</h1>
