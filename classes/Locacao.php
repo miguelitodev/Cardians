@@ -114,8 +114,6 @@ class Locacao
         $this->nomeUsuario = $usuario;
     }
 
-
-
     public function cadastrar($locacao)
     {
         $conexao = Conexao::pegarConexao();
@@ -128,6 +126,7 @@ class Locacao
                                     '" . $locacao->getIdUsuario()       . "',
                                     '" . $locacao->getIdCliente()       . "',
                                     '" . $locacao->getStatusLocacao()   . "')
+
                         ";
         $conexao->exec($insert);
         return 'Cadastro realizado com sucesso!';

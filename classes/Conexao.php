@@ -5,8 +5,8 @@ class Conexao {
     
         define("HOST", "localhost");
         define("DBNAME", "bdlojacarros");
-        define("USERNM", "admin");
-        define("PASSWD", "Msql_20191");
+        define("USERNM", "root");
+        define("PASSWD", "");
 
         $conexao = new PDO("mysql:host=" . HOST . ";dbname=" . DBNAME, USERNM, PASSWD);    
         $conexao->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

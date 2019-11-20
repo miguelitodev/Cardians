@@ -49,7 +49,7 @@
 						<div class="dropdown-menu">
 							<a class="dropdown-item" href="locacao/form-cadastrar-locacao.php">Locação</a>
 							<a class="dropdown-item" href="cliente/form-cadastrar-cliente.php">Cliente</a>
-							<a class="dropdown-item" href="usuario/form-cadastrar-usuario.php">Usário</a>
+							<a class="dropdown-item" href="usuario/form-cadastrar-usuario.php">Usuário</a>
 							<a class="dropdown-item" href="veiculo/form-cadastrar-veiculo.php">Veiculo</a>
 							<a class="dropdown-item" href="marca/form-cadastrar-marca.php">Marca</a>
 							<a class="dropdown-item" href="menu-admin.php">Menu</a>
@@ -104,7 +104,7 @@
 		<div class="card-body">
 			<a href="usuario/form-cadastrar-usuario.php">
 				<button class="botoes pequeno">
-					Cadastro marca
+					Cadastro usuário
 				</button>
 			</a>
 		</div>
