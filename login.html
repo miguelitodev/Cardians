@@ -1,60 +1,58 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  	<head>
-    	<title>Entrar</title>
-    	<meta charset="UTF-8">
-    	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
-		<link rel="stylesheet" href="css/style-parte-admin.css">
-	</head>
-  	<body>
 
-		<nav class="navbar navbar-expand-lg navbar-light bg-light shadow fixed-top">
-			<div class="container-fluid">
-				<a href="index.php">
-					<img src="img/menu_pag/logoSite.png" width="45" title="Home">
-				</a>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+<head>
+    <title>Entrar</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style-parte-admin.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow fixed-top">
+        <div class="container-fluid">
+            <a href="index.php">
+                <img src="img/menu_pag/logoSite.png" width="45" title="Home">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
-				<div class="collapse navbar-collapse" id="navbarResponsive">
-					<ul class="navbar-nav ml-auto">
-						<li class="nav-item">
-							<a class="nav-link" href="carros.php">
-								<img src="img/home/icone-carro.png" style="width: 30px; margin-right: 10px;" title="Carros"/>
-							</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="contato.php">
-								<img src="img/menu_pag/logoContato.png" style="width: 30px; margin-right: 10px;" title="Contato"/>
-							</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</nav>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="carros.php">
+                            <img src="img/home/icone-carro.png" style="width: 30px; margin-right: 10px;" title="Carros" />
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contato.php">
+                            <img src="img/menu_pag/logoContato.png" style="width: 30px; margin-right: 10px;" title="Contato" />
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-    	<div class="container">
+    <div class="container">
 
-			<form class="form-login" action="verifica-login.php" method="POST">
-				<h2 class="form-login-title">Entrar</h2>
-				<div class="form-group">
-					<input class="inputEmail"type="email" name="txtEmail" class="form-control" placeholder="E-mail" required />
-				</div>
-				<div class="form-group">
-					<input class="inputSenha" type="password" name="txtSenha" class="form-control" placeholder="Senha" required />
-				</div>
-				<button type="submit" class="btnEntrar">Entrar</button>
-			</form>
+        <form class="form-login" action="verifica-login.php" method="POST">
+            <h2 class="form-login-title">Entrar</h2>
+            <div class="form-group">
+                <input class="inputEmail" type="email" name="txtEmail" class="form-control" placeholder="E-mail" required />
+            </div>
+            <div class="form-group">
+                <input class="inputSenha" type="password" name="txtSenha" class="form-control" placeholder="Senha" required />
+            </div>
+            <button type="submit" class="btnEntrar">Entrar</button>
+        </form>
 
-		</div>
-		<script>
-			function redirectFormCadUsuario() {
-				window.location.href = "admin/usuario/form-cadastrar-usuario.php"
-			}
-		</script>
-		<script type="text/javascript" src="js/jquery.slim.min.js"></script>
-		<script type="text/javascript" src="js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="js/popper.min.js"></script>
-  </body>
+    </div>
+    <script type="text/javascript" src="js/jquery.slim.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+</body>
+
 </html>
