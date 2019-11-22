@@ -1,7 +1,8 @@
 <?php
 
-if(isset($_SESSION["login"]) === false && isset($_SESSION["login"]) === false) {
+session_start();
+
+if(!(isset($_SESSION["login"]) && isset($_SESSION["senha"])))
     header("Location: #");
-}
 
 ?>

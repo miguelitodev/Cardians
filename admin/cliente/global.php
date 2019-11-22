@@ -1,5 +1,7 @@
 <?php
 
+require_once "../../verifica-logado.php";
+
 spl_autoload_register('carregarClasse');
 
 function carregarClasse($nomeClasse)
