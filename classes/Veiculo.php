@@ -139,9 +139,12 @@ class Veiculo
     public function pesquisar($campoPesquisa)
     {
         $conexao = Conexao::pegarConexao();
-        $select = "select idVeiculo, anoVeiculo, corVeiculo, modeloVeiculo,
-                         valorDiariaVeiculo, imgVeiculo, statusVeiculo idMarca from tbveiculo
-                            where modeloVeiculo like '$campoPesquisa'";
+        $select = " SELECT  v.idVeiculo, v.anoVeiculo, v.corVeiculo, v.modeloVeiculo,
+                            v.valorDiariaVeiculo, v.imgVeiculo, v.statusVeiculo, m.nomeMarca 
+                    FROM tbveiculo AS v
+                    INNER JOIN tbmarca AS m
+                    ON v.idMarca = m.idMarca
+                    WHERE modeloVeiculo LIKE '$campoPesquisa'";
         $resultado = $conexao->query($select);
         $lista = $resultado->fetchAll();
         return $lista;

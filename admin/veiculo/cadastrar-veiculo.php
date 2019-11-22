@@ -2,6 +2,26 @@
 
 require_once 'global.php';
 
+function uploadImage($image, $path){
+	if($image!==null) {
+		$target_dir = $path;
+		$check = @getimagesize($image["tmp_name"]);
+		if($check !== false) {
+			//echo "File is an image - " . $check["mime"] . ".";
+			$target_file = uniqid().image_type_to_extension($check[2]);
+			if (move_uploaded_file($image["tmp_name"], $target_dir.$target_file)) {
+				return $target_file;
+			} else {
+				die("Ocorreu um erro ao enviar a foto do veículo (CHMOD).");
+			}
+		} else {
+			die("A foto do veículo selecionada não é uma imagem.");
+		}
+	} else {
+		die("A foto do veículo não foi encontrada.");
+	}
+}
+
 try {
 	header("Location: form-cadastrar-veiculo.php");
 
@@ -19,21 +39,9 @@ try {
 
 	$carro->setIdVeiculo($carro->pegarIdVeiculo());
 
-	$nomeImagem = $_FILES['img']['name'];
+	$caminho_da_imagem = uploadImage($_FILES["img"], __DIR__."/../../img/veiculos/");
 
-	$arquivoImagem = $_FILES['img']['tmp_name'];
-
-	$caminho = "../../img/veiculos/";
-
-	$array = explode(".", $nomeImagem);
-
-	$extensao = $array[1];
-
-	$nomeImagem = $caminho . $carro->getIdVeiculo() . "." . $extensao;
-
-	move_uploaded_file($arquivoImagem, $nomeImagem);
-
-	$carro->setImgVeiculo($nomeImagem);
+	$carro->setImgVeiculo($caminho_da_imagem);
 	$carro->fotoVeiculo($carro);
 	
 } catch (Exception $erro) {

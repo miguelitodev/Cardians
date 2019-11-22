@@ -77,7 +77,7 @@
 
 
                         <div class="post">
-                            <img class="veiculos" style="width: 100%; height: 214px" src="<?php echo $linha['imgVeiculo'] ?>" alt="">
+                            <img class="veiculos" style="width: 100%; height: 214px" src="img/veiculos/<?php echo $linha['imgVeiculo'] ?>" alt="">
                             <h1 class="modelo"><?php echo $linha['modeloVeiculo'] ?></h1>
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item"><b>Modelo: </b><?php echo $linha['modeloVeiculo'] ?></li>
@@ -123,7 +123,7 @@
 
 
                 <div class="card">
-                    <img class="veiculos" style="width: 100%; height: 224px" src="<?php echo $linha['imgVeiculo'] ?>" alt="">
+                    <img class="veiculos" style="width: 100%; height: 224px" src="img/veiculos/<?php echo $linha['imgVeiculo'] ?>" alt="">
                     <h1 class="modelo"><?php echo $linha['modeloVeiculo'] ?></h1>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item"><b>Modelo: </b><?php echo $linha['modeloVeiculo'] ?></li>

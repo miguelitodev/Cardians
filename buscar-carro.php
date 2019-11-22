@@ -13,7 +13,7 @@ try {
 
         foreach ($lista as $linha) {
             echo "<div class='card'>
-                <img class='veiculos' src='" . $linha['imgVeiculo'] . "' alt=''>
+                <img class='veiculos' src=img/veiculo/'" . $linha['imgVeiculo'] . "' alt=''>
                 <h1 class='modelo'>" . $linha['modeloVeiculo'] . "</h1>
                 <ul class='list-group list-group-flush'>
                     <li class='list-group-item'><b>Modelo: </b>" . $linha['modeloVeiculo'] . "</li>
@@ -30,7 +30,7 @@ try {
         foreach ($lista as $linha) {
             if ($linha['statusVeiculo'] != "Indisponível") {
                 echo "<div class='card'>
-                <img class='veiculos' src='" . $linha['imgVeiculo'] . "' alt=''>
+                <img class='veiculos' src=img/veiculo/'" . $linha['imgVeiculo'] . "' alt=''>
                 <h1 class='modelo'>" . $linha['modeloVeiculo'] . "</h1>
                 <ul class='list-group list-group-flush'>
                     <li class='list-group-item'><b>Modelo: </b>" . $linha['modeloVeiculo'] . "</li>
