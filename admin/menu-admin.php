@@ -1,5 +1,5 @@
 <?php
-
+	//require_once "verifica-logado.php";
 ?>
 <!doctype html>
 <html lang="pt-br">
