@@ -5,10 +5,6 @@
     
     if($login == "admin@admin.com" && $senha == "admin") {
         header("Location: admin/menu-admin.php");
-        
-        if($_SESSION["logged"] === true)
-            session_destroy();
-            
         session_start();
         $_SESSION["login"] = $_POST["txtEmail"];
         $_SESSION["senha"] = $_POST["txtSenha"];

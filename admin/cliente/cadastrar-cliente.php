@@ -1,5 +1,5 @@
 <?php
-
+    require_once "../../verifica-logado.php";
     require_once 'global.php';
 
     try {
