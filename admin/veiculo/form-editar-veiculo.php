@@ -113,6 +113,9 @@ try {
                 <input type="text" name="valorDiaria" value="<?php echo $veiculo->getValorDiariaVeiculo(); ?>">
             </div>
             <div class="card-body">
+                <input type="text" name="statusVeiculo" value="<?php echo $veiculo->getStatusVeiculo(); ?>">
+            </div>
+            <div class="card-body">
                 <input type="file" name="img">
             </div>
             <div class="card-body">

@@ -118,7 +118,9 @@ $listaVeiculo = $veiculo->listar();
                     <datalist id="listaVeiculo">
                         <?php
                         foreach ($listaVeiculo as $linha) {
-                            echo ("<option value=" . $linha[idVeiculo] . ">" . $linha[modeloVeiculo] . "</option>");
+                            if($linha[statusVeiculo] == "Disponível"){
+                                echo ("<option value=" . $linha[idVeiculo] . ">" . $linha[modeloVeiculo] . "</option>");
+                            }
                         }
                         ?>
                     </datalist>

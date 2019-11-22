@@ -9,6 +9,7 @@ try {
     $veiculo->setModeloVeiculo($_POST['modelo']);
     $veiculo->setImgVeiculo($_POST['img']);
     $veiculo->setCorVeiculo($_POST['cor']);
+    $veiculo->setStatusVeiculo($_POST['statusVeiculo']);
     $veiculo->setValorDiariaVeiculo($_POST['valorDiaria']);
     $veiculo->setIdMarca($_POST['idMarca']);
     echo $veiculo->editar($veiculo);
