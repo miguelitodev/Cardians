@@ -69,6 +69,7 @@ try {
 							<a class="dropdown-item" href="form-cadastrar-veiculo.php">Veiculo</a>
 							<a class="dropdown-item" href="../marca/form-cadastrar-marca.php">Marca</a>
 							<a class="dropdown-item" href="../menu-admin.php">Menu</a>
+							<a class="dropdown-item" href="">Sair</a>
 						</div>
 					</li>
 
@@ -171,7 +172,7 @@ try {
 								<td><?php echo $linha['nomeMarca'] ?></td>
 								<td><?php echo $linha['anoVeiculo'] ?></td>
 								<td><?php echo $linha['valorDiariaVeiculo'] ?></td>
-								<td><img src="<?php echo $linha['imgVeiculo'] ?>" width="80px"></td>
+								<td><img src="../../img/veiculos/<?php echo $linha['imgVeiculo'] ?>" width="80px"></td>
 								<td><?php echo $linha['statusVeiculo'] ?></td>
 
 								<td><a href="form-editar-veiculo.php?id=<?php echo $linha['idVeiculo'] ?>">Editar</td>
