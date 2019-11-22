@@ -236,3 +236,7 @@ div#formulario input {
     color: black;
     margin: 90px auto;
 }
+
+.ajusteTamanho {
+    width: 40px;
+}

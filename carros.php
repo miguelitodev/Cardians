@@ -20,7 +20,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
         <div class="container-fluid">
             <a href="index.php">
-                <img src="img/icons/logoSite.png" width="45" title="Home">
+                <img class="ajusteTamanho" src="img/icons/logoSite.png" title="Home">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -29,12 +29,12 @@
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="carros.php">
-                            <img src="img/icons/icone-carro.png" style="width: 30px; margin-right: 10px;" title="Carros" />
+                            <img class="ajusteTamanho" src="img/icons/icone-carro.png" title="Carros" />
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contato.php">
-                            <img src="img/icons/logoContato.png" style="width: 30px; margin-right: 10px;" title="Contato" />
+                            <img class="ajusteTamanho" src="img/icons/logoContato.png" title="Contato" />
                         </a>
                     </li>
                 </ul>

@@ -1,4 +1,4 @@
-body{
+body {
     background-color: #2DC874;
     /* background-image: url(../img/parte-admin/wpp01.jpg); */
     background-attachment: fixed;
@@ -7,13 +7,13 @@ body{
     text-align: center;
 }
 
-footer{
+footer {
     background-color: aliceblue;
     color: #055353;
     text-decoration: none;
 }
 
-.select{
+.select {
     height: 40px;
     width: 100%;
     border: none;
@@ -21,10 +21,9 @@ footer{
     background-color: white;
 }
 
-
-.link{
+.link {
     text-decoration: none;
-    color: #2DC874;
+    color: #188a62;
 }
 
 .card {
@@ -48,11 +47,11 @@ footer{
     height: 40px;
 }
 
-form{
+form {
     text-align: center;
 }
 
-.botoes{
+.botoes {
     width: 100%;
     border: none;
     height: 40px;
@@ -61,7 +60,9 @@ form{
     border-radius: 10px;
 }
 
+
 /* Login.html */
+
 .form-login {
     background-color: #f8f9fa;
     color: #055353;
@@ -75,6 +76,7 @@ form{
     border-radius: 10px;
     box-shadow: -10px 20px 60px rgba(0, 50, 30, 0.2);
 }
+
 .form-login-title {
     text-align: center;
     font-family: sans-serif;
@@ -83,21 +85,22 @@ form{
     letter-spacing: 5px;
     margin-bottom: 80px;
 }
-.inputEmail{
+
+.inputEmail {
     background-color: #f8f9fa;
     border: none;
     width: 100%;
     outline: none;
 }
 
-.inputSenha{
+.inputSenha {
     background-color: #f8f9fa;
     border: none;
     width: 100%;
     outline: none;
 }
 
-.btnEntrar{
+.btnEntrar {
     background-color: #055353;
     border: none;
     color: white;
@@ -108,6 +111,7 @@ form{
 
 
 /* form-cadastrar-usuario.php */
+
 .form-cadastrar {
     background-color: #f8f9fa;
     color: #055353;
@@ -121,6 +125,7 @@ form{
     border-radius: 10px;
     box-shadow: -10px 20px 60px rgba(0, 50, 30, 0.2);
 }
+
 .form-cadastrar-title {
     text-align: center;
     font-family: sans-serif;
@@ -130,33 +135,33 @@ form{
     margin-bottom: 80px;
 }
 
-.form-cadastrar input{
+.form-cadastrar input {
     border: none;
     outline: none;
     background-color: #f8f9fa;
     width: 100%;
 }
 
-.form-cadastrar button{
+.form-cadastrar button {
     background-color: #055353;
     color: white;
 }
 
+
 /* menu-admin.php */
 
-.dropdown{
+.dropdown {
     font-size: 20px;
 }
 
-.ajusteTamanho{
+.ajusteTamanho {
     width: 40px;
 }
 
-
-.pequeno{
+.pequeno {
     width: 40%;
 }
 
-.logoCard{
+.logoCard {
     width: 20%;
 }
