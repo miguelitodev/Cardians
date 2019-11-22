@@ -55,6 +55,7 @@
 							<a class="dropdown-item" href="veiculo/form-cadastrar-veiculo.php">Veiculo</a>
 							<a class="dropdown-item" href="marca/form-cadastrar-marca.php">Marca</a>
 							<a class="dropdown-item" href="menu-admin.php">Menu</a>
+							<a class="dropdown-item" href="">Sair</a>
 						</div>
 					</li>
 
