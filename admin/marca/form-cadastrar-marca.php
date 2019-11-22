@@ -92,7 +92,7 @@ try {
             </div>
             <div class="card-body">
                 <form method="POST" action="cadastrar-marca.php">
-                    <input type="text" name="marca" placeholder="Nome da marca">
+                    <input type="text" name="marca" placeholder="Nome da marca" required>
                     <input type="submit" value="Cadastrar">
                 </form>
             </div>

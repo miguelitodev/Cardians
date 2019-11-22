@@ -117,10 +117,10 @@ try {
 			</div>
 			
 			<div class="card-body">
-				<input type="file" name="img">
+				<input type="file" name="img" required>
 			</div>
 			<div class="card-body">
-				<select class="select" name="idMarca" title="Marca do veiculo">
+				<select class="select" name="idMarca" title="Marca do veiculo" required> 
 					<?php
 					foreach ($lista as $linha) {
 						echo ("<option value=" . $linha[idMarca] . ">" . $linha[nomeMarca] . "</option>");

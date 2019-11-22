@@ -91,24 +91,24 @@ try {
         </div>
         <form action="cadastrar-cliente.php" method="post">
             <div class="card-body">
-                <input type="text" name="nome" placeholder="Nome completo">
+                <input type="text" name="nome" placeholder="Nome completo" required>
             </div>
             <div class="card-body">
-                <input type="text" name="cpf" placeholder="CPF">
+                <input type="text" name="cpf" placeholder="CPF" required>
             </div>
             <div class="card-body">
-                <input type="text" name="cnh" placeholder="CNH">
+                <input type="text" name="cnh" placeholder="CNH" required>
             </div>
             <div class="card-body">
-                <input type="text" name="cep" id="cep" size='8' onblur="pesquisacep(this.value);" placeholder="CEP">
+                <input type="text" name="cep" id="cep" size='8' onblur="pesquisacep(this.value);" placeholder="CEP" required>
 
             </div>
             <div class="card-body">
-                <input type="text" name="endereco" id="endereco" placeholder="Endereço">
+                <input type="text" name="endereco" id="endereco" placeholder="Endereço" required>
 
             </div>
             <div class="card-body">
-                <input type="text" name="numeroCasa" placeholder="N° casa/apt">
+                <input type="text" name="numeroCasa" placeholder="N° casa/apt"  required>
 
             </div>
             <div class="card-body">
@@ -116,15 +116,15 @@ try {
 
             </div>
             <div class="card-body">
-                <input type="text" name="bairro" id="bairro" placeholder="Bairro">
+                <input type="text" name="bairro" id="bairro" placeholder="Bairro" required>
 
             </div>
             <div class="card-body">
-                <input type="text" name="cidade" id="cidade" placeholder="Cidade">
+                <input type="text" name="cidade" id="cidade" placeholder="Cidade" required>
 
             </div>
             <div class="card-body">
-                <input type="text" name="uf" id="uf" placeholder="UF">
+                <input type="text" name="uf" id="uf" placeholder="UF" required>
 
             </div>
             <div class="card-body">
