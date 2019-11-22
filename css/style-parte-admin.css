@@ -47,6 +47,14 @@ footer {
     height: 40px;
 }
 
+.botaoSubmit{
+    width: 100%;
+    border: none;
+    height: 40px;
+    background-color: #055353;
+    color: #f8f9fa;
+}
+
 form {
     text-align: center;
 }
@@ -57,7 +65,6 @@ form {
     height: 40px;
     background-color: #055353;
     color: #f8f9fa;
-    border-radius: 10px;
 }
 
 

@@ -105,7 +105,7 @@ $listaVeiculo = $veiculo->listar();
             </div>
 
             <div class="card-body">
-                <input type="text" name="cliente" id="cliente" placeholder="Nome do cliente" list="listaCliente"  required>
+                <input type="text" name="cliente" id="cliente" placeholder="Nome do cliente" list="listaCliente" required>
                 <datalist id="listaCliente">
                     <?php
                     foreach ($listaCliente as $linha) {
@@ -113,42 +113,43 @@ $listaVeiculo = $veiculo->listar();
                     }
                     ?>
                 </datalist>
-                <div class="card-body">
-                    <input type="text" name="veiculo" id="veiculo" placeholder="Nome do veiculo" list="listaVeiculo" required>
-                    <datalist id="listaVeiculo">
-                        <?php
-                        foreach ($listaVeiculo as $linha) {
-                            if($linha[statusVeiculo] == "Disponível"){
-                                echo ("<option value=" . $linha[idVeiculo] . ">" . $linha[modeloVeiculo] . "</option>");
-                            }
+            </div>
+            <div class="card-body">
+                <input type="text" name="veiculo" id="veiculo" placeholder="Nome do veiculo" list="listaVeiculo" required>
+                <datalist id="listaVeiculo">
+                    <?php
+                    foreach ($listaVeiculo as $linha) {
+                        if ($linha[statusVeiculo] == "Disponível") {
+                            echo ("<option value=" . $linha[idVeiculo] . ">" . $linha[modeloVeiculo] . "</option>");
                         }
-                        ?>
-                    </datalist>
-                </div>
+                    }
+                    ?>
+                </datalist>
+            </div>
 
-                <div class="card-body">
-                    <input type="text" name="usuario" id="usuario" placeholder="Nome do usuário" list="listaUsuario" required>
-                    <datalist id="listaUsuario">
-                        <?php
-                        foreach ($listaUsuario as $linha) {
-                            echo ("<option value=" . $linha[idUsuario] . ">" . $linha[nomeUsuario] . "</option>");
-                        }
-                        ?>
-                    </datalist>
-                </div>
+            <div class="card-body">
+                <input type="text" name="usuario" id="usuario" placeholder="Nome do usuário" list="listaUsuario" required>
+                <datalist id="listaUsuario">
+                    <?php
+                    foreach ($listaUsuario as $linha) {
+                        echo ("<option value=" . $linha[idUsuario] . ">" . $linha[nomeUsuario] . "</option>");
+                    }
+                    ?>
+                </datalist>
+            </div>
 
-                <div class="card-body">
-                    <input type="text" name="status" id="status" placeholder="Status da locação" list="listaStatus" required>
-                    <datalist id="listaStatus">
-                        <option value="Em processo"></option>
-                        <option value="Concluida"></option>
-                        <option value="Trancada"></option>
-                    </datalist>
-                </div>
+            <div class="card-body">
+                <input type="text" name="status" id="status" placeholder="Status da locação" list="listaStatus" required>
+                <datalist id="listaStatus">
+                    <option value="Em processo"></option>
+                    <option value="Concluida"></option>
+                    <option value="Trancada"></option>
+                </datalist>
+            </div>
 
-                <div class="card-body">
-                    <input type="submit" value="Enviar">
-                </div>
+            <div class="card-body">
+                <input class="botaoSubmit" type="submit" value="Enviar">
+            </div>
 
         </form>
 
@@ -157,7 +158,6 @@ $listaVeiculo = $veiculo->listar();
                 <button class="botoes">Voltar</button>
             </a>
         </div>
-    </div>
     </div>
 
     <div class="card">

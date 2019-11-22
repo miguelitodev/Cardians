@@ -58,12 +58,12 @@ try {
                             <img class="ajusteTamanho" src="../../img/icons/logo-opcoes.png">
                         </a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="locacao/form-cadastrar-locacao.php">Locação</a>
-                            <a class="dropdown-item" href="cliente/form-cadastrar-cliente.php">Cliente</a>
-                            <a class="dropdown-item" href="usuario/form-cadastrar-usuario.php">Usuário</a>
-                            <a class="dropdown-item" href="veiculo/form-cadastrar-veiculo.php">Veiculo</a>
-                            <a class="dropdown-item" href="marca/form-cadastrar-marca.php">Marca</a>
-                            <a class="dropdown-item" href="menu-admin.php">Menu</a>
+                            <a class="dropdown-item" href="form-cadastrar-locacao.php">Locação</a>
+                            <a class="dropdown-item" href="../cliente/form-cadastrar-cliente.php">Cliente</a>
+                            <a class="dropdown-item" href="../usuario/form-cadastrar-usuario.php">Usuário</a>
+                            <a class="dropdown-item" href="../veiculo/form-cadastrar-veiculo.php">Veiculo</a>
+                            <a class="dropdown-item" href="../marca/form-cadastrar-marca.php">Marca</a>
+                            <a class="dropdown-item" href="../menu-admin.php">Menu</a>
                         </div>
                     </li>
 

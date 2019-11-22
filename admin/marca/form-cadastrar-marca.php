@@ -66,7 +66,7 @@ try {
                             <a class="dropdown-item" href="../cliente/form-cadastrar-cliente.php">Cliente</a>
                             <a class="dropdown-item" href="../usuario/form-cadastrar-usuario.php">Usuário</a>
                             <a class="dropdown-item" href="../veiculo/form-cadastrar-veiculo.php">Veiculo</a>
-                            <a class="dropdown-item" href="marca/form-cadastrar-marca.php">Marca</a>
+                            <a class="dropdown-item" href="form-cadastrar-marca.php">Marca</a>
                             <a class="dropdown-item" href="../menu-admin.php">Menu</a>
                         </div>
                     </li>
@@ -93,7 +93,7 @@ try {
             <div class="card-body">
                 <form method="POST" action="cadastrar-marca.php">
                     <input type="text" name="marca" placeholder="Nome da marca" required>
-                    <input type="submit" value="Cadastrar">
+                    <input class="botaoSubmit" type="submit" value="Cadastrar">
                 </form>
             </div>
         </div>

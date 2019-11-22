@@ -66,7 +66,7 @@ try {
                             <a class="dropdown-item" href="../cliente/form-cadastrar-cliente.php">Cliente</a>
                             <a class="dropdown-item" href="../usuario/form-cadastrar-usuario.php">Usuário</a>
                             <a class="dropdown-item" href="../veiculo/form-cadastrar-veiculo.php">Veiculo</a>
-                            <a class="dropdown-item" href="marca/form-cadastrar-marca.php">Marca</a>
+                            <a class="dropdown-item" href="form-cadastrar-marca.php">Marca</a>
                             <a class="dropdown-item" href="../menu-admin.php">Menu</a>
                         </div>
                     </li>
@@ -84,7 +84,7 @@ try {
             <h1>Editar marca</h1>
             <form name="edicao" method="post" action="editar-marca.php?id=<?php echo $marca->getIdMarca(); ?>">
                 <input type="text" name="marca" value="<?php echo $marca->getNomeMarca(); ?>">
-                <input type="submit" value="Salvar">
+                <input class="botaoSubmit" type="submit" value="Salvar">
             </form>
         </div>
     </div>

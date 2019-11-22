@@ -60,7 +60,7 @@
 						<div class="dropdown-menu">
 							<a class="dropdown-item" href="../locacao/form-cadastrar-locacao.php">Locação</a>
 							<a class="dropdown-item" href="../cliente/form-cadastrar-cliente.php">Cliente</a>
-							<a class="dropdown-item" href="usuario/form-cadastrar-usuario.php">Usuário</a>
+							<a class="dropdown-item" href="form-cadastrar-usuario.php">Usuário</a>
 							<a class="dropdown-item" href="../veiculo/form-cadastrar-veiculo.php">Veiculo</a>
 							<a class="dropdown-item" href="../marca/form-cadastrar-marca.php">Marca</a>
 							<a class="dropdown-item" href="../menu-admin.php">Menu</a>
@@ -107,21 +107,21 @@
 			<div class="row text-center d-flex justify-content-center pt-5 mb-3">
 				<div class="col-md-2 mb-3">
 					<h6 class="text-uppercase font-weight-bold">
-						<a href="../../index.php">
+						<a class="link" href="../../index.php">
 							Home
 						</a>
 					</h6>
 				</div>
 				<div class="col-md-2 mb-3">
 					<h6 class="text-uppercase font-weight-bold">
-						<a href="../../carros.php">
+						<a class="link" href="../../carros.php">
 							Carros
 						</a>
 					</h6>
 				</div>
 				<div class="col-md-2 mb-3">
 					<h6 class="text-uppercase font-weight-bold">
-						<a href="../../contato.php">
+						<a class="link" href="../../contato.php">
 							Contato
 						</a>
 					</h6>
@@ -143,7 +143,7 @@
 			</div>
 		</div>
 		<div class="footer-copyright text-center py-3">© 2019 Copyright
-			<a href="../../index.html">
+			<a class="link" href="../../index.html">
 				Cardians
 			</a>
 		</div>
