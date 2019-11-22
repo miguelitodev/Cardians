@@ -93,19 +93,19 @@ $listaVeiculo = $veiculo->listar();
         <form action="cadastrar-locacao.php" method="post">
 
             <div class="card-body">
-                <input type="text" name="dataInicial" id="dataInicial" placeholder="Data inicial: AAAA-MM-DD">
+                <input type="text" name="dataInicial" id="dataInicial" placeholder="Data inicial: AAAA-MM-DD" required>
             </div>
 
             <div class="card-body">
-                <input type="text" name="dataFinal" id="dataFinal" placeholder="Data final: AAAA-MM-DD">
+                <input type="text" name="dataFinal" id="dataFinal" placeholder="Data final: AAAA-MM-DD" required>
             </div>
 
             <div class="card-body">
-                <input type="text" name="valorDiaria" id="valorDiaria" placeholder="Valor da diária">
+                <input type="text" name="valorDiaria" id="valorDiaria" placeholder="Valor da diária" required>
             </div>
 
             <div class="card-body">
-                <input type="text" name="cliente" id="cliente" placeholder="Nome do cliente" list="listaCliente">
+                <input type="text" name="cliente" id="cliente" placeholder="Nome do cliente" list="listaCliente"  required>
                 <datalist id="listaCliente">
                     <?php
                     foreach ($listaCliente as $linha) {

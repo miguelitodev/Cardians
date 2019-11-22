@@ -48,95 +48,16 @@
     </video>
  -->
 
-    <canvas id="canvas"></canvas>
-
-    <div class="page-wrapper">
-        <div class="post-slider">
-            <img src="img/icons/left-seta.png" class="left-seta prev" alt="">
-            <img src="img/icons/right-seta.png" class="right-seta next" alt="">
-            <p class="maisProcurados">Carros mais procurados!</p>
-            <div class="post-wrapper">
-                <?php
-                require_once 'global.php';
-
-                try {
-                    $marca = new Marca();
-                    $veiculo = new Veiculo();
-                    $lista = $marca->listarMarca();
-                    $listaVeiculo = $veiculo->listar();
-                } catch (Exception $erro) {
-                    echo '<pre>';
-                    print_r($erro);
-                    echo '</pre>';
-                    echo $erro->getMessage();
-                }
-
-                foreach ($listaVeiculo as $linha) {
-                    if ($linha['statusVeiculo'] != "Indisponível") {
-                        ?>
-
-
-                        <div class="post">
-                            <img class="veiculos" style="width: 100%; height: 214px" src="<?php echo $linha['imgVeiculo'] ?>" alt="">
-                            <h1 class="modelo"><?php echo $linha['modeloVeiculo'] ?></h1>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item"><b>Modelo: </b><?php echo $linha['modeloVeiculo'] ?></li>
-                                <li class="list-group-item"><b>Cor: </b><?php echo $linha['corVeiculo'] ?></li>
-                                <li class="list-group-item"><b>Marca: </b><?php echo $linha['nomeMarca'] ?></li>
-                                <li class="list-group-item"><b>Ano: </b><?php echo $linha['anoVeiculo'] ?></li>
-                                <li class="list-group-item"><b>Valor da diária: </b><?php echo $linha['valorDiariaVeiculo'] ?></li>
-                                <button type="button" class="btn" onclick="window.location.href='mensagem-locacao.php'">Fazer locação</button>
-                            </ul>
-                        </div>
-                <?php } else { }
-                }
-                ?>
-            </div>
+    <div class="msg">
+        <div class="msg body" style="height: 200px">
+            <h4 class="card-title">Mensagem enviada com sucesso!</h4>
+            <p class="card-text">
+                Entraremos em contato para informar o estoque do carro selecionado, o local mais próximo de retirada e os próximos passos para a sua locação.
+            </p>
+            <button class="btn" style="width: 100%; height: 50px" onclick= "window.location.href='carros.php'">
+                Voltar a loja
+            </button>
         </div>
-    </div>
-
-
-
-    <form action="admin/buscar-carro.php">
-        <input type="text" name="campoPesquisa" id="campoPesquisa" placeholder="Digite o modelo procurado">
-    </form>
-    <div class="cont" id="resultado">
-
-        <?php
-        require_once 'global.php';
-
-        try {
-            $marca = new Marca();
-            $veiculo = new Veiculo();
-            $lista = $marca->listarMarca();
-            $listaVeiculo = $veiculo->listar();
-        } catch (Exception $erro) {
-            echo '<pre>';
-            print_r($erro);
-            echo '</pre>';
-            echo $erro->getMessage();
-        }
-
-        foreach ($listaVeiculo as $linha) {
-            if ($linha['statusVeiculo'] != "Indisponível") {
-                ?>
-
-
-                <div class="card">
-                    <img class="veiculos" style="width: 100%; height: 224px" src="<?php echo $linha['imgVeiculo'] ?>" alt="">
-                    <h1 class="modelo"><?php echo $linha['modeloVeiculo'] ?></h1>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item"><b>Modelo: </b><?php echo $linha['modeloVeiculo'] ?></li>
-                        <li class="list-group-item"><b>Cor: </b><?php echo $linha['corVeiculo'] ?></li>
-                        <li class="list-group-item"><b>Marca: </b><?php echo $linha['nomeMarca'] ?></li>
-                        <li class="list-group-item"><b>Ano: </b><?php echo $linha['anoVeiculo'] ?></li>
-                        <li class="list-group-item"><b>Valor da diária: </b><?php echo $linha['valorDiariaVeiculo'] ?></li>
-                        <button type="button" class="btn" onclick="window.location.href='mensagem-locacao.php'">Fazer locação</button>
-                    </ul>
-                </div>
-        <?php }
-        }
-        ?>
     </div>
 
     <footer class="page-footer font-small indigo" id="desceai">
@@ -190,12 +111,6 @@
     <script type="text/javascript" src="js/jquery.slim.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/popper.min.js"></script>
-    <script type="text/javascript" src="js/slick.min.js"></script>
-    <script src="js/busca-aproximada-carro.js"></script>
-    <script src="js/particles.js"></script>
-    <script src="js/script.js"></script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
 
 </body>

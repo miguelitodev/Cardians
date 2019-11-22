@@ -25,7 +25,7 @@ try {
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" href="../../css/style-parte-admin.css">
-    <link rel="shortcut icon" href="../../img/icons/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="../../img/icons/favicon.ico" type="image/x-icon" />
 
 </head>
 
@@ -93,19 +93,31 @@ try {
 		</div>
 		<form method="POST" action="cadastrar-veiculo.php" enctype="multipart/form-data">
 			<div class="card-body">
-				<input type="text" placeholder="Modelo do veiculo" name="modelo">
+				<input type="text" placeholder="Modelo do veiculo" name="modelo" required>
 			</div>
+
 			<div class="card-body">
-				<input type="text" placeholder="Ano do veiculo" name="ano">
+				<input type="text" placeholder="Ano do veiculo" name="ano" required>
 			</div>
+
 			<div class="card-body">
-				<input type="text" placeholder="Cor do veiculo" name="cor">
+				<input type="text" placeholder="Cor do veiculo" name="cor" required>
 			</div>
+			
 			<div class="card-body">
-				<input type="money" placeholder="Valor da diaria" name="valorDiaria">
+				<input type="money" placeholder="Valor da diaria" name="valorDiaria" required>
 			</div>
+			
 			<div class="card-body">
-				<input  type="file" name="img">
+				<input type="text" name="statusVeiculo" id="statusVeiculo" placeholder="Status do veículo" list="listaStatus"  required>
+				<datalist id="listaStatus">
+					<option value="Disponível"></option>
+					<option value="Indisponível"></option>
+				</datalist>
+			</div>
+			
+			<div class="card-body">
+				<input type="file" name="img">
 			</div>
 			<div class="card-body">
 				<select class="select" name="idMarca" title="Marca do veiculo">
@@ -143,6 +155,8 @@ try {
 							<th>Ano</th>
 							<th>Valor diária</th>
 							<th>Imagem</th>
+							<th>Status Veículo</th>
+
 							<th class="acao">Editar</th>
 							<th class="acao">Excluir</th>
 
@@ -158,6 +172,8 @@ try {
 								<td><?php echo $linha['anoVeiculo'] ?></td>
 								<td><?php echo $linha['valorDiariaVeiculo'] ?></td>
 								<td><img src="<?php echo $linha['imgVeiculo'] ?>" width="80px"></td>
+								<td><?php echo $linha['statusVeiculo'] ?></td>
+
 								<td><a href="form-editar-veiculo.php?id=<?php echo $linha['idVeiculo'] ?>">Editar</td>
 								<td><a href="excluir-veiculo.php?id=<?php echo $linha['idVeiculo'] ?>">Excluir</td>
 							</tr>
@@ -169,56 +185,56 @@ try {
 		</div>
 	</div>
 
-		<footer class="page-footer font-small indigo" id="desceai">
-			<div class="container">
-				<div class="row text-center d-flex justify-content-center pt-5 mb-3">
-					<div class="col-md-2 mb-3">
-						<h6 class="text-uppercase font-weight-bold">
-							<a class="link" href="../../index.php">
-								Home
-							</a>
-						</h6>
-					</div>
-					<div class="col-md-2 mb-3">
-						<h6 class="text-uppercase font-weight-bold">
-							<a class="link" href="../../carros.php">
-								Carros
-							</a>
-						</h6>
-					</div>
-					<div class="col-md-2 mb-3">
-						<h6 class="text-uppercase font-weight-bold">
-							<a class="link" href="../../contato.php">
-								Contato
-							</a>
-						</h6>
-					</div>
-
+	<footer class="page-footer font-small indigo" id="desceai">
+		<div class="container">
+			<div class="row text-center d-flex justify-content-center pt-5 mb-3">
+				<div class="col-md-2 mb-3">
+					<h6 class="text-uppercase font-weight-bold">
+						<a class="link" href="../../index.php">
+							Home
+						</a>
+					</h6>
 				</div>
-				<hr class="rgba-white-light">
-				<div class="row d-flex text-center justify-content-center mb-md-0 mb-4">
-					<div class="col-md-8 col-12 mt-5">
-						<p style="line-height: 1.7rem">
-							Os melhores preços e a maior variedade de veículos para aluguel,
-							de forma que atenda as suas necessidades! Nós da Cardians nos preocupamos
-							com o bem-estar de nossos clientes, e prezamos para que desfrutem
-							dos nossos serviços com o mínimo de burocracia e o máximo de comodidade.
-							Faça sua reserva!
+				<div class="col-md-2 mb-3">
+					<h6 class="text-uppercase font-weight-bold">
+						<a class="link" href="../../carros.php">
+							Carros
+						</a>
+					</h6>
+				</div>
+				<div class="col-md-2 mb-3">
+					<h6 class="text-uppercase font-weight-bold">
+						<a class="link" href="../../contato.php">
+							Contato
+						</a>
+					</h6>
+				</div>
 
-						</p>
-					</div>
+			</div>
+			<hr class="rgba-white-light">
+			<div class="row d-flex text-center justify-content-center mb-md-0 mb-4">
+				<div class="col-md-8 col-12 mt-5">
+					<p style="line-height: 1.7rem">
+						Os melhores preços e a maior variedade de veículos para aluguel,
+						de forma que atenda as suas necessidades! Nós da Cardians nos preocupamos
+						com o bem-estar de nossos clientes, e prezamos para que desfrutem
+						dos nossos serviços com o mínimo de burocracia e o máximo de comodidade.
+						Faça sua reserva!
+
+					</p>
 				</div>
 			</div>
-			<div class="footer-copyright text-center py-3">© 2019 Copyright
-				<a class="link" href="../../index.html">
-					Cardians
-				</a>
-			</div>
-		</footer>
+		</div>
+		<div class="footer-copyright text-center py-3">© 2019 Copyright
+			<a class="link" href="../../index.html">
+				Cardians
+			</a>
+		</div>
+	</footer>
 
 
-		<script src="../../js/busca-aproximada-veiculo.js"></script>
-		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script src="../../js/busca-aproximada-veiculo.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>

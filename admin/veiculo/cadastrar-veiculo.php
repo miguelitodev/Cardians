@@ -3,7 +3,7 @@
 require_once 'global.php';
 
 try {
-	// header("Location: form-cadastrar-veiculo.php");
+	header("Location: form-cadastrar-veiculo.php");
 
 	//criando objeto do tipo Veiculo()
 	$carro = new Veiculo();
@@ -12,6 +12,7 @@ try {
 	$carro->setCorVeiculo($_POST['cor']);
 	$carro->setModeloVeiculo($_POST['modelo']);
 	$carro->setValorDiariaVeiculo($_POST['valorDiaria']);
+	$carro->setStatusVeiculo($_POST['statusVeiculo']);
 	$carro->setIdMarca($_POST['idMarca']);
 
 	$carro->cadastrar($carro);

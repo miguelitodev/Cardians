@@ -3,7 +3,7 @@
 require_once 'global.php';
 
 try {
-    header('Location: form-cadastrar-locacao.php');
+    // header('Location: form-cadastrar-locacao.php');
 
     $locacao = new Locacao();
 

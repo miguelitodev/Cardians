@@ -101,7 +101,7 @@ div#formulario input {
 #canvas {
     margin-top: 0%;
     background-attachment: fixed;
-    height: 800px;
+    height: 850px;
 }
 
 .post-slider .post-wrapper {
@@ -117,7 +117,7 @@ div#formulario input {
     height: 610px;
     display: inline-block;
     background: #fff;
-    margin: 0px 10px;
+    margin: 0px 20px;
 }
 
 .left-seta {
@@ -159,6 +159,21 @@ div#formulario input {
     height: 73px;
     border: none;
     color: white;
+}
+
+.btnI {
+    background-color: #8a1818;
+    height: 73px;
+    border: none;
+    color: white;
+}
+
+.btnI:hover {
+    background-color: #8a1818;
+    height: 73px;
+    border: none;
+    color: white;
+    cursor: not-allowed;
 }
 
 .btn:hover {
@@ -212,4 +227,12 @@ div#formulario input {
 .bgCards {
     width: 90%;
     background-color: rgb(255, 255, 255);
+}
+
+.msg {
+    width: 50%;
+    height: 400px;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    margin: 90px auto;
 }
