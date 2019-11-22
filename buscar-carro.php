@@ -13,7 +13,7 @@ try {
 
         foreach ($lista as $linha) {
             echo "<div class='card'>
-                <img class='veiculos' src=img/veiculo/'" . $linha['imgVeiculo'] . "' alt=''>
+            <img class='veiculos' style='width: 100%; height: 214px' src='img/veiculos/" . $linha['imgVeiculo'] . "' alt=''>
                 <h1 class='modelo'>" . $linha['modeloVeiculo'] . "</h1>
                 <ul class='list-group list-group-flush'>
                     <li class='list-group-item'><b>Modelo: </b>" . $linha['modeloVeiculo'] . "</li>
@@ -30,7 +30,7 @@ try {
         foreach ($lista as $linha) {
             if ($linha['statusVeiculo'] != "Indisponível") {
                 echo "<div class='card'>
-                <img class='veiculos' src=img/veiculo/'" . $linha['imgVeiculo'] . "' alt=''>
+                <img class='veiculos' style='width: 100%; height: 214px' src='img/veiculos/" . $linha['imgVeiculo'] . "' alt=''>
                 <h1 class='modelo'>" . $linha['modeloVeiculo'] . "</h1>
                 <ul class='list-group list-group-flush'>
                     <li class='list-group-item'><b>Modelo: </b>" . $linha['modeloVeiculo'] . "</li>
@@ -45,8 +45,8 @@ try {
         }
     }
 
-    if (empty($lista)) { 
-        if($linha['statusVeiculo'] != "Indisponível"){
+    if (empty($lista)) {
+        if ($linha['statusVeiculo'] != "Indisponível") {
             echo "<div class='alert alert-success' role='alert'>
         <h2 class='alert-heading' id='alert'>Ooops! :(</h4>
         <p>Infelizmente nós não conseguimos encontrar o veículo que você está procurando.</p>

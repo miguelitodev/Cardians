@@ -171,7 +171,7 @@ try {
 								<td><?php echo $linha['nomeMarca'] ?></td>
 								<td><?php echo $linha['anoVeiculo'] ?></td>
 								<td><?php echo $linha['valorDiariaVeiculo'] ?></td>
-								<td><img src="<?php echo $linha['imgVeiculo'] ?>" width="80px"></td>
+								<td><img src="../../img/veiculos/<?php echo $linha['imgVeiculo'] ?>" width="80px"></td>
 								<td><?php echo $linha['statusVeiculo'] ?></td>
 
 								<td><a href="form-editar-veiculo.php?id=<?php echo $linha['idVeiculo'] ?>">Editar</td>
