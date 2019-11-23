@@ -64,7 +64,7 @@
             <p>Escreva sua duvida ou suguestão e nós responderemos o mais rápido possivel.</p>
         </div>
 
-        <form class="form-group" action="mailto:desenvolvimentosistemas2019@gmail.com" method="POST">
+        <form class="form-group" action="mailto:omelhorgrupodetcc007@gmail.com" method="POST">
 
             <div class="card-body">
                 <input class="form-control" type="text" name="nome" id="nome" placeholder=" Nome" maxlength="20" size="15" required />
@@ -87,7 +87,7 @@
             </div>
 
             <div class="card-body">
-                <button class="botoes" type="submit">Enviar</button>
+                <button class="botoes" type="submit" onclick="alert('Aguarde o seu gerenciador de E-mails abrir...');">Enviar</button>
             </div>
 
         </form>
