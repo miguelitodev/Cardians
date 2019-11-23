@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 4.6.6deb5
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Tempo de geração: 22/11/2019 às 14:06
--- Versão do servidor: 10.4.6-MariaDB
--- Versão do PHP: 7.3.9
+-- Host: localhost:3306
+-- Generation Time: 22-Nov-2019 às 20:51
+-- Versão do servidor: 5.7.27-0ubuntu0.18.04.1
+-- PHP Version: 7.3.11-1+ubuntu18.04.1+deb.sury.org+1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -19,13 +17,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `bdlojacarros`
+-- Database: `bdlojacarros`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `tbcliente`
+-- Estrutura da tabela `tbcliente`
 --
 
 CREATE TABLE `tbcliente` (
@@ -43,7 +41,7 @@ CREATE TABLE `tbcliente` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Despejando dados para a tabela `tbcliente`
+-- Extraindo dados da tabela `tbcliente`
 --
 
 INSERT INTO `tbcliente` (`idCliente`, `nomeCliente`, `cpfCliente`, `cnhCliente`, `enderecoCliente`, `numeroCliente`, `complementoCliente`, `bairroCliente`, `cidadeCliente`, `cepCliente`, `ufCliente`) VALUES
@@ -54,7 +52,7 @@ INSERT INTO `tbcliente` (`idCliente`, `nomeCliente`, `cpfCliente`, `cnhCliente`,
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `tblocacao`
+-- Estrutura da tabela `tblocacao`
 --
 
 CREATE TABLE `tblocacao` (
@@ -69,17 +67,16 @@ CREATE TABLE `tblocacao` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Despejando dados para a tabela `tblocacao`
+-- Extraindo dados da tabela `tblocacao`
 --
 
 INSERT INTO `tblocacao` (`idLocacao`, `dataInicial`, `dataFinal`, `valorTotal`, `idCliente`, `idVeiculo`, `idUsuario`, `statusLocacao`) VALUES
-(1, '2019-08-23', '2019-11-15', 100, 2, 48, 3, 'Concluida'),
-(2, '2019-11-19', '2019-12-27', 200, 4, 50, 3, 'Em processo');
+(3, '2019-08-23', '2019-12-27', 200, 3, 62, 3, 'Em processo');
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `tbmarca`
+-- Estrutura da tabela `tbmarca`
 --
 
 CREATE TABLE `tbmarca` (
@@ -88,7 +85,7 @@ CREATE TABLE `tbmarca` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Despejando dados para a tabela `tbmarca`
+-- Extraindo dados da tabela `tbmarca`
 --
 
 INSERT INTO `tbmarca` (`idMarca`, `nomeMarca`) VALUES
@@ -102,7 +99,7 @@ INSERT INTO `tbmarca` (`idMarca`, `nomeMarca`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `tbusuario`
+-- Estrutura da tabela `tbusuario`
 --
 
 CREATE TABLE `tbusuario` (
@@ -113,7 +110,7 @@ CREATE TABLE `tbusuario` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Despejando dados para a tabela `tbusuario`
+-- Extraindo dados da tabela `tbusuario`
 --
 
 INSERT INTO `tbusuario` (`idUsuario`, `nomeUsuario`, `loginUsuario`, `senhaUsuario`) VALUES
@@ -124,7 +121,7 @@ INSERT INTO `tbusuario` (`idUsuario`, `nomeUsuario`, `loginUsuario`, `senhaUsuar
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `tbveiculo`
+-- Estrutura da tabela `tbveiculo`
 --
 
 CREATE TABLE `tbveiculo` (
@@ -139,29 +136,24 @@ CREATE TABLE `tbveiculo` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Despejando dados para a tabela `tbveiculo`
+-- Extraindo dados da tabela `tbveiculo`
 --
 
 INSERT INTO `tbveiculo` (`idVeiculo`, `anoVeiculo`, `corVeiculo`, `modeloVeiculo`, `valorDiariaVeiculo`, `imgVeiculo`, `statusVeiculo`, `idMarca`) VALUES
-(48, 2019, 'Preto', 'Model S', '200.00', '../../img/veiculos/48.jpg', 'Disponível', 1),
-(49, 2019, 'Branco', 'Model Z', '400.00', '../../img/veiculos/49.png', 'Disponível', 1),
-(50, 2019, 'Branco', 'BMW Série X3', '700.00', '../../img/veiculos/50.jpg', 'Disponível', 2),
-(51, 2018, 'Vermelho', 'Model 3', '500.00', '../../img/veiculos/51.png', 'Disponível', 1),
-(60, 2018, 'Vermelho', 'Model 3', '400.00', '5dd7ce110f579.png', 'Disponível', 1),
-(61, 2018, 'Vermelho', 'Model 3', '400.00', '../../img/veiculos/61.png', 'Disponível', 1);
+(62, 2018, 'Preto', 'Model S', '120.00', '5dd8654f36b64.jpeg', 'Disponível', 1);
 
 --
--- Índices de tabelas apagadas
+-- Indexes for dumped tables
 --
 
 --
--- Índices de tabela `tbcliente`
+-- Indexes for table `tbcliente`
 --
 ALTER TABLE `tbcliente`
   ADD PRIMARY KEY (`idCliente`);
 
 --
--- Índices de tabela `tblocacao`
+-- Indexes for table `tblocacao`
 --
 ALTER TABLE `tblocacao`
   ADD PRIMARY KEY (`idLocacao`),
@@ -170,64 +162,59 @@ ALTER TABLE `tblocacao`
   ADD KEY `FK_idUsuario` (`idUsuario`);
 
 --
--- Índices de tabela `tbmarca`
+-- Indexes for table `tbmarca`
 --
 ALTER TABLE `tbmarca`
   ADD PRIMARY KEY (`idMarca`);
 
 --
--- Índices de tabela `tbusuario`
+-- Indexes for table `tbusuario`
 --
 ALTER TABLE `tbusuario`
   ADD PRIMARY KEY (`idUsuario`);
 
 --
--- Índices de tabela `tbveiculo`
+-- Indexes for table `tbveiculo`
 --
 ALTER TABLE `tbveiculo`
   ADD PRIMARY KEY (`idVeiculo`),
   ADD KEY `FK_idMarca` (`idMarca`);
 
 --
--- AUTO_INCREMENT de tabelas apagadas
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT de tabela `tbcliente`
+-- AUTO_INCREMENT for table `tbcliente`
 --
 ALTER TABLE `tbcliente`
   MODIFY `idCliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
 --
--- AUTO_INCREMENT de tabela `tblocacao`
+-- AUTO_INCREMENT for table `tblocacao`
 --
 ALTER TABLE `tblocacao`
-  MODIFY `idLocacao` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
+  MODIFY `idLocacao` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
--- AUTO_INCREMENT de tabela `tbmarca`
+-- AUTO_INCREMENT for table `tbmarca`
 --
 ALTER TABLE `tbmarca`
   MODIFY `idMarca` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
 --
--- AUTO_INCREMENT de tabela `tbusuario`
+-- AUTO_INCREMENT for table `tbusuario`
 --
 ALTER TABLE `tbusuario`
   MODIFY `idUsuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
 --
--- AUTO_INCREMENT de tabela `tbveiculo`
+-- AUTO_INCREMENT for table `tbveiculo`
 --
 ALTER TABLE `tbveiculo`
-  MODIFY `idVeiculo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
+  MODIFY `idVeiculo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
+--
+-- Constraints for dumped tables
+--
 
 --
--- Restrições para dumps de tabelas
---
-
---
--- Restrições para tabelas `tblocacao`
+-- Limitadores para a tabela `tblocacao`
 --
 ALTER TABLE `tblocacao`
   ADD CONSTRAINT `tblocacao_ibfk_1` FOREIGN KEY (`idVeiculo`) REFERENCES `tbveiculo` (`idVeiculo`),
@@ -235,11 +222,10 @@ ALTER TABLE `tblocacao`
   ADD CONSTRAINT `tblocacao_ibfk_3` FOREIGN KEY (`idCliente`) REFERENCES `tbcliente` (`idCliente`);
 
 --
--- Restrições para tabelas `tbveiculo`
+-- Limitadores para a tabela `tbveiculo`
 --
 ALTER TABLE `tbveiculo`
   ADD CONSTRAINT `tbveiculo_ibfk_1` FOREIGN KEY (`idMarca`) REFERENCES `tbmarca` (`idMarca`);
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
