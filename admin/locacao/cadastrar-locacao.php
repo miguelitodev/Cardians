@@ -3,7 +3,7 @@
 require_once 'global.php';
 
 try {
-    // header('Location: form-cadastrar-locacao.php');
+    header('Location: form-cadastrar-locacao.php');
 
     $locacao = new Locacao();
 
@@ -13,7 +13,7 @@ try {
     $locacao->setIdCliente($_POST['cliente']);
     $locacao->setIdVeiculo($_POST['veiculo']);
     $locacao->setIdUsuario($_POST['usuario']);
-    $locacao->setStatusLocacao($_POST['statusLocacao']);    
+    $locacao->setStatusLocacao($_POST['status']);    
 
     $locacao->cadastrar($locacao);
 

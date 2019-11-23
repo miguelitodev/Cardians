@@ -89,24 +89,24 @@ try {
 		</div>
 		<div class="card-body">
 
-			<h4 class="card-title">Cadastrar veiculo</h4>
-			<p class="card-text">Insira os dados nos campos abaixo para cadastrar um novo veiculo</p>
+			<h4 class="card-title">Cadastrar veículo</h4>
+			<p class="card-text">Insira os dados nos campos abaixo para cadastrar um novo veículo</p>
 		</div>
 		<form method="POST" action="cadastrar-veiculo.php" enctype="multipart/form-data">
 			<div class="card-body">
-				<input type="text" placeholder="Modelo do veiculo" name="modelo" required>
+				<input type="text" placeholder="Modelo do veículo" name="modelo" required>
 			</div>
 
 			<div class="card-body">
-				<input type="text" placeholder="Ano do veiculo" name="ano" required>
+				<input type="text" placeholder="Ano do veículo" name="ano" required>
 			</div>
 
 			<div class="card-body">
-				<input type="text" placeholder="Cor do veiculo" name="cor" required>
+				<input type="text" placeholder="Cor do veículo" name="cor" required>
 			</div>
 			
 			<div class="card-body">
-				<input type="money" placeholder="Valor da diaria" name="valorDiaria" required>
+				<input type="money" placeholder="Valor da diária" name="valorDiaria" required>
 			</div>
 			
 			<div class="card-body">
@@ -121,7 +121,7 @@ try {
 				<input type="file" name="img" required>
 			</div>
 			<div class="card-body">
-				<select class="select" name="idMarca" title="Marca do veiculo" required> 
+				<select class="select" name="idMarca" title="Marca do veículo" required> 
 					<?php
 					foreach ($lista as $linha) {
 						echo ("<option value=" . $linha[idMarca] . ">" . $linha[nomeMarca] . "</option>");
@@ -137,8 +137,8 @@ try {
 	<div class="card">
 		<div class="card-body">
 			<div class="card-body">
-				<h4 class="card-title">Veiculos cadastrados</h4>
-				<p class="card-text">Aqui você poderá ver, Pesquisar, editar e apagar veiculos já cadastrados</p>
+				<h4 class="card-title">Veículos cadastrados</h4>
+				<p class="card-text">Aqui você poderá ver, Pesquisar, editar e apagar veículos já cadastrados</p>
 			</div>
 			<div class="card-body">
 				<form action="buscar-veiculo.php">

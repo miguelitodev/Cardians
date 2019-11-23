@@ -116,7 +116,7 @@ $listaVeiculo = $veiculo->listar();
                 </datalist>
             </div>
             <div class="card-body">
-                <input type="text" name="veiculo" id="veiculo" placeholder="Nome do veiculo" list="listaVeiculo" required>
+                <input type="text" name="veiculo" id="veiculo" placeholder="Nome do veículo" list="listaVeiculo" required>
                 <datalist id="listaVeiculo">
                     <?php
                     foreach ($listaVeiculo as $linha) {
@@ -143,7 +143,7 @@ $listaVeiculo = $veiculo->listar();
                 <input type="text" name="status" id="status" placeholder="Status da locação" list="listaStatus" required>
                 <datalist id="listaStatus">
                     <option value="Em processo"></option>
-                    <option value="Concluida"></option>
+                    <option value="Concluída"></option>
                     <option value="Trancada"></option>
                 </datalist>
             </div>
@@ -175,7 +175,7 @@ $listaVeiculo = $veiculo->listar();
                     <tr>
                         <th>ID</th>
                         <th>Cliente</th>
-                        <th>Veiculo</th>
+                        <th>Veículo</th>
                         <th>Data inicial</th>
                         <th>Data Final</th>
                         <th>Valor Total</th>

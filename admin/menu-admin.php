@@ -86,7 +86,7 @@
 		<div class="card-body">
 			<a href="veiculo/form-cadastrar-veiculo.php">
 				<button class="botoes pequeno">
-					Cadastro veiculo
+					Cadastro veículo
 				</button>
 			</a>
 		</div>

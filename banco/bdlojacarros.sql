@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: 22-Nov-2019 às 20:51
+-- Generation Time: 22-Nov-2019 às 22:59
 -- Versão do servidor: 5.7.27-0ubuntu0.18.04.1
 -- PHP Version: 7.3.11-1+ubuntu18.04.1+deb.sury.org+1
 
@@ -47,7 +47,8 @@ CREATE TABLE `tbcliente` (
 INSERT INTO `tbcliente` (`idCliente`, `nomeCliente`, `cpfCliente`, `cnhCliente`, `enderecoCliente`, `numeroCliente`, `complementoCliente`, `bairroCliente`, `cidadeCliente`, `cepCliente`, `ufCliente`) VALUES
 (2, 'Raimundo Oliver Arthur Figueiredo', '301.031.077-38', '16861801454', 'Rua Parque Nacional de Abrolhos', '491', '', 'Esperança', 'Londrina', '08490-515', 'PR'),
 (3, 'Benício Roberto Ramos', '369.048.428-65', '17138127338', 'CL 106 ', '920', 'Bloco B', 'Santa Maria', 'Brasília', '72506-202', 'DF'),
-(4, 'Elisa Marina Mariana Freitas', '653.851.358-10', '60896939041', 'Rua Vítor do Amaral', '642', '', 'Jardim Alvorada', 'Maringá', '87035-230', 'PR');
+(4, 'Elisa Marina Mariana Freitas', '653.851.358-10', '60896939041', 'Rua Vítor do Amaral', '642', '', 'Jardim Alvorada', 'Maringá', '87035-230', 'PR'),
+(5, 'Edson Diogo da Conceição', '653.104.481-01', '98895373003', 'Rua Inácio Magalhães', ' 651', '', 'Centro', 'Boa Vista', '69301-340', 'RR');
 
 -- --------------------------------------------------------
 
@@ -71,7 +72,13 @@ CREATE TABLE `tblocacao` (
 --
 
 INSERT INTO `tblocacao` (`idLocacao`, `dataInicial`, `dataFinal`, `valorTotal`, `idCliente`, `idVeiculo`, `idUsuario`, `statusLocacao`) VALUES
-(3, '2019-08-23', '2019-12-27', 200, 3, 62, 3, 'Em processo');
+(3, '2019-08-23', '2019-12-27', 200, 3, 62, 3, 'Em processo'),
+(4, '2019-08-23', '2019-12-27', 200, 4, 62, 3, ''),
+(5, '2019-08-23', '2019-12-27', 200, 4, 62, 3, ''),
+(6, '2019-08-23', '2019-12-27', 200, 4, 62, 3, ''),
+(7, '2019-08-23', '2019-12-27', 700, 3, 62, 3, 'Em processo'),
+(8, '2019-08-23', '2019-11-15', 200, 3, 62, 3, 'Concluida'),
+(9, '2018-02-12', '2019-11-15', 200, 2, 62, 3, 'Trancada');
 
 -- --------------------------------------------------------
 
@@ -89,12 +96,12 @@ CREATE TABLE `tbmarca` (
 --
 
 INSERT INTO `tbmarca` (`idMarca`, `nomeMarca`) VALUES
-(1, 'tesla'),
-(2, 'bmw'),
-(3, 'volkswagen'),
-(4, 'volkswagen'),
-(5, 'mercedez'),
-(6, 'honda');
+(1, 'Tesla'),
+(2, 'Bmw'),
+(3, 'Volkswagen'),
+(5, 'Mercedez'),
+(6, 'Honda'),
+(7, 'Fiat');
 
 -- --------------------------------------------------------
 
@@ -116,7 +123,8 @@ CREATE TABLE `tbusuario` (
 INSERT INTO `tbusuario` (`idUsuario`, `nomeUsuario`, `loginUsuario`, `senhaUsuario`) VALUES
 (1, 'Miguel Riquelme', 'miguelr@gmail.com', 'miguelmiguel'),
 (2, 'Gabriel Teodoro', 'gabrielt@gmail.com', 'gabrielgabriel'),
-(3, 'Tabata Fernanda', 'tabataf@gmail.com', '123456');
+(3, 'Tabata Fernanda', 'tabataf@gmail.com', '123456'),
+(4, 'Vanessa Ferraz', 'vanessaf@gmail.com', 'vanessa1234');
 
 -- --------------------------------------------------------
 
@@ -140,7 +148,8 @@ CREATE TABLE `tbveiculo` (
 --
 
 INSERT INTO `tbveiculo` (`idVeiculo`, `anoVeiculo`, `corVeiculo`, `modeloVeiculo`, `valorDiariaVeiculo`, `imgVeiculo`, `statusVeiculo`, `idMarca`) VALUES
-(62, 2018, 'Preto', 'Model S', '120.00', '5dd8654f36b64.jpeg', 'Disponível', 1);
+(62, 2018, 'Preto', 'Model S', '120.00', '5dd8654f36b64.jpeg', 'Disponível', 1),
+(63, 2020, 'Prata', 'Civic', '300.00', '5dd87fc2da1c3.jpeg', 'Disponível', 6);
 
 --
 -- Indexes for dumped tables
@@ -188,27 +197,27 @@ ALTER TABLE `tbveiculo`
 -- AUTO_INCREMENT for table `tbcliente`
 --
 ALTER TABLE `tbcliente`
-  MODIFY `idCliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `idCliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `tblocacao`
 --
 ALTER TABLE `tblocacao`
-  MODIFY `idLocacao` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `idLocacao` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `tbmarca`
 --
 ALTER TABLE `tbmarca`
-  MODIFY `idMarca` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `idMarca` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `tbusuario`
 --
 ALTER TABLE `tbusuario`
-  MODIFY `idUsuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `idUsuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `tbveiculo`
 --
 ALTER TABLE `tbveiculo`
-  MODIFY `idVeiculo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
+  MODIFY `idVeiculo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
 --
 -- Constraints for dumped tables
 --
